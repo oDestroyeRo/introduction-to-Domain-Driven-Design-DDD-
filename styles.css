@@ -607,6 +607,25 @@ h3 {
 .book-stack article, .strategy-board article, .compare-board > div, .three-panel article, .exercise-grid article {
   padding: 24px;
 }
+.book-stack article {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+.book-cover {
+  display: block;
+  margin: 0;
+}
+.book-cover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 1px solid rgba(20, 33, 61, 0.16);
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 14px 28px rgba(20, 33, 61, 0.18);
+}
 .book-stack span, .strategy-board span, .three-panel span, .context-card span, .context-example span {
   margin-bottom: 8px;
   color: var(--teal-dark);
@@ -978,6 +997,10 @@ h3 {
 .presenter-preview .goal-strip span, .presenter-preview .book-stack article, .presenter-preview .strategy-board article, .presenter-preview .compare-board > div, .presenter-preview .three-panel article, .presenter-preview .exercise-grid article, .presenter-preview .evidence-list div {
   padding: 12px;
 }
+.presenter-preview .book-stack article {
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 10px;
+}
 .presenter-preview .speaker-notes {
   display: none !important;
 }
@@ -1134,6 +1157,11 @@ h3 {
   }
   .language-table [role="cell"] {
     border-bottom: 1px solid var(--line);
+  }
+  .book-stack article {
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
   }
   .slide-controls {
     width: 100%;

@@ -158,6 +158,13 @@
 
     const index = slides.findIndex((slide) => slide.id === hash);
     setActiveSlide(index === -1 ? 0 : index, false, { broadcast: false });
+
+    if (!isAudienceMode) {
+      const resetSlideScroll = () => window.scrollTo({ top: 0, left: 0 });
+      requestAnimationFrame(resetSlideScroll);
+      window.addEventListener("load", resetSlideScroll, { once: true });
+      window.setTimeout(resetSlideScroll, 120);
+    }
   }
 
   function getStoredSlideIndex() {
