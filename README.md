@@ -9,6 +9,8 @@ https://oDestroyeRo.github.io/introduction-to-Domain-Driven-Design-DDD-/
 Local preview:
 
 ```sh
+bun install
+bun run build:css
 python3 -m http.server 4173
 ```
 

@@ -1,0 +1,11 @@
+{
+  "packageManager": "bun@1.3.14",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles.css -o ./styles.css",
+    "dev:css": "tailwindcss -i ./src/styles.css -o ./styles.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.0",
+    "tailwindcss": "4.3.0"
+  }
+}

@@ -98,15 +98,27 @@
     });
   }
 
+  function returnToSlideTopIfControlsAreInline() {
+    if (body.classList.contains("reader-mode") || body.classList.contains("presenter-mode")) {
+      return;
+    }
+
+    if (getComputedStyle(prevButton.parentElement).position === "static") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   function goNext() {
     if (!body.classList.contains("reader-mode")) {
       setActiveSlide(currentSlide + 1, true);
+      returnToSlideTopIfControlsAreInline();
     }
   }
 
   function goPrevious() {
     if (!body.classList.contains("reader-mode")) {
       setActiveSlide(currentSlide - 1, true);
+      returnToSlideTopIfControlsAreInline();
     }
   }
 
