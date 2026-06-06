@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Entity and value object</title>
+  <desc id="desc">An entity keeps identity over time while a value object is defined by values.</desc>
+  <rect width="640" height="360" rx="24" fill="#fffefa"/>
+  <rect x="58" y="82" width="244" height="210" rx="20" fill="#f7f8f5" stroke="#dbe0dc" stroke-width="2"/>
+  <rect x="338" y="82" width="244" height="210" rx="20" fill="#f7f8f5" stroke="#dbe0dc" stroke-width="2"/>
+  <circle cx="180" cy="148" r="40" fill="#0f8f8c"/>
+  <path d="M158 212h84M146 238h108" stroke="#14213d" stroke-width="8" stroke-linecap="round"/>
+  <rect x="408" y="122" width="100" height="76" rx="12" fill="#fff2d8" stroke="#d89222" stroke-width="3"/>
+  <circle cx="432" cy="236" r="14" fill="#0d6766"/>
+  <circle cx="458" cy="236" r="14" fill="#0d6766"/>
+  <circle cx="484" cy="236" r="14" fill="#0d6766"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <text x="180" y="54" font-size="18" font-weight="850" fill="#0d6766">Entity</text>
+    <text x="460" y="54" font-size="18" font-weight="850" fill="#9c6416">Value object</text>
+    <text x="180" y="154" font-size="20" font-weight="850" fill="#fffefa">ID</text>
+    <text x="180" y="274" font-size="16" fill="#46535f">same identity, changing state</text>
+    <text x="458" y="160" font-size="20" font-weight="850" fill="#14213d">Money</text>
+    <text x="458" y="274" font-size="16" fill="#46535f">same values, same meaning</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Bounded context split</title>
+  <desc id="desc">Catalog and ordering contexts keep different product meanings separate.</desc>
+  <rect width="640" height="360" rx="24" fill="#fffefa"/>
+  <rect x="54" y="66" width="232" height="228" rx="22" fill="#e7f4f2" stroke="#0f8f8c" stroke-width="3"/>
+  <rect x="354" y="66" width="232" height="228" rx="22" fill="#fff2d8" stroke="#d89222" stroke-width="3"/>
+  <path d="M320 48v264" stroke="#14213d" stroke-width="4" stroke-dasharray="10 12" stroke-linecap="round"/>
+  <circle cx="320" cy="180" r="34" fill="#14213d"/>
+  <path d="M306 180h28M324 168l12 12-12 12" fill="none" stroke="#fffefa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <text x="170" y="114" font-size="18" font-weight="850" fill="#0d6766">Catalog</text>
+    <text x="470" y="114" font-size="18" font-weight="850" fill="#9c6416">Ordering</text>
+    <text x="170" y="170" font-size="34" font-weight="850" fill="#14213d">Product</text>
+    <text x="470" y="170" font-size="34" font-weight="850" fill="#14213d">Product</text>
+    <text x="170" y="214" font-size="15" fill="#46535f">discovery and comparison</text>
+    <text x="470" y="214" font-size="15" fill="#46535f">purchasable snapshot</text>
+    <text x="320" y="320" font-size="17" font-weight="850" fill="#14213d">same word, bounded meaning</text>
+  </g>
+</svg>

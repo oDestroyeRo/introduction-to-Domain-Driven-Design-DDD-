@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Domain first flow</title>
+  <desc id="desc">A domain conversation leads to behavior, model, and data decisions.</desc>
+  <rect width="640" height="360" rx="24" fill="#fffefa"/>
+  <g fill="#f7f8f5" stroke="#dbe0dc" stroke-width="2">
+    <rect x="42" y="126" width="128" height="94" rx="16"/>
+    <rect x="210" y="126" width="128" height="94" rx="16"/>
+    <rect x="378" y="126" width="128" height="94" rx="16"/>
+  </g>
+  <rect x="506" y="126" width="92" height="94" rx="16" fill="#fff2d8" stroke="#d89222" stroke-width="2"/>
+  <g stroke="#14213d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M170 173h40"/>
+    <path d="M338 173h40"/>
+    <path d="M506 173h22"/>
+    <path d="M198 158l14 15-14 15M366 158l14 15-14 15M516 158l14 15-14 15"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <circle cx="106" cy="116" r="24" fill="#0f8f8c"/>
+    <text x="106" y="122" font-size="17" font-weight="850" fill="#fffefa">1</text>
+    <text x="106" y="164" font-size="17" font-weight="850" fill="#14213d">Domain</text>
+    <text x="106" y="190" font-size="14" fill="#66727d">conversation</text>
+    <circle cx="274" cy="116" r="24" fill="#0f8f8c"/>
+    <text x="274" y="122" font-size="17" font-weight="850" fill="#fffefa">2</text>
+    <text x="274" y="164" font-size="17" font-weight="850" fill="#14213d">Behavior</text>
+    <text x="274" y="190" font-size="14" fill="#66727d">rules first</text>
+    <circle cx="442" cy="116" r="24" fill="#0f8f8c"/>
+    <text x="442" y="122" font-size="17" font-weight="850" fill="#fffefa">3</text>
+    <text x="442" y="164" font-size="17" font-weight="850" fill="#14213d">Model</text>
+    <text x="442" y="190" font-size="14" fill="#66727d">names fit</text>
+    <text x="552" y="164" font-size="17" font-weight="850" fill="#14213d">Data</text>
+    <text x="552" y="190" font-size="14" fill="#66727d">last</text>
+  </g>
+</svg>

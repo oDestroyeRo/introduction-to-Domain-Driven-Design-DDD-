@@ -471,7 +471,7 @@ h3 {
 .lead.narrow {
   max-width: 700px;
 }
-.goal-strip, .principle-row, .evidence-list, .strategy-board, .book-stack, .compare-board, .exercise-grid, .reading-path, .aggregate-diagram, .context-example, .event-timeline, .language-table, .capability-map {
+.goal-strip, .principle-row, .evidence-list, .strategy-board, .book-stack, .compare-board, .exercise-grid, .reading-path, .aggregate-diagram, .context-example, .event-timeline, .language-table, .capability-map, .slide-art {
   border-radius: var(--radius);
 }
 .goal-strip {
@@ -547,9 +547,32 @@ h3 {
   width: 26%;
   transform: rotate(-23deg);
 }
-.evidence-list, .strategy-board, .book-stack, .compare-board, .exercise-grid {
+.evidence-list, .strategy-board, .book-stack, .compare-board, .exercise-grid, .language-panel {
   display: grid;
   gap: 14px;
+}
+.slide-art {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(20, 33, 61, 0.12);
+  background: #fdfdf9;
+  box-shadow: 0 16px 42px rgba(20, 33, 61, 0.08);
+}
+.slide-art img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: contain;
+}
+.centered-art {
+  width: min(420px, 100%);
+  margin: 0 auto 18px;
+}
+.centered-art img {
+  aspect-ratio: 16 / 7.5;
+}
+.span-all {
+  grid-column: 1 / -1;
 }
 .evidence-list div, .strategy-board article, .book-stack article, .compare-board > div, .exercise-grid article, .three-panel article, .reading-path, .aggregate-diagram, .context-example > div, .event-timeline div {
   border: 1px solid rgba(20, 33, 61, 0.12);
@@ -701,6 +724,9 @@ h3 {
   display: grid;
   gap: 14px;
 }
+.context-example .slide-art {
+  margin-bottom: 2px;
+}
 .context-example > div {
   padding: 26px;
 }
@@ -802,10 +828,17 @@ h3 {
 }
 .exercise-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 32px;
+  margin-top: 18px;
+}
+.exercise-art {
+  width: min(620px, 100%);
+  margin-top: 18px;
+}
+.exercise-art img {
+  aspect-ratio: 21 / 6.5;
 }
 .exercise-grid article {
-  min-height: 230px;
+  min-height: 170px;
 }
 .takeaways {
   color: #35424d;
@@ -815,6 +848,9 @@ h3 {
 .reading-path {
   padding: 28px;
   background: #fdfdf9;
+}
+.reading-art {
+  margin-bottom: 20px;
 }
 .reading-path li {
   margin: 18px 0;
@@ -987,14 +1023,20 @@ h3 {
   font-size: 0.9rem;
   line-height: 1.35;
 }
-.presenter-preview .domain-map, .presenter-preview .wide-context-map, .presenter-preview .capability-map, .presenter-preview .aggregate-diagram, .presenter-preview .exercise-grid, .presenter-preview .principle-row, .presenter-preview .compare-board {
+.presenter-preview .slide-art {
+  box-shadow: none;
+}
+.presenter-preview .slide-art img {
+  aspect-ratio: 16 / 8.5;
+}
+.presenter-preview .domain-map, .presenter-preview .wide-context-map, .presenter-preview .capability-map, .presenter-preview .aggregate-diagram, .presenter-preview .exercise-grid, .presenter-preview .principle-row, .presenter-preview .compare-board, .presenter-preview .language-panel {
   min-height: auto;
   grid-template-columns: 1fr;
 }
 .presenter-preview .domain-map {
   display: none;
 }
-.presenter-preview .goal-strip span, .presenter-preview .book-stack article, .presenter-preview .strategy-board article, .presenter-preview .compare-board > div, .presenter-preview .three-panel article, .presenter-preview .exercise-grid article, .presenter-preview .evidence-list div {
+.presenter-preview .goal-strip span, .presenter-preview .slide-art, .presenter-preview .book-stack article, .presenter-preview .strategy-board article, .presenter-preview .compare-board > div, .presenter-preview .three-panel article, .presenter-preview .exercise-grid article, .presenter-preview .evidence-list div {
   padding: 12px;
 }
 .presenter-preview .book-stack article {

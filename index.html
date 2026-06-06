@@ -84,6 +84,9 @@
               <p class="lead">Many systems are not difficult because of databases or APIs. They are difficult because the business language is inconsistent.</p>
             </div>
             <div class="evidence-list">
+              <figure class="slide-art">
+                <img src="assets/slides/meaning-conflict.svg" alt="Two marketplace teams using the word order with different meanings">
+              </figure>
               <div>
                 <span class="index">A</span>
                 <p>Different teams use the same word for different ideas.</p>
@@ -110,6 +113,9 @@
             <p class="lead narrow">
               Domain-Driven Design helps teams build a software model that matches the business model well enough to support change.
             </p>
+            <figure class="slide-art centered-art">
+              <img src="assets/slides/modeling-loop.svg" alt="Discover, model, and bound as a continuous DDD learning loop">
+            </figure>
             <div class="principle-row">
               <div>
                 <strong>Discover</strong>
@@ -183,6 +189,9 @@
               <p class="lead">DDD does not start with tables. It starts with the behavior and language of the business.</p>
             </div>
             <div class="compare-board">
+              <figure class="slide-art span-all">
+                <img src="assets/slides/domain-first-flow.svg" alt="Domain conversation leading to behavior, model, and data decisions">
+              </figure>
               <div>
                 <h3>Data-first</h3>
                 <ul>
@@ -289,22 +298,27 @@
               <h2>Ubiquitous Language is the shared model in words</h2>
               <p class="lead">The team agrees on the words and uses them in conversations, tickets, diagrams, APIs, tests, and code.</p>
             </div>
-            <div class="language-table" role="table" aria-label="Vocabulary example">
-              <div role="row">
-                <strong role="cell">Term</strong>
-                <strong role="cell">Meaning in Ordering</strong>
-              </div>
-              <div role="row">
-                <span role="cell">Order</span>
-                <span role="cell">Customer commitment to buy selected items.</span>
-              </div>
-              <div role="row">
-                <span role="cell">Shipment</span>
-                <span role="cell">Fulfillment movement after an order is accepted.</span>
-              </div>
-              <div role="row">
-                <span role="cell">Cancellation</span>
-                <span role="cell">Business decision before the order is shipped.</span>
+            <div class="language-panel">
+              <figure class="slide-art">
+                <img src="assets/slides/language-board.svg" alt="Shared language flowing from conversation into tickets, APIs, tests, and code">
+              </figure>
+              <div class="language-table" role="table" aria-label="Vocabulary example">
+                <div role="row">
+                  <strong role="cell">Term</strong>
+                  <strong role="cell">Meaning in Ordering</strong>
+                </div>
+                <div role="row">
+                  <span role="cell">Order</span>
+                  <span role="cell">Customer commitment to buy selected items.</span>
+                </div>
+                <div role="row">
+                  <span role="cell">Shipment</span>
+                  <span role="cell">Fulfillment movement after an order is accepted.</span>
+                </div>
+                <div role="row">
+                  <span role="cell">Cancellation</span>
+                  <span role="cell">Business decision before the order is shipped.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -321,6 +335,9 @@
               <p class="lead">Inside a bounded context, a model and its language are consistent. Outside it, the same word may mean something else.</p>
             </div>
             <div class="context-example">
+              <figure class="slide-art">
+                <img src="assets/slides/bounded-context-split.svg" alt="Catalog and ordering contexts keeping separate meanings for product">
+              </figure>
               <div>
                 <span>Catalog context</span>
                 <strong>Product</strong>
@@ -379,6 +396,9 @@
               <p class="lead">Entity and value object are small concepts, but they prevent a lot of accidental complexity.</p>
             </div>
             <div class="compare-board">
+              <figure class="slide-art span-all">
+                <img src="assets/slides/tactical-patterns.svg" alt="Entity identity and value object values compared in a marketplace model">
+              </figure>
               <div>
                 <h3>Entity</h3>
                 <ul>
@@ -447,6 +467,9 @@
             <h2>Exercise: model a marketplace order</h2>
             <p class="lead narrow">Scenario: a customer places an order, pays for it, and waits for delivery.</p>
           </div>
+          <figure class="slide-art exercise-art">
+            <img src="assets/slides/workshop-board.svg" alt="Workshop board showing marketplace terms, contexts, and events">
+          </figure>
           <div class="exercise-grid">
             <article>
               <span>1</span>
@@ -482,6 +505,9 @@
               </ul>
             </div>
             <div class="reading-path">
+              <figure class="slide-art reading-art">
+                <img src="assets/slides/reading-path.svg" alt="Reading path from distilled concepts to practical guide to original DDD book">
+              </figure>
               <h3>Recommended reading order</h3>
               <ol>
                 <li><strong>Domain-Driven Design Distilled</strong><span>Vaughn Vernon</span></li>

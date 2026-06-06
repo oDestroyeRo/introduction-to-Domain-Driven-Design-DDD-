@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">DDD modeling loop</title>
+  <desc id="desc">Discover, model, and bound form a continuous learning loop.</desc>
+  <rect width="640" height="360" rx="24" fill="#fffefa"/>
+  <circle cx="320" cy="180" r="126" fill="#e7f4f2"/>
+  <circle cx="320" cy="180" r="78" fill="#fffefa" stroke="#dbe0dc" stroke-width="2"/>
+  <path d="M250 98c54-38 131-25 170 28M430 222c-26 61-98 91-159 65M226 220c-27-60 0-132 61-160" fill="none" stroke="#14213d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M430 126l-2-42 36 20M271 287l-42 6 16-38M287 60l-36-22 40-15" fill="none" stroke="#14213d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <circle cx="190" cy="104" r="42" fill="#0f8f8c"/>
+    <text x="190" y="110" font-size="16" font-weight="850" fill="#fffefa">Discover</text>
+    <circle cx="462" cy="130" r="42" fill="#d89222"/>
+    <text x="462" y="136" font-size="16" font-weight="850" fill="#fffefa">Model</text>
+    <circle cx="320" cy="300" r="42" fill="#14213d"/>
+    <text x="320" y="306" font-size="16" font-weight="850" fill="#fffefa">Bound</text>
+  </g>
+</svg>

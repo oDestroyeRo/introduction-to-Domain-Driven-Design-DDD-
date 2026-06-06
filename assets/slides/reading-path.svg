@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">DDD reading path</title>
+  <desc id="desc">A reading path moves from distilled concepts to practical guidance to the original DDD book.</desc>
+  <rect width="640" height="360" rx="24" fill="#fffefa"/>
+  <path d="M90 238c80-94 175-126 286-98 56 14 103 42 160 6" fill="none" stroke="#e7f4f2" stroke-width="50" stroke-linecap="round"/>
+  <g stroke="#14213d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M130 238h402"/>
+    <path d="M508 218l32 20-32 20"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <rect x="96" y="112" width="112" height="124" rx="14" fill="#e7f4f2" stroke="#0f8f8c" stroke-width="3"/>
+    <rect x="264" y="82" width="112" height="154" rx="14" fill="#fff2d8" stroke="#d89222" stroke-width="3"/>
+    <rect x="432" y="52" width="112" height="184" rx="14" fill="#f7f8f5" stroke="#14213d" stroke-width="3"/>
+    <text x="152" y="156" font-size="16" font-weight="850" fill="#14213d">Distilled</text>
+    <text x="320" y="142" font-size="16" font-weight="850" fill="#14213d">Learning</text>
+    <text x="488" y="126" font-size="16" font-weight="850" fill="#14213d">Original</text>
+    <text x="152" y="284" font-size="15" fill="#66727d">start small</text>
+    <text x="320" y="284" font-size="15" fill="#66727d">apply patterns</text>
+    <text x="488" y="284" font-size="15" fill="#66727d">go deeper</text>
+  </g>
+</svg>

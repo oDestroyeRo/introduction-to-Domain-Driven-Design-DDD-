@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Ubiquitous language board</title>
+  <desc id="desc">Shared terms move from team discussion into delivery artifacts.</desc>
+  <rect width="640" height="360" rx="24" fill="#fffefa"/>
+  <rect x="64" y="64" width="512" height="232" rx="18" fill="#f7f8f5" stroke="#dbe0dc" stroke-width="2"/>
+  <rect x="94" y="94" width="172" height="68" rx="16" fill="#e7f4f2" stroke="#0f8f8c" stroke-width="2"/>
+  <rect x="370" y="94" width="172" height="68" rx="16" fill="#fff2d8" stroke="#d89222" stroke-width="2"/>
+  <rect x="118" y="204" width="404" height="58" rx="12" fill="#14213d"/>
+  <path d="M250 162l72 40M390 162l-72 40" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <text x="180" y="121" font-size="17" font-weight="850" fill="#14213d">Order</text>
+    <text x="180" y="145" font-size="13" fill="#66727d">customer commitment</text>
+    <text x="456" y="121" font-size="17" font-weight="850" fill="#14213d">Shipment</text>
+    <text x="456" y="145" font-size="13" fill="#66727d">fulfillment movement</text>
+    <text x="320" y="239" font-size="19" font-weight="850" fill="#fffefa">conversation -> ticket -> API -> test -> code</text>
+  </g>
+</svg>
