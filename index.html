@@ -72,7 +72,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Open by saying this is not a framework talk. DDD is a way to reduce misunderstanding between product, business, and engineering when the rules of the business are the hard part.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> Today is an introduction to Domain-Driven Design. This is not a framework talk and not a clean architecture debate. The focus is how product, business, and engineering can describe the same business problem clearly.</p>
+            <p><span class="note-cue">Set expectation:</span> In 60 minutes we will cover the ideas you need to recognize where DDD helps: language, boundaries, context maps, and a few tactical patterns.</p>
+            <p><span class="note-cue">Transition:</span> Start by explaining why normal software projects become hard even when the technology stack is familiar.</p>
           </aside>
         </section>
 
@@ -102,7 +105,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Ask the room for one overloaded business term they have seen. Examples: customer, order, product, shipment, payment, account.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> A lot of software complexity is not caused by databases or APIs. It comes from unclear meaning. One team says order and means cart intent; another team says order and means paid customer commitment.</p>
+            <p><span class="note-cue">Ask:</span> What is one business word in our work that different teams use differently? Examples: customer, order, product, shipment, payment, account.</p>
+            <p><span class="note-cue">Transition:</span> DDD gives us tools to make these meanings explicit before they become accidental architecture.</p>
           </aside>
         </section>
 
@@ -132,7 +138,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Connect this to Eric Evans' original framing: the heart of software is its ability to solve domain-related problems for users.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> DDD is a discipline for designing software around the domain: the business problem we are trying to solve. It works best when the domain has real rules, exceptions, and language that matter.</p>
+            <p><span class="note-cue">Explain the loop:</span> Discover the domain with experts, model the important concepts and behavior, then bound that model so each meaning stays consistent.</p>
+            <p><span class="note-cue">Transition:</span> The session is based on three books. I will use their ideas, but attendees do not need to have read them first.</p>
           </aside>
         </section>
 
@@ -177,7 +186,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Make clear that the talk paraphrases concepts and does not require attendees to have read the books first.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> These are the three references behind the session. Evans gives the original deep treatment. Khononov gives a modern practical way to choose patterns by business complexity. Vernon gives a concise overview that is easier to start with.</p>
+            <p><span class="note-cue">Reading advice:</span> If someone is new, start with Distilled, then Learning Domain-Driven Design, then use Evans as the deeper reference.</p>
+            <p><span class="note-cue">Transition:</span> With the references clear, move into the first mindset shift: domain-first instead of data-first.</p>
           </aside>
         </section>
 
@@ -213,7 +225,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Do not position data modeling as bad. The point is sequencing: understand business meaning before locking tables and service names.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> Data modeling is important, but DDD asks us not to start there. If we start with tables, we often lock in storage names before we understand the behavior.</p>
+            <p><span class="note-cue">Example:</span> In a marketplace, product in catalog is information for discovery. Product in ordering may be a snapshot used for price and fulfillment. If we force one table-shaped meaning too early, the model becomes confusing.</p>
+            <p><span class="note-cue">Transition:</span> Once we start from the domain, we need two levels of practice: strategic design and tactical design.</p>
           </aside>
         </section>
 
@@ -238,7 +253,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Emphasize that strategic design usually matters first. Tactical patterns without boundaries often create complicated code with unclear meaning.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> Strategic DDD answers where a model applies. Tactical DDD answers how the model behaves inside that boundary.</p>
+            <p><span class="note-cue">Emphasize:</span> Strategic design usually comes first. If we jump directly to entities and aggregates without boundaries, we may create complicated code that still has unclear meaning.</p>
+            <p><span class="note-cue">Transition:</span> To talk about boundaries, first define domain and subdomain.</p>
           </aside>
         </section>
 
@@ -259,7 +277,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Keep the example familiar. The point is to show that one product usually contains multiple subdomains with different rules and priorities.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> A domain is the overall business problem space. A subdomain is a smaller business capability inside it.</p>
+            <p><span class="note-cue">Marketplace example:</span> The marketplace contains catalog, ordering, payment, shipping, and support. They are connected, but each has different rules and priorities.</p>
+            <p><span class="note-cue">Transition:</span> Not every subdomain deserves the same level of design investment. That is why DDD separates core, supporting, and generic domains.</p>
           </aside>
         </section>
 
@@ -287,7 +308,10 @@
             </article>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Use Khononov's practical lens: business complexity should guide pattern choice. Not every area needs heavy DDD.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> The core domain is where the business wins or differentiates. Supporting domains are business-specific but not the main advantage. Generic domains are common capabilities that many companies need.</p>
+            <p><span class="note-cue">Example:</span> For a marketplace, matching supply and demand may be core. Payment gateway integration may be supporting or generic depending on the company. Authentication is often generic.</p>
+            <p><span class="note-cue">Transition:</span> Once we know where to invest, the next tool is language. DDD treats language as part of the model, not decoration.</p>
           </aside>
         </section>
 
@@ -323,7 +347,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Stress that language is not documentation decoration. It is a design tool. When words drift, the model drifts.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> Ubiquitous Language means the team uses the same words in meetings, tickets, diagrams, APIs, tests, and code. The language is not only for documents; it shapes the model.</p>
+            <p><span class="note-cue">Example:</span> If the Ordering context says cancellation means before shipment, that meaning should appear in tests, API names, and code behavior.</p>
+            <p><span class="note-cue">Transition:</span> Shared language needs a boundary. Without a boundary, the same word will eventually need multiple meanings.</p>
           </aside>
         </section>
 
@@ -351,7 +378,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> This is often the most important slide. A bounded context is not automatically a microservice. It is first a boundary of meaning.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> A Bounded Context is a boundary where one model and one language are consistent. Outside the boundary, the same word can mean something else.</p>
+            <p><span class="note-cue">Important:</span> A bounded context is not automatically a microservice. It can be a module, a team boundary, or later a service boundary. First it is a boundary of meaning.</p>
+            <p><span class="note-cue">Transition:</span> After defining contexts, we can draw how they cooperate with a context map.</p>
           </aside>
         </section>
 
@@ -384,7 +414,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Walk left to right. The point is handoff between models: catalog product is not the same as order line item; order paid is not the same as parcel shipped.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> This context map shows a marketplace order flow. Catalog helps the customer discover a product. Ordering creates a cart and order. Payment handles charge and refund. Shipping handles parcel movement. Support handles exceptions.</p>
+            <p><span class="note-cue">Walkthrough:</span> Move left to right. Catalog product becomes an order line snapshot. A paid order becomes a payment fact. A shipment request becomes a parcel process. These handoffs are between related but different models.</p>
+            <p><span class="note-cue">Transition:</span> Now move from strategic design into tactical modeling inside a context.</p>
           </aside>
         </section>
 
@@ -418,7 +451,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Ask: if two addresses have the same values, are they the same address for this model? If two orders have identical items, are they the same order?
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> An entity has identity over time. A value object is defined by its values. This small distinction prevents many modeling mistakes.</p>
+            <p><span class="note-cue">Ask:</span> If two addresses have the same values, are they the same address for this model? Usually yes. If two orders have the same items and price, are they the same order? Usually no, because each order has its own identity.</p>
+            <p><span class="note-cue">Transition:</span> Entities and value objects are often grouped into aggregates, which protect business rules.</p>
           </aside>
         </section>
 
@@ -438,7 +474,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Keep this conceptual. An aggregate is not just an object tree. It is the place where invariants are protected.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> An aggregate is a consistency boundary. It groups objects that must change together to protect business rules, also called invariants.</p>
+            <p><span class="note-cue">Example:</span> In an order aggregate, the rule might be that an order cannot be confirmed unless required payment information exists. The aggregate protects that rule before state changes are accepted.</p>
+            <p><span class="note-cue">Transition:</span> When something important happens in the domain, we can name it as a domain event.</p>
           </aside>
         </section>
 
@@ -457,7 +496,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Use past tense names. Events help teams see workflows and integration points without making every model share the same data structure.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. That is why event names are usually past tense, such as OrderPlaced or PaymentAuthorized.</p>
+            <p><span class="note-cue">Explain:</span> Events help teams see workflows and integration points. They do not mean every context must share the same data model; they create a clear handoff between models.</p>
+            <p><span class="note-cue">Transition:</span> Now give the group a small exercise to practice language, boundaries, and tactical patterns together.</p>
           </aside>
         </section>
 
@@ -488,7 +530,10 @@
             </article>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Give the group 4 minutes to work, 2 minutes to discuss, and 2 minutes to summarize. Do not seek a perfect answer; seek better questions and language.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> We will model a simple marketplace order. The goal is not to create a perfect diagram. The goal is to practice asking better domain questions.</p>
+            <p><span class="note-cue">Facilitate:</span> Give 4 minutes to list terms and draw boundaries, 2 minutes for discussion, and 2 minutes to summarize. Ask groups to identify at least one ambiguous word and one possible domain event.</p>
+            <p><span class="note-cue">Transition:</span> Close by summarizing what they should remember and where to continue reading.</p>
           </aside>
         </section>
 
@@ -517,7 +562,10 @@
             </div>
           </div>
           <aside class="speaker-notes">
-            <strong>Speaker notes:</strong> Close with a practical next step: pick one business workflow and map its terms and boundaries before discussing architecture.
+            <strong>Speaker notes:</strong>
+            <p><span class="note-cue">Say:</span> The main takeaway is that DDD helps us model the business, not only the database. Start with language, then boundaries, then tactical patterns where complexity justifies them.</p>
+            <p><span class="note-cue">Recommended next step:</span> Pick one real workflow, such as marketplace order placement, and map the terms, business rules, context boundaries, and important events before discussing architecture.</p>
+            <p><span class="note-cue">Close:</span> For reading, start with Vernon for the short overview, Khononov for practical pattern choice, and Evans for the deeper original reference.</p>
           </aside>
         </section>
       </main>

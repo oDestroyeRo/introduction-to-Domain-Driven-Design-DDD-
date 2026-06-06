@@ -871,6 +871,16 @@ h3 {
   background: var(--soft-teal);
   line-height: 1.55;
 }
+.speaker-notes p, .presenter-notes p {
+  margin: 10px 0 0;
+}
+.speaker-notes strong + p, .presenter-notes strong + p {
+  margin-top: 0;
+}
+.note-cue {
+  color: var(--teal-dark);
+  font-weight: 850;
+}
 .show-notes .speaker-notes, .reader-mode .speaker-notes {
   display: block;
 }
