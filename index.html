@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A 60-minute knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
+    <title>Introduction to Domain-Driven Design</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#slide-title">Skip to presentation</a>
+
+    <div class="progress" aria-hidden="true">
+      <span id="progressBar"></span>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#slide-title" aria-label="Introduction to Domain-Driven Design home">
+        <span class="brand-mark">DDD</span>
+        <span class="brand-copy">Introduction to Domain-Driven Design</span>
+      </a>
+
+      <nav class="top-actions" aria-label="Presentation controls">
+        <button class="icon-button" type="button" id="modeToggle" aria-pressed="false">
+          Reader mode
+        </button>
+        <button class="icon-button" type="button" id="notesToggle" aria-pressed="false">
+          Show notes
+        </button>
+        <button class="icon-button" type="button" id="printButton">
+          Print
+        </button>
+      </nav>
+    </header>
+
+    <div class="shell">
+      <aside class="agenda-panel" aria-label="Presentation agenda">
+        <div class="agenda-heading">
+          <span>60 min</span>
+          <strong>Agenda</strong>
+        </div>
+        <ol id="agendaList" class="agenda-list"></ol>
+      </aside>
+
+      <main id="presentation" class="presentation" aria-live="polite">
+        <section id="slide-title" class="slide hero-slide is-active" data-title="Title and goals" data-time="5 min">
+          <div class="slide-grid hero-grid">
+            <div class="hero-copy">
+              <p class="slide-number">01 / 16</p>
+              <h1>Introduction to Domain-Driven Design</h1>
+              <p class="lead">
+                A practical 60-minute session on aligning software design with the business domain.
+              </p>
+              <div class="goal-strip" aria-label="Session goals">
+                <span>Shared language</span>
+                <span>Clear boundaries</span>
+                <span>Better models</span>
+              </div>
+            </div>
+            <div class="domain-map compact-map" aria-label="Marketplace domain context map">
+              <div class="map-node catalog">Catalog</div>
+              <div class="map-node ordering">Ordering</div>
+              <div class="map-node payment">Payment</div>
+              <div class="map-node shipping">Shipping</div>
+              <div class="map-node support">Support</div>
+              <div class="map-line line-a"></div>
+              <div class="map-line line-b"></div>
+              <div class="map-line line-c"></div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Open by saying this is not a framework talk. DDD is a way to reduce misunderstanding between product, business, and engineering when the rules of the business are the hard part.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Why software gets hard" data-time="7 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">02 / 16</p>
+              <h2>Software gets hard when meaning is unclear</h2>
+              <p class="lead">Many systems are not difficult because of databases or APIs. They are difficult because the business language is inconsistent.</p>
+            </div>
+            <div class="evidence-list">
+              <div>
+                <span class="index">A</span>
+                <p>Different teams use the same word for different ideas.</p>
+              </div>
+              <div>
+                <span class="index">B</span>
+                <p>Rules live in conversations, tickets, spreadsheets, and code comments.</p>
+              </div>
+              <div>
+                <span class="index">C</span>
+                <p>The data model becomes the business model by accident.</p>
+              </div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Ask the room for one overloaded business term they have seen. Examples: customer, order, product, shipment, payment, account.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="What DDD is" data-time="5 min">
+          <div class="centered">
+            <p class="slide-number">03 / 16</p>
+            <h2>DDD is a design discipline for complex domains</h2>
+            <p class="lead narrow">
+              Domain-Driven Design helps teams build a software model that matches the business model well enough to support change.
+            </p>
+            <div class="principle-row">
+              <div>
+                <strong>Discover</strong>
+                <span>Learn the domain with experts.</span>
+              </div>
+              <div>
+                <strong>Model</strong>
+                <span>Name concepts and behavior clearly.</span>
+              </div>
+              <div>
+                <strong>Bound</strong>
+                <span>Keep meanings consistent inside clear contexts.</span>
+              </div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Connect this to Eric Evans' original framing: the heart of software is its ability to solve domain-related problems for users.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Reference books" data-time="3 min">
+          <div class="slide-grid book-grid">
+            <div>
+              <p class="slide-number">04 / 16</p>
+              <h2>The three references for this session</h2>
+              <p class="lead">We use the original book, a modern practical guide, and a concise distilled overview.</p>
+            </div>
+            <div class="book-stack">
+              <article>
+                <span>Eric Evans</span>
+                <h3>Domain-Driven Design</h3>
+                <p>Original source for model-driven design, ubiquitous language, and strategic design.</p>
+              </article>
+              <article>
+                <span>Vlad Khononov</span>
+                <h3>Learning Domain-Driven Design</h3>
+                <p>Practical guidance for choosing patterns based on business complexity.</p>
+              </article>
+              <article>
+                <span>Vaughn Vernon</span>
+                <h3>Domain-Driven Design Distilled</h3>
+                <p>Short path through strategic and tactical DDD concepts.</p>
+              </article>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Make clear that the talk paraphrases concepts and does not require attendees to have read the books first.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Domain-first vs data-first" data-time="5 min">
+          <div class="slide-grid comparison">
+            <div>
+              <p class="slide-number">05 / 16</p>
+              <h2>Domain-first thinking changes the starting point</h2>
+              <p class="lead">DDD does not start with tables. It starts with the behavior and language of the business.</p>
+            </div>
+            <div class="compare-board">
+              <div>
+                <h3>Data-first</h3>
+                <ul>
+                  <li>Tables first</li>
+                  <li>Generic services</li>
+                  <li>Rules scattered across layers</li>
+                  <li>Names mirror storage</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Domain-first</h3>
+                <ul>
+                  <li>Business behavior first</li>
+                  <li>Explicit model language</li>
+                  <li>Rules near the model</li>
+                  <li>Names mirror the domain</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Do not position data modeling as bad. The point is sequencing: understand business meaning before locking tables and service names.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Strategic vs tactical DDD" data-time="4 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">06 / 16</p>
+              <h2>DDD has two layers of practice</h2>
+              <p class="lead">Strategic DDD decides the boundaries. Tactical DDD shapes the model inside a boundary.</p>
+            </div>
+            <div class="strategy-board">
+              <article>
+                <span>Strategic</span>
+                <h3>Where does the model apply?</h3>
+                <p>Domain, subdomain, bounded context, context mapping, team ownership.</p>
+              </article>
+              <article>
+                <span>Tactical</span>
+                <h3>How does the model behave?</h3>
+                <p>Entity, value object, aggregate, repository, domain service, domain event.</p>
+              </article>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Emphasize that strategic design usually matters first. Tactical patterns without boundaries often create complicated code with unclear meaning.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Domains and subdomains" data-time="4 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">07 / 16</p>
+              <h2>A domain is the business problem space</h2>
+              <p class="lead">A subdomain is a smaller area of business capability inside that problem space.</p>
+            </div>
+            <div class="capability-map">
+              <div class="capability core">Marketplace</div>
+              <div class="capability">Product catalog</div>
+              <div class="capability">Order management</div>
+              <div class="capability">Payment processing</div>
+              <div class="capability">Shipping coordination</div>
+              <div class="capability">Customer support</div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Keep the example familiar. The point is to show that one product usually contains multiple subdomains with different rules and priorities.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Core, supporting, generic" data-time="5 min">
+          <div class="slide-grid three-panel">
+            <div class="panel-intro">
+              <p class="slide-number">08 / 16</p>
+              <h2>Not all subdomains deserve the same investment</h2>
+              <p class="lead">DDD helps teams focus design effort where business differentiation is highest.</p>
+            </div>
+            <article>
+              <span>Core domain</span>
+              <h3>Competitive advantage</h3>
+              <p>Invest most modeling effort here.</p>
+            </article>
+            <article>
+              <span>Supporting domain</span>
+              <h3>Business-specific but not unique</h3>
+              <p>Build enough to fit the business.</p>
+            </article>
+            <article>
+              <span>Generic domain</span>
+              <h3>Common capability</h3>
+              <p>Buy, reuse, or integrate when practical.</p>
+            </article>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Use Khononov's practical lens: business complexity should guide pattern choice. Not every area needs heavy DDD.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Ubiquitous Language" data-time="5 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">09 / 16</p>
+              <h2>Ubiquitous Language is the shared model in words</h2>
+              <p class="lead">The team agrees on the words and uses them in conversations, tickets, diagrams, APIs, tests, and code.</p>
+            </div>
+            <div class="language-table" role="table" aria-label="Vocabulary example">
+              <div role="row">
+                <strong role="cell">Term</strong>
+                <strong role="cell">Meaning in Ordering</strong>
+              </div>
+              <div role="row">
+                <span role="cell">Order</span>
+                <span role="cell">Customer commitment to buy selected items.</span>
+              </div>
+              <div role="row">
+                <span role="cell">Shipment</span>
+                <span role="cell">Fulfillment movement after an order is accepted.</span>
+              </div>
+              <div role="row">
+                <span role="cell">Cancellation</span>
+                <span role="cell">Business decision before the order is shipped.</span>
+              </div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Stress that language is not documentation decoration. It is a design tool. When words drift, the model drifts.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Bounded Context" data-time="6 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">10 / 16</p>
+              <h2>A Bounded Context protects meaning</h2>
+              <p class="lead">Inside a bounded context, a model and its language are consistent. Outside it, the same word may mean something else.</p>
+            </div>
+            <div class="context-example">
+              <div>
+                <span>Catalog context</span>
+                <strong>Product</strong>
+                <p>Information buyers use to discover and compare items.</p>
+              </div>
+              <div>
+                <span>Ordering context</span>
+                <strong>Product</strong>
+                <p>A purchasable item snapshot used to calculate an order.</p>
+              </div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> This is often the most important slide. A bounded context is not automatically a microservice. It is first a boundary of meaning.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Marketplace context map" data-time="6 min">
+          <div>
+            <p class="slide-number">11 / 16</p>
+            <h2>Example context map: marketplace order flow</h2>
+            <p class="lead narrow">A context map shows how different models cooperate without pretending they are one universal model.</p>
+          </div>
+          <div class="wide-context-map" aria-label="Marketplace context map diagram">
+            <div class="context-card catalog-card">
+              <span>Catalog</span>
+              <strong>Product discovery</strong>
+            </div>
+            <div class="context-card order-card">
+              <span>Ordering</span>
+              <strong>Cart, order, cancellation</strong>
+            </div>
+            <div class="context-card payment-card">
+              <span>Payment</span>
+              <strong>Charge, refund, settlement</strong>
+            </div>
+            <div class="context-card ship-card">
+              <span>Shipping</span>
+              <strong>Parcel, pickup, tracking</strong>
+            </div>
+            <div class="context-card support-card">
+              <span>Support</span>
+              <strong>Case, claim, resolution</strong>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Walk left to right. The point is handoff between models: catalog product is not the same as order line item; order paid is not the same as parcel shipped.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Entities and value objects" data-time="5 min">
+          <div class="slide-grid comparison">
+            <div>
+              <p class="slide-number">12 / 16</p>
+              <h2>Tactical models start with identity and value</h2>
+              <p class="lead">Entity and value object are small concepts, but they prevent a lot of accidental complexity.</p>
+            </div>
+            <div class="compare-board">
+              <div>
+                <h3>Entity</h3>
+                <ul>
+                  <li>Has identity over time</li>
+                  <li>Can change state</li>
+                  <li>Example: Order, Customer</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Value object</h3>
+                <ul>
+                  <li>Defined by values</li>
+                  <li>Usually immutable</li>
+                  <li>Example: Money, Address</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Ask: if two addresses have the same values, are they the same address for this model? If two orders have identical items, are they the same order?
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Aggregates" data-time="5 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">13 / 16</p>
+              <h2>An aggregate is a consistency boundary</h2>
+              <p class="lead">An aggregate groups model objects that must change together to protect business rules.</p>
+            </div>
+            <div class="aggregate-diagram">
+              <div class="aggregate-root">Order</div>
+              <div>Order Line</div>
+              <div>Shipping Address</div>
+              <div>Payment Intent</div>
+              <p>Rule: an order cannot be confirmed if required payment information is missing.</p>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Keep this conceptual. An aggregate is not just an object tree. It is the place where invariants are protected.
+          </aside>
+        </section>
+
+        <section class="slide" data-title="Domain events" data-time="5 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">14 / 16</p>
+              <h2>Domain events name important business facts</h2>
+              <p class="lead">A domain event is something meaningful that already happened inside the domain.</p>
+            </div>
+            <div class="event-timeline" aria-label="Domain event examples">
+              <div><span>01</span><strong>OrderPlaced</strong></div>
+              <div><span>02</span><strong>PaymentAuthorized</strong></div>
+              <div><span>03</span><strong>ShipmentRequested</strong></div>
+              <div><span>04</span><strong>OrderDelivered</strong></div>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Use past tense names. Events help teams see workflows and integration points without making every model share the same data structure.
+          </aside>
+        </section>
+
+        <section class="slide exercise-slide" data-title="Group exercise" data-time="12 min">
+          <div>
+            <p class="slide-number">15 / 16</p>
+            <h2>Exercise: model a marketplace order</h2>
+            <p class="lead narrow">Scenario: a customer places an order, pays for it, and waits for delivery.</p>
+          </div>
+          <div class="exercise-grid">
+            <article>
+              <span>1</span>
+              <h3>List domain terms</h3>
+              <p>Order, customer, payment, parcel, refund, cancellation.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>Draw bounded contexts</h3>
+              <p>Separate meanings for catalog, ordering, payment, shipping, support.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>Mark model patterns</h3>
+              <p>Find entities, value objects, aggregates, and domain events.</p>
+            </article>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Give the group 6 minutes to work, 4 minutes to discuss, and 2 minutes to summarize. Do not seek a perfect answer; seek better questions and language.
+          </aside>
+        </section>
+
+        <section class="slide summary-slide" data-title="Summary and reading path" data-time="3 min">
+          <div class="slide-grid two-column">
+            <div>
+              <p class="slide-number">16 / 16</p>
+              <h2>Takeaways</h2>
+              <ul class="takeaways">
+                <li>Model the domain, not only the database.</li>
+                <li>Use shared language to reduce ambiguity.</li>
+                <li>Draw boundaries before choosing service boundaries.</li>
+                <li>Apply tactical patterns where complexity justifies them.</li>
+              </ul>
+            </div>
+            <div class="reading-path">
+              <h3>Recommended reading order</h3>
+              <ol>
+                <li><strong>Domain-Driven Design Distilled</strong><span>Vaughn Vernon</span></li>
+                <li><strong>Learning Domain-Driven Design</strong><span>Vlad Khononov</span></li>
+                <li><strong>Domain-Driven Design</strong><span>Eric Evans</span></li>
+              </ol>
+            </div>
+          </div>
+          <aside class="speaker-notes">
+            <strong>Speaker notes:</strong> Close with a practical next step: pick one business workflow and map its terms and boundaries before discussing architecture.
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <footer class="slide-controls" aria-label="Slide navigation">
+      <button type="button" id="prevButton">Previous</button>
+      <div class="counter" id="slideCounter">1 / 16</div>
+      <button type="button" id="nextButton">Next</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
