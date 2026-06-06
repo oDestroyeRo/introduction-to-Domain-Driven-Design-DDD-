@@ -7,6 +7,9 @@
   const slideCounter = document.getElementById("slideCounter");
   const prevButton = document.getElementById("prevButton");
   const nextButton = document.getElementById("nextButton");
+  const presenterPrevButton = document.getElementById("presenterPrevButton");
+  const presenterNextButton = document.getElementById("presenterNextButton");
+  const presenterMiniCounter = document.getElementById("presenterMiniCounter");
   const modeToggle = document.getElementById("modeToggle");
   const notesToggle = document.getElementById("notesToggle");
   const presenterToggle = document.getElementById("presenterToggle");
@@ -51,6 +54,9 @@
     slideCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
     prevButton.disabled = currentSlide === 0;
     nextButton.disabled = currentSlide === slides.length - 1;
+    presenterMiniCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
+    presenterPrevButton.disabled = currentSlide === 0;
+    presenterNextButton.disabled = currentSlide === slides.length - 1;
 
     const activeSlide = slides[currentSlide];
     if (updateHash && activeSlide.id) {
@@ -206,7 +212,7 @@
     audienceWindow = window.open(audienceUrl, "ddd-audience-display", "popup=yes,width=1280,height=720");
 
     if (audienceWindow) {
-      audienceWindow.focus();
+      window.focus();
       audienceStatus.textContent = "Audience display opened";
       publishSlideState();
     } else {
@@ -214,7 +220,7 @@
     }
   }
 
-  function startPresenterMode(openDisplay = true) {
+  function startPresenterMode(openDisplay = false) {
     if (body.classList.contains("reader-mode")) {
       toggleReaderMode();
     }
@@ -223,6 +229,7 @@
     presenterConsole.hidden = false;
     presenterToggle.textContent = "Exit presenter";
     presenterToggle.setAttribute("aria-pressed", "true");
+    presenterToggle.setAttribute("title", "Exit presenter mode (Esc)");
     renderPresenterConsole();
     publishSlideState();
 
@@ -236,13 +243,14 @@
     presenterConsole.hidden = true;
     presenterToggle.textContent = "Presenter mode";
     presenterToggle.setAttribute("aria-pressed", "false");
+    presenterToggle.setAttribute("title", "Toggle presenter mode (P, Esc to exit)");
   }
 
   function togglePresenterMode() {
     if (body.classList.contains("presenter-mode")) {
       stopPresenterMode();
     } else {
-      startPresenterMode(true);
+      startPresenterMode(false);
     }
   }
 
@@ -334,6 +342,8 @@
 
   prevButton.addEventListener("click", goPrevious);
   nextButton.addEventListener("click", goNext);
+  presenterPrevButton.addEventListener("click", goPrevious);
+  presenterNextButton.addEventListener("click", goNext);
   modeToggle.addEventListener("click", toggleReaderMode);
   notesToggle.addEventListener("click", toggleNotes);
   presenterToggle.addEventListener("click", togglePresenterMode);
@@ -353,6 +363,20 @@
 
     if (usesNativeActivation && (event.key === " " || event.key === "Enter")) {
       return;
+    }
+
+    if (event.key === "Escape") {
+      if (body.classList.contains("presenter-mode")) {
+        event.preventDefault();
+        stopPresenterMode();
+        return;
+      }
+
+      if (body.classList.contains("show-notes")) {
+        event.preventDefault();
+        toggleNotes();
+        return;
+      }
     }
 
     if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {

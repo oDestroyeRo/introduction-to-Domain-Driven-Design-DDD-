@@ -21,16 +21,16 @@
       </a>
 
       <nav class="top-actions" aria-label="Presentation controls">
-        <button class="icon-button" type="button" id="modeToggle" aria-pressed="false">
+        <button class="icon-button" type="button" id="modeToggle" aria-pressed="false" aria-keyshortcuts="R" title="Toggle reader mode (R)">
           Reader mode
         </button>
-        <button class="icon-button" type="button" id="notesToggle" aria-pressed="false">
+        <button class="icon-button" type="button" id="notesToggle" aria-pressed="false" aria-keyshortcuts="N" title="Show or hide speaker notes (N)">
           Show notes
         </button>
-        <button class="icon-button" type="button" id="presenterToggle" aria-pressed="false">
+        <button class="icon-button" type="button" id="presenterToggle" aria-pressed="false" aria-keyshortcuts="P" title="Toggle presenter mode (P, Esc to exit)">
           Presenter mode
         </button>
-        <button class="icon-button" type="button" id="printButton">
+        <button class="icon-button" type="button" id="printButton" title="Print handout">
           Print
         </button>
       </nav>
@@ -571,23 +571,36 @@
       </main>
 
       <footer class="slide-controls" aria-label="Slide navigation">
-        <button type="button" id="prevButton">Previous</button>
+        <button type="button" id="prevButton" aria-keyshortcuts="ArrowLeft PageUp" title="Previous slide">
+          Previous
+        </button>
         <div class="counter" id="slideCounter">1 / 16</div>
-        <button type="button" id="nextButton">Next</button>
+        <button type="button" id="nextButton" aria-keyshortcuts="ArrowRight PageDown Space" title="Next slide">
+          Next
+        </button>
       </footer>
     </div>
 
     <section class="presenter-console" id="presenterConsole" aria-label="Presenter console" hidden>
       <div class="presenter-console-header">
-        <div>
+        <div class="presenter-title-block">
           <p class="slide-number" id="presenterCounter">01 / 16</p>
           <h2 id="presenterTitle">Title and goals</h2>
+          <div class="presenter-stepper" aria-label="Presenter slide navigation">
+            <button type="button" id="presenterPrevButton" aria-keyshortcuts="ArrowLeft PageUp" title="Previous slide">
+              Previous
+            </button>
+            <span class="presenter-mini-counter" id="presenterMiniCounter">1 / 16</span>
+            <button type="button" id="presenterNextButton" aria-keyshortcuts="ArrowRight PageDown Space" title="Next slide">
+              Next
+            </button>
+          </div>
         </div>
         <div class="presenter-actions">
-          <button class="icon-button" type="button" id="audienceButton">
+          <button class="icon-button" type="button" id="audienceButton" title="Open a synced audience display window">
             Open audience display
           </button>
-          <span id="audienceStatus">Audience display not opened</span>
+          <span id="audienceStatus" aria-live="polite">Audience display not opened</span>
         </div>
       </div>
 
