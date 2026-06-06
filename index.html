@@ -27,6 +27,9 @@
         <button class="icon-button" type="button" id="notesToggle" aria-pressed="false">
           Show notes
         </button>
+        <button class="icon-button" type="button" id="presenterToggle" aria-pressed="false">
+          Presenter mode
+        </button>
         <button class="icon-button" type="button" id="printButton">
           Print
         </button>
@@ -478,6 +481,47 @@
         </section>
       </main>
     </div>
+
+    <section class="presenter-console" id="presenterConsole" aria-label="Presenter console" hidden>
+      <div class="presenter-console-header">
+        <div>
+          <p class="slide-number" id="presenterCounter">01 / 16</p>
+          <h2 id="presenterTitle">Title and goals</h2>
+        </div>
+        <div class="presenter-actions">
+          <button class="icon-button" type="button" id="audienceButton">
+            Open audience display
+          </button>
+          <span id="audienceStatus">Audience display not opened</span>
+        </div>
+      </div>
+
+      <div class="presenter-grid">
+        <article class="presenter-panel current-panel">
+          <div class="panel-heading">
+            <span>Current</span>
+            <strong>Slide preview</strong>
+          </div>
+          <div class="presenter-preview" id="currentPreview" aria-label="Current slide preview"></div>
+        </article>
+
+        <article class="presenter-panel notes-panel">
+          <div class="panel-heading">
+            <span>Speaker</span>
+            <strong>Notes</strong>
+          </div>
+          <div class="presenter-notes" id="presenterNotes"></div>
+        </article>
+
+        <article class="presenter-panel next-panel">
+          <div class="panel-heading">
+            <span>Next</span>
+            <strong>Upcoming slide</strong>
+          </div>
+          <div class="presenter-preview next-preview" id="nextPreview" aria-label="Next slide preview"></div>
+        </article>
+      </div>
+    </section>
 
     <footer class="slide-controls" aria-label="Slide navigation">
       <button type="button" id="prevButton">Previous</button>
