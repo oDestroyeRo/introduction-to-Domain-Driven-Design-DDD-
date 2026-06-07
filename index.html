@@ -75,6 +75,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> Today is an introduction to Domain-Driven Design. This is not a framework talk and not a clean architecture debate. The focus is how product, business, and engineering can describe the same business problem clearly.</p>
             <p><span class="note-cue">Set expectation:</span> In 60 minutes we will cover the ideas you need to recognize where DDD helps: language, boundaries, context maps, and a few tactical patterns.</p>
+            <p><span class="note-cue">Example:</span> We will use a marketplace checkout: one buyer purchases items from multiple shops, pays once, and the platform splits the purchase into shop orders.</p>
             <p><span class="note-cue">Transition:</span> Start by explaining why normal software projects become hard even when the technology stack is familiar.</p>
           </aside>
         </section>
@@ -95,6 +96,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> A lot of software complexity is not caused by databases or APIs. It comes from unclear meaning. One team says order and means cart intent; another team says order and means paid customer commitment.</p>
+            <p><span class="note-cue">Example:</span> In the same marketplace, order might mean a buyer checkout order, a seller shop order, a payment record, or a shipment request. If we do not separate the meanings, the code starts mixing responsibilities.</p>
             <p><span class="note-cue">Ask:</span> What is one business word in our work that different teams use differently? Examples: customer, order, product, shipment, payment, account.</p>
             <p><span class="note-cue">Transition:</span> DDD gives us tools to make these meanings explicit before they become accidental architecture.</p>
           </aside>
@@ -126,6 +128,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> DDD is a discipline for designing software around the domain: the business problem we are trying to solve. It works best when the domain has real rules, exceptions, and language that matter.</p>
             <p><span class="note-cue">Explain the loop:</span> Discover the domain with experts, model the important concepts and behavior, then bound that model so each meaning stays consistent.</p>
+            <p><span class="note-cue">Example:</span> Instead of starting with an orders table, ask what must happen in the business: reserve price, authorize one payment, split by shop, and notify fulfillment.</p>
             <p><span class="note-cue">Transition:</span> The session is based on three books. I will use their ideas, but attendees do not need to have read them first.</p>
           </aside>
         </section>
@@ -174,6 +177,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> These are the three references behind the session. The short lines on the cards are paraphrased takeaways, not direct quotations. Evans gives the original deep treatment. Khononov gives a modern practical way to choose patterns by business complexity. Vernon gives a concise overview that is easier to start with.</p>
             <p><span class="note-cue">Reading advice:</span> If someone is new, start with Distilled, then Learning Domain-Driven Design, then use Evans as the deeper reference.</p>
+            <p><span class="note-cue">Example:</span> Use Evans when you want depth on model and language, Khononov when you need to choose patterns by domain complexity, and Vernon when you need a short explanation for the team.</p>
             <p><span class="note-cue">Transition:</span> With the references clear, move into the first mindset shift: domain-first instead of data-first.</p>
           </aside>
         </section>
@@ -221,6 +225,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> Strategic DDD answers where a model applies. Tactical DDD answers how the model behaves inside that boundary.</p>
             <p><span class="note-cue">Emphasize:</span> Strategic design usually comes first. If we jump directly to entities and aggregates without boundaries, we may create complicated code that still has unclear meaning.</p>
+            <p><span class="note-cue">Example:</span> Strategic design separates Checkout, Payment, Shop Orders, and Fulfillment. Tactical design then decides whether ShopOrder is an aggregate and which events it emits.</p>
             <p><span class="note-cue">Transition:</span> To talk about boundaries, first define domain and subdomain.</p>
           </aside>
         </section>
@@ -244,7 +249,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> A domain is the overall business problem space. A subdomain is a smaller business capability inside it.</p>
-            <p><span class="note-cue">Marketplace example:</span> The marketplace contains catalog, ordering, payment, shipping, and support. They are connected, but each has different rules and priorities.</p>
+            <p><span class="note-cue">Example:</span> The marketplace contains catalog, checkout, payment, shop-order management, fulfillment, and support. They are connected, but each has different rules and priorities.</p>
             <p><span class="note-cue">Transition:</span> Not every subdomain deserves the same level of design investment. That is why DDD separates core, supporting, and generic domains.</p>
           </aside>
         </section>
@@ -293,7 +298,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> Ubiquitous Language means the team uses the same words in meetings, tickets, diagrams, APIs, tests, and code. The language is not only for documents; it shapes the model.</p>
-            <p><span class="note-cue">Example:</span> If the Ordering context says cancellation means before shipment, that meaning should appear in tests, API names, and code behavior.</p>
+            <p><span class="note-cue">Example:</span> If Checkout says buyer order, Shop Orders says shop order, and Fulfillment says shipment, those names should appear in tickets, tests, API names, and code behavior.</p>
             <p><span class="note-cue">Transition:</span> Shared language needs a boundary. Without a boundary, the same word will eventually need multiple meanings.</p>
           </aside>
         </section>
@@ -307,14 +312,14 @@
             </div>
             <div class="context-example">
               <figure class="slide-art">
-                <img src="assets/slides/bounded-context-split.svg" alt="Catalog and ordering contexts keeping separate meanings for product">
+                <img src="assets/slides/bounded-context-split.svg" alt="Catalog and checkout contexts keeping separate meanings for product">
               </figure>
               <div>
                 <span>Catalog context</span>
                 <strong>Product</strong>
               </div>
               <div>
-                <span>Ordering context</span>
+                <span>Checkout context</span>
                 <strong>Product</strong>
               </div>
             </div>
@@ -323,6 +328,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> A Bounded Context is a boundary where one model and one language are consistent. Outside the boundary, the same word can mean something else.</p>
             <p><span class="note-cue">Important:</span> A bounded context is not automatically a microservice. It can be a module, a team boundary, or later a service boundary. First it is a boundary of meaning.</p>
+            <p><span class="note-cue">Example:</span> In Catalog, product describes searchable information and shop offer details. In Checkout, product is a line snapshot with price and seller at the moment the buyer pays.</p>
             <p><span class="note-cue">Transition:</span> After defining contexts, we can draw how they cooperate with a context map.</p>
           </aside>
         </section>
@@ -365,6 +371,7 @@
             <p><span class="note-cue">Say:</span> This context map shows the marketplace rule more clearly: the customer checks out once and pays once. After payment is authorized, the platform splits the buyer order into shop orders, usually one shop order per seller.</p>
             <p><span class="note-cue">Walkthrough:</span> Move left to right. Catalog offers become checkout line snapshots. Checkout owns the buyer-facing order and total amount. Payment owns the single charge, refund, and settlement facts. Shop Orders owns seller-facing orders. Fulfillment handles pickup, parcel, and tracking per shop order.</p>
             <p><span class="note-cue">Important:</span> This is why the word order should not be one universal model. A buyer order is about the customer's purchase and payment. A shop order is about the seller's responsibility to fulfill part of that purchase. Support can still handle exceptions across these contexts.</p>
+            <p><span class="note-cue">Example:</span> A buyer buys a phone case from Shop A and a charger from Shop B. Payment charges the buyer once for the full amount, then Shop Orders creates one order for Shop A and one order for Shop B.</p>
             <p><span class="note-cue">Transition:</span> Now move from strategic design into tactical modeling inside a context.</p>
           </aside>
         </section>
@@ -393,6 +400,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> An entity has identity over time. A value object is defined by its values. This small distinction prevents many modeling mistakes.</p>
+            <p><span class="note-cue">Example:</span> BuyerOrder and ShopOrder are entities because each has an identity and lifecycle. Money, Address, and OrderLineSnapshot are usually value objects because their meaning comes from their values.</p>
             <p><span class="note-cue">Ask:</span> If two addresses have the same values, are they the same address for this model? Usually yes. If two orders have the same items and price, are they the same order? Usually no, because each order has its own identity.</p>
             <p><span class="note-cue">Transition:</span> Entities and value objects are often grouped into aggregates, which protect business rules.</p>
           </aside>
@@ -429,16 +437,17 @@
               <p class="lead">Name the business facts that already happened.</p>
             </div>
             <div class="event-timeline" aria-label="Domain event examples">
-              <div><span>01</span><strong>OrderPlaced</strong></div>
+              <div><span>01</span><strong>BuyerOrderPlaced</strong></div>
               <div><span>02</span><strong>PaymentAuthorized</strong></div>
-              <div><span>03</span><strong>ShipmentRequested</strong></div>
-              <div><span>04</span><strong>OrderDelivered</strong></div>
+              <div><span>03</span><strong>ShopOrderCreated</strong></div>
+              <div><span>04</span><strong>ShipmentDelivered</strong></div>
             </div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
-            <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. That is why event names are usually past tense, such as OrderPlaced or PaymentAuthorized.</p>
+            <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. That is why event names are usually past tense, such as BuyerOrderPlaced or PaymentAuthorized.</p>
             <p><span class="note-cue">Explain:</span> Events help teams see workflows and integration points. They do not mean every context must share the same data model; they create a clear handoff between models.</p>
+            <p><span class="note-cue">Example:</span> In the marketplace flow, useful events might be BuyerOrderPlaced, PaymentAuthorized, ShopOrderCreated, FulfillmentRequested, and ShipmentDelivered.</p>
             <p><span class="note-cue">Transition:</span> Now give the group a small exercise to practice language, boundaries, and tactical patterns together.</p>
           </aside>
         </section>
@@ -469,6 +478,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> We will model a simple marketplace order. The goal is not to create a perfect diagram. The goal is to practice asking better domain questions.</p>
+            <p><span class="note-cue">Example:</span> Use this scenario: a buyer checks out items from two shops, pays once, one shop can ship today, and the other shop needs two days. Ask which context owns each decision.</p>
             <p><span class="note-cue">Facilitate:</span> Give 4 minutes to list terms and draw boundaries, 2 minutes for discussion, and 2 minutes to summarize. Ask groups to identify at least one ambiguous word and one possible domain event.</p>
             <p><span class="note-cue">Transition:</span> Close by summarizing what they should remember and where to continue reading.</p>
           </aside>
@@ -496,6 +506,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> The main takeaway is that DDD helps us model the business, not only the database. Start with language, then boundaries, then tactical patterns where complexity justifies them.</p>
             <p><span class="note-cue">Recommended next step:</span> Pick one real workflow, such as marketplace order placement, and map the terms, business rules, context boundaries, and important events before discussing architecture.</p>
+            <p><span class="note-cue">Example:</span> For the checkout workflow, write down BuyerOrder, Payment, ShopOrder, FulfillmentRequest, and Shipment. Then mark which context owns each word and which event moves work to the next context.</p>
             <p><span class="note-cue">Close:</span> For reading, start with Vernon for the short overview, Khononov for practical pattern choice, and Evans for the deeper original reference.</p>
           </aside>
         </section>
