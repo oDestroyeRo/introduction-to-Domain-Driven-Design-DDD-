@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
     <title>Introduction to Domain-Driven Design</title>
-    <link rel="stylesheet" href="styles.css?v=20260607-topic-header-all-slides">
+    <link rel="stylesheet" href="styles.css?v=20260607-fill-sparse-slides">
   </head>
   <body>
     <a class="skip-link" href="#slide-title">Skip to presentation</a>
@@ -113,12 +113,15 @@
             <div class="principle-row">
               <div>
                 <strong>Discover</strong>
+                <span>Talk with domain experts and follow real workflows.</span>
               </div>
               <div>
                 <strong>Model</strong>
+                <span>Name the rules, decisions, and business concepts.</span>
               </div>
               <div>
                 <strong>Bound</strong>
+                <span>Keep each meaning consistent inside its context.</span>
               </div>
             </div>
           </div>
@@ -207,11 +210,18 @@
             <article>
               <span>Strategic</span>
               <h3>Boundaries</h3>
+              <p>Subdomains, Bounded Contexts, context maps, and integration relationships.</p>
             </article>
             <article>
               <span>Tactical</span>
               <h3>Behavior</h3>
+              <p>Entities, value objects, aggregates, repositories, and domain events.</p>
             </article>
+          </div>
+          <div class="lesson-strip" aria-label="DDD practice sequence">
+            <span>1. Map business capabilities</span>
+            <span>2. Choose context boundaries</span>
+            <span>3. Model behavior inside each boundary</span>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -255,15 +265,23 @@
             <article>
               <span>Core domain</span>
               <h3>Competitive advantage</h3>
+              <p>Marketplace matching, pricing rules, trust, and ranking.</p>
             </article>
             <article>
               <span>Supporting domain</span>
               <h3>Business-specific but not unique</h3>
+              <p>Seller onboarding, promotion setup, and dispute workflows.</p>
             </article>
             <article>
               <span>Generic domain</span>
               <h3>Common capability</h3>
+              <p>Authentication, email delivery, analytics, and gateway adapters.</p>
             </article>
+          </div>
+          <div class="lesson-strip investment-strip" aria-label="Subdomain investment rule">
+            <span><strong>Core</strong> custom model</span>
+            <span><strong>Supporting</strong> pragmatic build</span>
+            <span><strong>Generic</strong> buy or reuse</span>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -305,10 +323,12 @@
             <div>
               <span>Catalog context</span>
               <strong>Product</strong>
+              <p>Searchable offer information that a shop can edit.</p>
             </div>
             <div>
               <span>Checkout context</span>
               <strong>Product</strong>
+              <p>Line snapshot locked for price, shop, and payment.</p>
             </div>
           </div>
           <aside class="speaker-notes">
@@ -400,11 +420,11 @@
             </figure>
             <div>
               <h3>Entity</h3>
-              <p>Identity over time</p>
+              <p>Identity and lifecycle: one order changes status over time.</p>
             </div>
             <div>
               <h3>Value object</h3>
-              <p>Defined by values</p>
+              <p>Defined by values: money, address, and line snapshots.</p>
             </div>
           </div>
           <aside class="speaker-notes">
@@ -427,7 +447,7 @@
             <div>Order Line</div>
             <div>Shipping Address</div>
             <div>Payment Reference</div>
-            <p>Invariant protected here</p>
+            <p><strong>Invariant:</strong> a confirmed order must have lines, a delivery address, and a payment reference.</p>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -444,10 +464,10 @@
             <p class="lead">Name the business facts that already happened.</p>
           </div>
           <div class="event-timeline" aria-label="Domain event examples">
-            <div><span>01</span><strong>BuyerOrderPlaced</strong></div>
-            <div><span>02</span><strong>PaymentAuthorized</strong></div>
-            <div><span>03</span><strong>ShopOrderCreated</strong></div>
-            <div><span>04</span><strong>ShipmentDelivered</strong></div>
+            <div><span>01</span><strong>BuyerOrderPlaced<small>Buyer commits to the checkout.</small></strong></div>
+            <div><span>02</span><strong>PaymentAuthorized<small>Payment context confirms the charge.</small></strong></div>
+            <div><span>03</span><strong>ShopOrderCreated<small>Orders context creates per-shop work.</small></strong></div>
+            <div><span>04</span><strong>ShipmentDelivered<small>Fulfillment closes the delivery.</small></strong></div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -494,6 +514,7 @@
           <div class="topic-header">
             <p class="slide-number">16 / 16</p>
             <h2>Takeaways</h2>
+            <p class="lead narrow">Use DDD to choose names, boundaries, and patterns deliberately.</p>
             <div class="goal-strip summary-cues" aria-label="Session takeaways">
               <span>Domain</span>
               <span>Language</span>
