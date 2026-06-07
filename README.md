@@ -1,6 +1,6 @@
 # Introduction to Domain-Driven Design
 
-A static GitHub Pages web presentation for a 60-minute knowledge-sharing session on Domain-Driven Design.
+A static GitHub Pages web presentation for a knowledge-sharing session on Domain-Driven Design.
 
 Live site:
 

@@ -85,13 +85,17 @@
       const item = document.createElement("li");
       const button = document.createElement("button");
       const title = document.createElement("span");
-      const time = document.createElement("small");
+      const time = slide.dataset.time;
 
       title.textContent = slide.dataset.title || `Slide ${index + 1}`;
-      time.textContent = slide.dataset.time || "";
 
       button.type = "button";
-      button.append(title, time);
+      button.append(title);
+      if (time) {
+        const timeLabel = document.createElement("small");
+        timeLabel.textContent = time;
+        button.append(timeLabel);
+      }
       button.addEventListener("click", () => {
         setActiveSlide(index, true);
         if (body.classList.contains("reader-mode")) {
