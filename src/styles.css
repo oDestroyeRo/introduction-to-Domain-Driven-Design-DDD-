@@ -1134,7 +1134,7 @@ h3 {
 }
 
 .payment-card,
-.shop-order-card,
+.confirmed-order-card,
 .ship-card {
   background: linear-gradient(180deg, #fff8e8, var(--soft-amber));
 }

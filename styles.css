@@ -1037,7 +1037,7 @@ h3 {
 .order-card span, .order-card strong, .order-card small {
   color: white;
 }
-.payment-card, .shop-order-card, .ship-card {
+.payment-card, .confirmed-order-card, .ship-card {
   background: linear-gradient(180deg, #fff8e8, var(--soft-amber));
 }
 .aggregate-diagram {
