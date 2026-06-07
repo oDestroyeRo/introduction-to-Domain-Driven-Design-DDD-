@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
     <title>Introduction to Domain-Driven Design</title>
-    <link rel="stylesheet" href="styles.css?v=20260607-shared-order-model">
+    <link rel="stylesheet" href="styles.css?v=20260607-cart-context">
   </head>
   <body>
     <a class="skip-link" href="#slide-title">Skip to presentation</a>
@@ -61,7 +61,7 @@
           </div>
           <div class="domain-map compact-map" aria-label="Marketplace domain context map">
             <div class="map-node catalog">Catalog</div>
-            <div class="map-node ordering">Ordering</div>
+            <div class="map-node ordering">Cart + Checkout</div>
             <div class="map-node payment">Payment</div>
             <div class="map-node shipping">Shipping</div>
             <div class="map-node support">Support</div>
@@ -227,7 +227,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> Strategic DDD answers where a model applies. Tactical DDD answers how the model behaves inside that boundary.</p>
             <p><span class="note-cue">Emphasize:</span> Strategic design usually comes first. If we jump directly to entities and aggregates without boundaries, we may create complicated code that still has unclear meaning.</p>
-            <p><span class="note-cue">Example:</span> Strategic design separates Checkout, Payment, Orders, and Fulfillment. Tactical design then decides whether Order is an aggregate and which events it emits.</p>
+            <p><span class="note-cue">Example:</span> Strategic design separates Cart, Checkout, Payment, Orders, and Fulfillment. Tactical design then decides whether Order is an aggregate and which events it emits.</p>
             <p><span class="note-cue">Transition:</span> To talk about boundaries, first define domain and subdomain.</p>
           </aside>
         </section>
@@ -241,8 +241,9 @@
           <div class="capability-map">
             <div class="capability core">Marketplace</div>
             <div class="capability">Product catalog</div>
+            <div class="capability">Cart management</div>
             <div class="capability">Checkout</div>
-            <div class="capability">Shop order management</div>
+            <div class="capability">Order management</div>
             <div class="capability">Payment processing</div>
             <div class="capability">Fulfillment coordination</div>
             <div class="capability">Customer support</div>
@@ -250,7 +251,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> A domain is the overall business problem space. A subdomain is a smaller business capability inside it.</p>
-            <p><span class="note-cue">Example:</span> The marketplace contains catalog, checkout, payment, order management, fulfillment, and support. They are connected, but each has different rules and priorities.</p>
+            <p><span class="note-cue">Example:</span> The marketplace contains catalog, cart, checkout, payment, order management, fulfillment, and support. They are connected, but each has different rules and priorities.</p>
             <p><span class="note-cue">Transition:</span> Not every subdomain deserves the same level of design investment. That is why DDD separates core, supporting, and generic domains.</p>
           </aside>
         </section>
@@ -305,7 +306,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> Ubiquitous Language means the team uses the same words in meetings, tickets, diagrams, APIs, tests, and code. The language is not only for documents; it shapes the model.</p>
-            <p><span class="note-cue">Example:</span> If Checkout says checkout attempt, Orders says confirmed order, and Fulfillment says shipment, those names should appear in tickets, tests, API names, and code behavior.</p>
+            <p><span class="note-cue">Example:</span> If Cart says editable shopping intent, Checkout says checkout attempt, Orders says confirmed order, and Fulfillment says shipment, those names should appear in tickets, tests, API names, and code behavior.</p>
             <p><span class="note-cue">Transition:</span> Shared language needs a boundary. Without a boundary, the same word will eventually need multiple meanings.</p>
           </aside>
         </section>
@@ -344,7 +345,7 @@
           <div class="topic-header">
             <p class="slide-number">11 / 16</p>
             <h2>One checkout, one payment, many orders</h2>
-            <p class="lead narrow">Checkout groups items by shop. After payment succeeds, the platform creates one shared order record for each shop group.</p>
+            <p class="lead narrow">Cart captures editable intent. Checkout commits selected items, pays once, then creates one shared order record for each shop group.</p>
           </div>
           <div class="wide-context-map" aria-label="Marketplace bounded-context map with relationship labels">
             <div class="context-row">
@@ -353,10 +354,15 @@
                 <strong>Product discovery</strong>
                 <small>Products and shop offers</small>
               </div>
-              <div class="context-card order-card">
+              <div class="context-card cart-card">
+                <span>Cart</span>
+                <strong>Editable buyer intent</strong>
+                <small>Items, quantities, shop grouping preview</small>
+              </div>
+              <div class="context-card checkout-card">
                 <span>Checkout</span>
                 <strong>Shop-grouped checkout</strong>
-                <small>Draft before payment</small>
+                <small>Commit selected cart items</small>
               </div>
               <div class="context-card payment-card">
                 <span>Payment</span>
@@ -377,8 +383,13 @@
             <div class="context-relations" aria-label="Context map relationships">
               <div class="context-link">
                 <span>Published Language</span>
-                <strong>Catalog -> Checkout</strong>
+                <strong>Catalog -> Cart</strong>
                 <small>Offer snapshot</small>
+              </div>
+              <div class="context-link">
+                <span>Customer/Supplier</span>
+                <strong>Cart -> Checkout</strong>
+                <small>Selected cart items</small>
               </div>
               <div class="context-link">
                 <span>Customer/Supplier</span>
@@ -399,11 +410,11 @@
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
-            <p><span class="note-cue">Say:</span> This context map shows the marketplace rule more accurately: before payment, Checkout is not yet the final order. Checkout is a purchase attempt that groups items by shop and asks Payment to charge the buyer once.</p>
-            <p><span class="note-cue">Walkthrough:</span> Catalog publishes an offer snapshot to Checkout. Checkout requests one payment for the whole checkout. After payment succeeds, Orders creates one confirmed order record for each shop group. The buyer sees those order records, and each shop sees only the same record it must fulfill.</p>
+            <p><span class="note-cue">Say:</span> This context map shows the marketplace rule more accurately: Cart is editable shopping intent, Checkout is the commitment to buy, and neither one is the final order.</p>
+            <p><span class="note-cue">Walkthrough:</span> Catalog publishes offer snapshots to Cart. Cart owns selected items, quantities, and a preview of shop grouping. Checkout receives selected cart items, confirms shipping and payment choices, then requests one payment for the whole checkout. After payment succeeds, Orders creates one confirmed order record for each shop group. The buyer sees those order records, and each shop sees only the same record it must fulfill.</p>
             <p><span class="note-cue">Important:</span> Different roles are only a clue, not an automatic bounded-context split. In this marketplace, buyer-facing order history and shop-facing order work are different views and permissions over the same confirmed order model.</p>
-            <p><span class="note-cue">Design note:</span> If Payment integrates an external gateway, Payment can protect the marketplace model with an anti-corruption layer instead of leaking gateway terms into Checkout.</p>
-            <p><span class="note-cue">Example:</span> A buyer buys a phone case from Shop A and a charger from Shop B. Checkout contains two shop groups. Payment charges the buyer once. After success, Orders creates one order for Shop A and one order for Shop B. The buyer sees both order records; each shop sees the same order record scoped to its shop.</p>
+            <p><span class="note-cue">Design note:</span> Cart should not own payment authorization, order numbers, or fulfillment status. If Payment integrates an external gateway, Payment can protect the marketplace model with an anti-corruption layer instead of leaking gateway terms into Checkout.</p>
+            <p><span class="note-cue">Example:</span> A buyer adds a phone case from Shop A and a charger from Shop B to Cart. Checkout contains two shop groups and one payment amount. Payment charges the buyer once. After success, Orders creates one order for Shop A and one order for Shop B. The buyer sees both order records; each shop sees the same order record scoped to its shop.</p>
             <p><span class="note-cue">Transition:</span> Now move from strategic design into tactical modeling inside a context.</p>
           </aside>
         </section>
@@ -464,16 +475,17 @@
             <p class="lead">Name the business facts that already happened.</p>
           </div>
           <div class="event-timeline" aria-label="Domain event examples">
-            <div><span>01</span><strong>CheckoutSubmitted<small>Buyer commits to the checkout.</small></strong></div>
-            <div><span>02</span><strong>PaymentAuthorized<small>Payment context confirms the charge.</small></strong></div>
-            <div><span>03</span><strong>OrderCreated<small>Orders context creates one order per shop.</small></strong></div>
-            <div><span>04</span><strong>FulfillmentRequested<small>Fulfillment starts work for the order.</small></strong></div>
+            <div><span>01</span><strong>CartUpdated<small>Buyer changes editable shopping intent.</small></strong></div>
+            <div><span>02</span><strong>CheckoutSubmitted<small>Buyer commits selected cart items.</small></strong></div>
+            <div><span>03</span><strong>PaymentAuthorized<small>Payment context confirms the charge.</small></strong></div>
+            <div><span>04</span><strong>OrderCreated<small>Orders context creates one order per shop.</small></strong></div>
+            <div><span>05</span><strong>FulfillmentRequested<small>Fulfillment starts work for the order.</small></strong></div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
-            <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. That is why event names are usually past tense, such as CheckoutSubmitted or PaymentAuthorized.</p>
+            <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. That is why event names are usually past tense, such as CartUpdated, CheckoutSubmitted, or PaymentAuthorized.</p>
             <p><span class="note-cue">Explain:</span> Events help teams see workflows and integration points. They do not mean every context must share the same data model; they create a clear handoff between models.</p>
-            <p><span class="note-cue">Example:</span> In the marketplace flow, useful events might be CheckoutSubmitted, PaymentAuthorized, OrderCreated, FulfillmentRequested, and ShipmentDelivered.</p>
+            <p><span class="note-cue">Example:</span> In the marketplace flow, useful events might be CartUpdated, CheckoutSubmitted, PaymentAuthorized, OrderCreated, FulfillmentRequested, and ShipmentDelivered.</p>
             <p><span class="note-cue">Transition:</span> Now give the group a small exercise to practice language, boundaries, and tactical patterns together.</p>
           </aside>
         </section>
@@ -482,7 +494,7 @@
           <div class="topic-header">
             <p class="slide-number">15 / 16</p>
             <h2>Exercise: model a marketplace order</h2>
-            <p class="lead narrow">Order. Payment. Delivery.</p>
+            <p class="lead narrow">Cart. Checkout. Order. Delivery.</p>
           </div>
           <figure class="slide-art exercise-art">
             <img src="assets/slides/workshop-board.svg" alt="Workshop board showing marketplace terms, contexts, and events">
@@ -504,7 +516,7 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> We will model a simple marketplace order. The goal is not to create a perfect diagram. The goal is to practice asking better domain questions.</p>
-            <p><span class="note-cue">Example:</span> Use this scenario: a buyer checks out items from two shops, pays once, one shop can ship today, and the other shop needs two days. Ask which context owns each decision.</p>
+            <p><span class="note-cue">Example:</span> Use this scenario: a buyer adds items from two shops to the cart, checks out selected items, pays once, one shop can ship today, and the other shop needs two days. Ask which context owns each decision.</p>
             <p><span class="note-cue">Facilitate:</span> Ask groups to list terms, draw boundaries, discuss tradeoffs, and summarize their model. Each group should identify at least one ambiguous word, one invariant, one aggregate candidate, and one possible domain event.</p>
             <p><span class="note-cue">Transition:</span> Close by summarizing what they should remember and where to continue reading.</p>
           </aside>
@@ -531,7 +543,7 @@
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> The main takeaway is that DDD helps us model the business, not only the database. Start with language, then boundaries, then tactical patterns where complexity justifies them.</p>
             <p><span class="note-cue">Recommended next step:</span> Pick one real workflow, such as marketplace order placement, and map the terms, business rules, context boundaries, and important events before discussing architecture.</p>
-            <p><span class="note-cue">Example:</span> For the checkout workflow, write down Checkout, Payment, Order, FulfillmentRequest, and Shipment. Then mark which context owns each word and which event moves work to the next context.</p>
+            <p><span class="note-cue">Example:</span> For the checkout workflow, write down Cart, Checkout, Payment, Order, FulfillmentRequest, and Shipment. Then mark which context owns each word and which event moves work to the next context.</p>
             <p><span class="note-cue">Close:</span> For reading, start with Vernon for the short overview, Khononov for practical pattern choice, and Evans for the deeper original reference.</p>
           </aside>
         </section>

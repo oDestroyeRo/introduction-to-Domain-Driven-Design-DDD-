@@ -1043,17 +1043,17 @@ h3 {
 }
 
 .context-row {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .context-relations {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-top: 10px;
 }
 
 .context-card {
-  min-height: 132px;
-  padding: 16px;
+  min-height: 126px;
+  padding: 14px;
   border: 1px solid rgba(20, 33, 61, 0.13);
   border-radius: var(--radius);
   background:
@@ -1065,7 +1065,7 @@ h3 {
 .context-card strong {
   display: block;
   color: var(--navy);
-  font-size: 1.06rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
@@ -1073,7 +1073,7 @@ h3 {
   display: block;
   margin-top: 8px;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   line-height: 1.35;
 }
 
@@ -1122,14 +1122,20 @@ h3 {
   line-height: 1.25;
 }
 
-.order-card {
+.cart-card {
+  background:
+    linear-gradient(180deg, rgba(246, 255, 253, 0.96), rgba(231, 244, 242, 0.82)),
+    var(--soft-teal);
+}
+
+.checkout-card {
   color: white;
   background: linear-gradient(145deg, var(--teal-dark), #0b5457);
 }
 
-.order-card span,
-.order-card strong,
-.order-card small {
+.checkout-card span,
+.checkout-card strong,
+.checkout-card small {
   color: white;
 }
 
@@ -1636,9 +1642,9 @@ h3 {
   padding: clamp(16px, 1.8vw, 24px);
 }
 
-.audience-mode .context-card {
-  min-height: clamp(138px, 16vh, 188px);
-}
+  .audience-mode .context-card {
+    min-height: clamp(126px, 14vh, 168px);
+  }
 
 .audience-mode .context-link {
   min-height: clamp(72px, 9vh, 98px);
@@ -1737,8 +1743,8 @@ h3 {
   }
 
   .audience-mode .context-card {
-    min-height: clamp(160px, 17vh, 210px);
-    padding: clamp(20px, 1.45vw, 28px);
+    min-height: clamp(142px, 15vh, 180px);
+    padding: clamp(16px, 1.2vw, 22px);
   }
 
   .audience-mode .context-link {
