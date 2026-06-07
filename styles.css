@@ -933,19 +933,33 @@ h3 {
 .compare-board {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.compare-board ul, .takeaways, .reading-path ol {
+.compare-board ul, .example-list, .takeaways, .reading-path ol {
   margin: 0;
   padding-left: 20px;
   list-style-position: outside;
 }
-.compare-board ul, .takeaways {
+.compare-board ul, .example-list, .takeaways {
   list-style-type: disc;
 }
 .reading-path ol {
   list-style-type: decimal;
 }
-.compare-board li, .takeaways li {
+.compare-board li, .example-list li, .takeaways li {
   margin: 12px 0;
+}
+.example-list {
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+  color: #3f4d54;
+  line-height: 1.42;
+}
+.example-list li {
+  margin: 0;
+  padding-left: 2px;
+}
+.audience-mode .example-list {
+  font-size: clamp(0.96rem, 0.96vw, 1.08rem);
 }
 .capability-map {
   display: grid;
@@ -1826,7 +1840,7 @@ h3 {
   grid-template-rows: auto minmax(0, 1fr);
   align-content: start;
   gap: clamp(16px, 1.6vw, 24px);
-  min-height: clamp(470px, 55vh, 600px);
+  min-height: clamp(420px, 48vh, 540px);
   padding: clamp(22px, 2vw, 32px);
 }
 .audience-mode .layout-books .book-cover img {
@@ -1845,7 +1859,7 @@ h3 {
   gap: clamp(18px, 2vw, 32px);
 }
 .audience-mode .layout-dual .strategy-board article, .audience-mode .layout-domain-types .three-panel article, .audience-mode .layout-patterns .compare-board > div {
-  min-height: clamp(210px, 27vh, 320px);
+  min-height: clamp(230px, 24vh, 300px);
   padding: clamp(24px, 2.2vw, 38px);
 }
 .audience-mode .layout-dual .lesson-strip, .audience-mode .layout-domain-types .lesson-strip {
@@ -1904,11 +1918,35 @@ h3 {
   gap: clamp(10px, 1vw, 18px);
   margin: 0;
 }
+.audience-mode .layout-marketplace-map .context-row {
+  counter-reset: marketplace-step;
+}
 .audience-mode .layout-marketplace-map .context-card {
+  position: relative;
   display: grid;
   align-content: center;
+  overflow: hidden;
   min-height: clamp(144px, 18vh, 214px);
   padding: clamp(14px, 1.25vw, 22px);
+}
+.audience-mode .layout-marketplace-map .context-card::before {
+  position: absolute;
+  top: clamp(10px, 1vw, 16px);
+  right: clamp(10px, 1vw, 16px);
+  display: grid;
+  place-items: center;
+  width: clamp(30px, 2.5vw, 42px);
+  height: clamp(30px, 2.5vw, 42px);
+  border: 1px solid rgba(16, 29, 51, 0.13);
+  border-radius: 999px;
+  color: var(--ink-blue);
+  background: rgba(255, 253, 248, 0.82);
+  box-shadow: 0 10px 22px rgba(16, 24, 38, 0.1);
+  content: counter(marketplace-step, decimal-leading-zero);
+  counter-increment: marketplace-step;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.72vw, 0.84rem);
+  font-weight: 850;
 }
 .audience-mode .layout-marketplace-map .context-link {
   min-height: clamp(88px, 11vh, 128px);
@@ -2620,7 +2658,7 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
 }
 .audience-mode .layout-events .event-story {
   grid-template-columns: minmax(340px, 0.6fr) minmax(0, 1fr);
-  align-items: stretch;
+  align-items: start;
   width: 100%;
 }
 .audience-mode .layout-events .event-principle {

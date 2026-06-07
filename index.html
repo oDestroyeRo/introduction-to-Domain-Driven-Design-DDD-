@@ -66,7 +66,7 @@
             <div class="map-node catalog">Catalog</div>
             <div class="map-node ordering">Cart + Checkout</div>
             <div class="map-node payment">Payment</div>
-            <div class="map-node shipping">Shipping</div>
+            <div class="map-node shipping">Fulfillment</div>
             <div class="map-node support">Support</div>
             <div class="map-line line-a"></div>
             <div class="map-line line-b"></div>
@@ -215,11 +215,21 @@
               <span>Strategic</span>
               <h3>Boundaries</h3>
               <p>Subdomains, Bounded Contexts, context maps, and integration relationships.</p>
+              <ul class="example-list">
+                <li>Cart owns editable intent</li>
+                <li>Payment owns charge lifecycle</li>
+                <li>Orders owns confirmed order records</li>
+              </ul>
             </article>
             <article>
               <span>Tactical</span>
               <h3>Behavior</h3>
               <p>Entities, value objects, aggregates, repositories, and domain events.</p>
+              <ul class="example-list">
+                <li>Order aggregate protects invariants</li>
+                <li>Money is a value object</li>
+                <li>OrderConfirmed is a domain event</li>
+              </ul>
             </article>
           </div>
           <div class="lesson-strip" aria-label="DDD practice sequence">
@@ -271,16 +281,28 @@
               <span>Core domain</span>
               <h3>Competitive advantage</h3>
               <p>Marketplace matching, pricing rules, trust, and ranking.</p>
+              <ul class="example-list">
+                <li>How buyers find the best offer</li>
+                <li>How shops compete fairly</li>
+              </ul>
             </article>
             <article>
               <span>Supporting domain</span>
               <h3>Business-specific but not unique</h3>
               <p>Seller onboarding, promotion setup, and dispute workflows.</p>
+              <ul class="example-list">
+                <li>Needed for operations</li>
+                <li>Good enough beats perfect</li>
+              </ul>
             </article>
             <article>
               <span>Generic domain</span>
               <h3>Common capability</h3>
               <p>Authentication, email delivery, analytics, and gateway adapters.</p>
+              <ul class="example-list">
+                <li>Prefer proven services</li>
+                <li>Avoid custom complexity</li>
+              </ul>
             </article>
           </div>
           <div class="lesson-strip investment-strip" aria-label="Subdomain investment rule">
@@ -436,10 +458,18 @@
             <div>
               <h3>Entity</h3>
               <p>Identity and lifecycle: one order changes status over time.</p>
+              <ul class="example-list">
+                <li>Order keeps the same ID from confirmed to fulfilled.</li>
+                <li>Buyer and shop screens are views of that same order.</li>
+              </ul>
             </div>
             <div>
               <h3>Value object</h3>
               <p>Defined by values: money, address, and line snapshots.</p>
+              <ul class="example-list">
+                <li>Two Money values are equal when amount and currency match.</li>
+                <li>A line snapshot preserves price, shop, and product name at checkout.</li>
+              </ul>
             </div>
           </div>
           <aside class="speaker-notes">
