@@ -880,17 +880,17 @@ h3 {
 }
 
 .context-row {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .context-relations {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-top: 10px;
 }
 
 .context-card {
-  min-height: 138px;
-  padding: 18px;
+  min-height: 128px;
+  padding: 14px;
   border: 1px solid rgba(20, 33, 61, 0.13);
   border-radius: var(--radius);
   background:
@@ -902,15 +902,15 @@ h3 {
 .context-card strong {
   display: block;
   color: var(--navy);
-  font-size: 1.12rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
 .context-card small {
   display: block;
-  margin-top: 10px;
+  margin-top: 8px;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   line-height: 1.35;
 }
 
@@ -918,8 +918,8 @@ h3 {
   position: relative;
   display: grid;
   align-content: center;
-  min-height: 68px;
-  padding: 12px 10px;
+  min-height: 64px;
+  padding: 10px 8px;
   border: 1px solid rgba(216, 146, 34, 0.36);
   border-radius: var(--radius);
   background: rgba(255, 248, 232, 0.94);
