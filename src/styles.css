@@ -2173,13 +2173,13 @@ h3 {
   grid-template-columns: 1fr;
   grid-template-rows: auto minmax(0, 1fr);
   align-content: start;
-  gap: clamp(16px, 1.6vw, 24px);
-  min-height: clamp(420px, 48vh, 540px);
-  padding: clamp(22px, 2vw, 32px);
+  gap: clamp(14px, 1.4vw, 20px);
+  min-height: clamp(360px, 40vh, 460px);
+  padding: clamp(20px, 1.7vw, 28px);
 }
 
 .audience-mode .layout-books .book-cover img {
-  width: min(190px, 64%);
+  width: min(170px, 60%);
   margin: 0 auto;
 }
 
@@ -2187,34 +2187,52 @@ h3 {
   font-size: clamp(1.35rem, 1.55vw, 1.8rem);
 }
 
+.audience-mode .layout-books.slide.is-active,
+.audience-mode .layout-dual.slide.is-active,
+.audience-mode .layout-domain-types.slide.is-active,
+.audience-mode .layout-aggregate.slide.is-active {
+  grid-template-rows: none;
+  grid-auto-rows: max-content;
+  align-content: start;
+}
+
 .audience-mode .layout-dual .strategy-board,
 .audience-mode .layout-domain-types .three-panel,
 .audience-mode .layout-patterns .compare-board {
   display: grid;
+  align-self: start;
   width: 100%;
 }
 
 .audience-mode .layout-dual .strategy-board,
 .audience-mode .layout-patterns .compare-board {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: clamp(18px, 2vw, 32px);
 }
 
 .audience-mode .layout-dual .strategy-board article,
 .audience-mode .layout-domain-types .three-panel article,
 .audience-mode .layout-patterns .compare-board > div {
-  min-height: clamp(230px, 24vh, 300px);
-  padding: clamp(24px, 2.2vw, 38px);
+  min-height: clamp(188px, 20vh, 250px);
+  padding: clamp(20px, 1.8vw, 30px);
 }
 
 .audience-mode .layout-dual .lesson-strip,
 .audience-mode .layout-domain-types .lesson-strip {
   width: 100%;
-  margin-top: clamp(16px, 2vh, 28px);
+  margin-top: clamp(12px, 1.4vh, 22px);
+}
+
+.audience-mode .layout-dual .lesson-strip span,
+.audience-mode .layout-domain-types .lesson-strip span {
+  min-height: clamp(96px, 10vh, 124px);
+  padding: clamp(14px, 1.1vw, 20px);
 }
 
 .audience-mode .layout-domain-types .three-panel {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: clamp(18px, 2vw, 30px);
 }
 
@@ -2264,10 +2282,10 @@ h3 {
 
 .audience-mode .layout-marketplace-map .wide-context-map {
   display: grid;
-  grid-template-rows: minmax(0, 1.25fr) minmax(0, 0.78fr);
+  grid-template-rows: minmax(0, 1.1fr) minmax(0, 0.62fr);
   gap: clamp(12px, 1.4vw, 20px);
   width: 100%;
-  padding: clamp(18px, 1.8vw, 30px);
+  padding: clamp(16px, 1.5vw, 26px);
 }
 
 .audience-mode .layout-marketplace-map .context-row,
@@ -2285,8 +2303,8 @@ h3 {
   display: grid;
   align-content: center;
   overflow: hidden;
-  min-height: clamp(144px, 18vh, 214px);
-  padding: clamp(14px, 1.25vw, 22px);
+  min-height: clamp(118px, 14vh, 170px);
+  padding: clamp(12px, 1vw, 18px);
 }
 
 .audience-mode .layout-marketplace-map .context-card::before {
@@ -2295,8 +2313,8 @@ h3 {
   right: clamp(10px, 1vw, 16px);
   display: grid;
   place-items: center;
-  width: clamp(30px, 2.5vw, 42px);
-  height: clamp(30px, 2.5vw, 42px);
+  width: clamp(26px, 2.1vw, 36px);
+  height: clamp(26px, 2.1vw, 36px);
   border: 1px solid rgba(16, 29, 51, 0.13);
   border-radius: 999px;
   color: var(--ink-blue);
@@ -2310,7 +2328,8 @@ h3 {
 }
 
 .audience-mode .layout-marketplace-map .context-link {
-  min-height: clamp(88px, 11vh, 128px);
+  min-height: clamp(72px, 8.5vh, 104px);
+  padding: clamp(12px, 0.9vw, 16px);
 }
 
 .audience-mode .layout-patterns .compare-board {
@@ -2323,8 +2342,8 @@ h3 {
 
 .audience-mode .layout-aggregate .aggregate-diagram {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2vw, 28px);
-  padding: clamp(24px, 2vw, 36px);
+  gap: clamp(14px, 1.6vw, 22px);
+  padding: clamp(20px, 1.7vw, 30px);
 }
 
 .audience-mode .layout-aggregate .aggregate-diagram .aggregate-root,
@@ -2333,13 +2352,13 @@ h3 {
 }
 
 .audience-mode .layout-aggregate .aggregate-diagram .aggregate-root {
-  min-height: clamp(150px, 21vh, 240px);
-  font-size: clamp(2rem, 3vw, 3.8rem);
+  min-height: clamp(118px, 15vh, 180px);
+  font-size: clamp(1.8rem, 2.6vw, 3.25rem);
 }
 
 .audience-mode .layout-aggregate .aggregate-diagram div:not(.aggregate-root) {
-  min-height: clamp(145px, 19vh, 210px);
-  font-size: clamp(1.1rem, 1.35vw, 1.6rem);
+  min-height: clamp(110px, 14vh, 160px);
+  font-size: clamp(1rem, 1.18vw, 1.38rem);
 }
 
 .audience-mode .layout-events .event-timeline {
@@ -3459,7 +3478,7 @@ body.reader-mode .slide.is-active {
 
   .audience-mode .layout-marketplace-map .wide-context-map,
   .audience-mode .layout-title .domain-map {
-    min-height: min(680px, 68vh);
+    min-height: min(610px, 60vh);
   }
 }
 
@@ -3469,7 +3488,7 @@ body.reader-mode .slide.is-active {
   }
 
   .audience-mode .layout-books .book-stack article {
-    min-height: clamp(520px, 58vh, 650px);
+    min-height: clamp(380px, 40vh, 470px);
   }
 
   .audience-mode .layout-marketplace-map .context-card strong {
