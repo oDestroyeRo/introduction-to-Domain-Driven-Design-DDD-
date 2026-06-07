@@ -330,35 +330,41 @@
         <section class="slide" data-title="Marketplace context map" data-time="5 min">
           <div>
             <p class="slide-number">11 / 16</p>
-            <h2>Example context map: marketplace order flow</h2>
-            <p class="lead narrow">Different models cooperate without becoming one universal model.</p>
+            <h2>One checkout payment, many shop orders</h2>
+            <p class="lead narrow">A marketplace order is split by shop after one customer payment.</p>
           </div>
           <div class="wide-context-map" aria-label="Marketplace context map diagram">
             <div class="context-card catalog-card">
               <span>Catalog</span>
               <strong>Product discovery</strong>
+              <small>Products and shop offers</small>
             </div>
             <div class="context-card order-card">
-              <span>Ordering</span>
-              <strong>Cart, order, cancellation</strong>
+              <span>Checkout</span>
+              <strong>Cart and buyer order</strong>
+              <small>One customer purchase</small>
             </div>
             <div class="context-card payment-card">
               <span>Payment</span>
-              <strong>Charge, refund, settlement</strong>
+              <strong>One charge</strong>
+              <small>Total checkout amount</small>
+            </div>
+            <div class="context-card shop-order-card">
+              <span>Shop Orders</span>
+              <strong>Split by shop</strong>
+              <small>One order per seller</small>
             </div>
             <div class="context-card ship-card">
-              <span>Shipping</span>
-              <strong>Parcel, pickup, tracking</strong>
-            </div>
-            <div class="context-card support-card">
-              <span>Support</span>
-              <strong>Case, claim, resolution</strong>
+              <span>Fulfillment</span>
+              <strong>Pickup, parcel, tracking</strong>
+              <small>Handled per shop order</small>
             </div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
-            <p><span class="note-cue">Say:</span> This context map shows a marketplace order flow. Catalog helps the customer discover a product. Ordering creates a cart and order. Payment handles charge and refund. Shipping handles parcel movement. Support handles exceptions.</p>
-            <p><span class="note-cue">Walkthrough:</span> Move left to right. Catalog product becomes an order line snapshot. A paid order becomes a payment fact. A shipment request becomes a parcel process. These handoffs are between related but different models.</p>
+            <p><span class="note-cue">Say:</span> This context map shows the marketplace rule more clearly: the customer checks out once and pays once. After payment is authorized, the platform splits the buyer order into shop orders, usually one shop order per seller.</p>
+            <p><span class="note-cue">Walkthrough:</span> Move left to right. Catalog offers become checkout line snapshots. Checkout owns the buyer-facing order and total amount. Payment owns the single charge, refund, and settlement facts. Shop Orders owns seller-facing orders. Fulfillment handles pickup, parcel, and tracking per shop order.</p>
+            <p><span class="note-cue">Important:</span> This is why the word order should not be one universal model. A buyer order is about the customer's purchase and payment. A shop order is about the seller's responsibility to fulfill part of that purchase. Support can still handle exceptions across these contexts.</p>
             <p><span class="note-cue">Transition:</span> Now move from strategic design into tactical modeling inside a context.</p>
           </aside>
         </section>

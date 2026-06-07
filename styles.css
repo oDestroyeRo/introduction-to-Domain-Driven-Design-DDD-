@@ -851,14 +851,21 @@ h3 {
   font-size: 1.25rem;
   line-height: 1.2;
 }
+.context-card small {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
 .order-card {
   color: white;
   background: linear-gradient(145deg, var(--teal-dark), #0b5457);
 }
-.order-card span, .order-card strong {
+.order-card span, .order-card strong, .order-card small {
   color: white;
 }
-.payment-card, .ship-card {
+.payment-card, .shop-order-card, .ship-card {
   background: linear-gradient(180deg, #fff8e8, var(--soft-amber));
 }
 .aggregate-diagram {
