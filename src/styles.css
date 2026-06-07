@@ -398,6 +398,81 @@ button {
   margin-bottom: 0;
 }
 
+.topic-header .goal-strip {
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.topic-body {
+  width: min(920px, 100%);
+  margin-inline: auto;
+}
+
+.topic-body.centered {
+  min-height: auto;
+}
+
+.hero-slide .compact-map,
+.topic-header + .evidence-list,
+.topic-header + .language-panel,
+.topic-header + .compare-board,
+.topic-header + .reading-path {
+  width: min(920px, 100%);
+  margin-inline: auto;
+}
+
+.hero-slide .compact-map {
+  min-height: clamp(250px, 28vw, 330px);
+  margin-top: clamp(16px, 2vw, 26px);
+}
+
+.topic-header + .book-stack {
+  width: min(860px, 100%);
+  margin-inline: auto;
+}
+
+.topic-header + .strategy-board {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(760px, 100%);
+  margin-inline: auto;
+}
+
+.topic-header + .capability-map,
+.topic-header + .aggregate-diagram,
+.topic-header + .event-timeline {
+  width: min(820px, 100%);
+  margin-inline: auto;
+}
+
+.topic-header + .three-panel {
+  width: min(980px, 100%);
+  margin-inline: auto;
+}
+
+.topic-header + .context-example {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(680px, 100%);
+  margin-inline: auto;
+}
+
+.topic-header + .context-example .slide-art {
+  grid-column: 1 / -1;
+}
+
+.topic-header + .context-example > div {
+  padding: 18px;
+}
+
+.topic-header + .context-example strong {
+  margin-bottom: 0;
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+}
+
+.exercise-slide .exercise-art,
+.exercise-slide .exercise-grid {
+  margin-inline: auto;
+}
+
 .slide-number {
   display: inline-flex;
   width: max-content;
@@ -1519,6 +1594,7 @@ h3 {
   line-height: 1.04;
 }
 
+.audience-mode .topic-header h1,
 .audience-mode .topic-header h2 {
   max-width: min(960px, 100%);
   font-size: clamp(2rem, 2.75vw, 2.8rem);
@@ -1539,6 +1615,7 @@ h3 {
     margin-bottom: clamp(24px, 2.2vw, 40px);
   }
 
+  .audience-mode .topic-header h1,
   .audience-mode .topic-header h2 {
     max-width: min(1120px, 100%);
     font-size: clamp(2.2rem, 2.45vw, 3rem);
@@ -1552,6 +1629,22 @@ h3 {
   .audience-mode .wide-context-map {
     width: min(1480px, 100%);
     padding: clamp(24px, 2vw, 36px);
+  }
+
+  .audience-mode .hero-slide .compact-map,
+  .audience-mode .topic-header + .evidence-list,
+  .audience-mode .topic-header + .language-panel,
+  .audience-mode .topic-header + .compare-board,
+  .audience-mode .topic-header + .reading-path {
+    width: min(1120px, 100%);
+  }
+
+  .audience-mode .hero-slide .compact-map {
+    min-height: clamp(320px, 31vh, 380px);
+  }
+
+  .audience-mode .topic-header + .context-example {
+    width: min(860px, 100%);
   }
 
   .audience-mode .context-card {
@@ -1792,10 +1885,16 @@ h3 {
 
   .agenda-list,
   .compare-board,
+  .topic-header + .strategy-board,
+  .topic-header + .context-example,
   .capability-map,
   .aggregate-diagram,
   .language-table [role="row"] {
     grid-template-columns: 1fr;
+  }
+
+  .topic-header + .context-example .slide-art {
+    grid-column: auto;
   }
 
   .language-table [role="cell"] {

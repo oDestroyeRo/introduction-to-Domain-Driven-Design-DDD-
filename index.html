@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
     <title>Introduction to Domain-Driven Design</title>
-    <link rel="stylesheet" href="styles.css?v=20260607-fullhd-stage">
+    <link rel="stylesheet" href="styles.css?v=20260607-topic-header-all-slides">
   </head>
   <body>
     <a class="skip-link" href="#slide-title">Skip to presentation</a>
@@ -47,29 +47,27 @@
 
       <main id="presentation" class="presentation" aria-live="polite">
         <section id="slide-title" class="slide hero-slide is-active" data-title="Title and goals">
-          <div class="slide-grid hero-grid">
-            <div class="hero-copy">
-              <p class="slide-number">01 / 16</p>
-              <h1>Introduction to Domain-Driven Design</h1>
-              <p class="lead">
-                A practical knowledge-sharing guide for aligning software design with the business domain.
-              </p>
-              <div class="goal-strip" aria-label="Session goals">
-                <span>Shared language</span>
-                <span>Clear boundaries</span>
-                <span>Better models</span>
-              </div>
+          <div class="topic-header hero-topic">
+            <p class="slide-number">01 / 16</p>
+            <h1>Introduction to Domain-Driven Design</h1>
+            <p class="lead">
+              A practical knowledge-sharing guide for aligning software design with the business domain.
+            </p>
+            <div class="goal-strip" aria-label="Session goals">
+              <span>Shared language</span>
+              <span>Clear boundaries</span>
+              <span>Better models</span>
             </div>
-            <div class="domain-map compact-map" aria-label="Marketplace domain context map">
-              <div class="map-node catalog">Catalog</div>
-              <div class="map-node ordering">Ordering</div>
-              <div class="map-node payment">Payment</div>
-              <div class="map-node shipping">Shipping</div>
-              <div class="map-node support">Support</div>
-              <div class="map-line line-a"></div>
-              <div class="map-line line-b"></div>
-              <div class="map-line line-c"></div>
-            </div>
+          </div>
+          <div class="domain-map compact-map" aria-label="Marketplace domain context map">
+            <div class="map-node catalog">Catalog</div>
+            <div class="map-node ordering">Ordering</div>
+            <div class="map-node payment">Payment</div>
+            <div class="map-node shipping">Shipping</div>
+            <div class="map-node support">Support</div>
+            <div class="map-line line-a"></div>
+            <div class="map-line line-b"></div>
+            <div class="map-line line-c"></div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -81,17 +79,15 @@
         </section>
 
         <section class="slide" data-title="Why software gets hard">
-          <div class="slide-grid two-column visual-focus">
-            <div>
-              <p class="slide-number">02 / 16</p>
-              <h2>Software gets hard when meaning is unclear</h2>
-              <p class="lead">The same word can hide different business meanings.</p>
-            </div>
-            <div class="evidence-list image-only">
-              <figure class="slide-art">
-                <img src="assets/slides/meaning-conflict.svg" alt="Two marketplace teams using the word order with different meanings">
-              </figure>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">02 / 16</p>
+            <h2>Software gets hard when meaning is unclear</h2>
+            <p class="lead">The same word can hide different business meanings.</p>
+          </div>
+          <div class="evidence-list image-only">
+            <figure class="slide-art">
+              <img src="assets/slides/meaning-conflict.svg" alt="Two marketplace teams using the word order with different meanings">
+            </figure>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -103,12 +99,14 @@
         </section>
 
         <section class="slide" data-title="What DDD is">
-          <div class="centered">
+          <div class="topic-header">
             <p class="slide-number">03 / 16</p>
             <h2>DDD is a design discipline for complex domains</h2>
             <p class="lead narrow">
               Build a model that can change with the business.
             </p>
+          </div>
+          <div class="centered topic-body">
             <figure class="slide-art centered-art">
               <img src="assets/slides/modeling-loop.svg" alt="Discover, model, and bound as a continuous DDD learning loop">
             </figure>
@@ -134,44 +132,42 @@
         </section>
 
         <section class="slide" data-title="Reference books">
-          <div class="slide-grid book-grid">
-            <div>
-              <p class="slide-number">04 / 16</p>
-              <h2>The three references for this session</h2>
-              <p class="lead">Original reference, practical guide, concise overview.</p>
-            </div>
-            <div class="book-stack">
-              <article>
-                <figure class="book-cover">
-                  <img src="assets/books/domain-driven-design-eric-evans.jpg" alt="Cover of Domain-Driven Design by Eric Evans" loading="lazy">
-                </figure>
-                <div>
-                  <span>Eric Evans</span>
-                  <h3>Domain-Driven Design</h3>
-                  <p class="book-idea"><span>Key idea</span>Refine a shared model with experts and code.</p>
-                </div>
-              </article>
-              <article>
-                <figure class="book-cover">
-                  <img src="assets/books/learning-domain-driven-design-vlad-khononov.jpg" alt="Cover of Learning Domain-Driven Design by Vlad Khononov" loading="lazy">
-                </figure>
-                <div>
-                  <span>Vlad Khononov</span>
-                  <h3>Learning Domain-Driven Design</h3>
-                  <p class="book-idea"><span>Key idea</span>Fit patterns to subdomain value and complexity.</p>
-                </div>
-              </article>
-              <article>
-                <figure class="book-cover">
-                  <img src="assets/books/domain-driven-design-distilled-vaughn-vernon.jpg" alt="Cover of Domain-Driven Design Distilled by Vaughn Vernon" loading="lazy">
-                </figure>
-                <div>
-                  <span>Vaughn Vernon</span>
-                  <h3>Domain-Driven Design Distilled</h3>
-                  <p class="book-idea"><span>Key idea</span>Map language and contexts before tactical patterns.</p>
-                </div>
-              </article>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">04 / 16</p>
+            <h2>The three references for this session</h2>
+            <p class="lead">Original reference, practical guide, concise overview.</p>
+          </div>
+          <div class="book-stack">
+            <article>
+              <figure class="book-cover">
+                <img src="assets/books/domain-driven-design-eric-evans.jpg" alt="Cover of Domain-Driven Design by Eric Evans" loading="lazy">
+              </figure>
+              <div>
+                <span>Eric Evans</span>
+                <h3>Domain-Driven Design</h3>
+                <p class="book-idea"><span>Key idea</span>Refine a shared model with experts and code.</p>
+              </div>
+            </article>
+            <article>
+              <figure class="book-cover">
+                <img src="assets/books/learning-domain-driven-design-vlad-khononov.jpg" alt="Cover of Learning Domain-Driven Design by Vlad Khononov" loading="lazy">
+              </figure>
+              <div>
+                <span>Vlad Khononov</span>
+                <h3>Learning Domain-Driven Design</h3>
+                <p class="book-idea"><span>Key idea</span>Fit patterns to subdomain value and complexity.</p>
+              </div>
+            </article>
+            <article>
+              <figure class="book-cover">
+                <img src="assets/books/domain-driven-design-distilled-vaughn-vernon.jpg" alt="Cover of Domain-Driven Design Distilled by Vaughn Vernon" loading="lazy">
+              </figure>
+              <div>
+                <span>Vaughn Vernon</span>
+                <h3>Domain-Driven Design Distilled</h3>
+                <p class="book-idea"><span>Key idea</span>Map language and contexts before tactical patterns.</p>
+              </div>
+            </article>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -183,17 +179,15 @@
         </section>
 
         <section class="slide" data-title="Domain-first vs data-first">
-          <div class="slide-grid comparison visual-focus">
-            <div>
-              <p class="slide-number">05 / 16</p>
-              <h2>Domain-first thinking changes the starting point</h2>
-              <p class="lead">Start with behavior and language before storage shape.</p>
-            </div>
-            <div class="compare-board image-only">
-              <figure class="slide-art span-all">
-                <img src="assets/slides/domain-first-flow.svg" alt="Domain conversation leading to behavior, model, and data decisions">
-              </figure>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">05 / 16</p>
+            <h2>Domain-first thinking changes the starting point</h2>
+            <p class="lead">Start with behavior and language before storage shape.</p>
+          </div>
+          <div class="compare-board image-only">
+            <figure class="slide-art span-all">
+              <img src="assets/slides/domain-first-flow.svg" alt="Domain conversation leading to behavior, model, and data decisions">
+            </figure>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -204,22 +198,20 @@
         </section>
 
         <section class="slide" data-title="Strategic vs tactical DDD">
-          <div class="slide-grid two-column">
-            <div>
-              <p class="slide-number">06 / 16</p>
-              <h2>DDD has two layers of practice</h2>
-              <p class="lead">Boundaries first. Model behavior second.</p>
-            </div>
-            <div class="strategy-board">
-              <article>
-                <span>Strategic</span>
-                <h3>Boundaries</h3>
-              </article>
-              <article>
-                <span>Tactical</span>
-                <h3>Behavior</h3>
-              </article>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">06 / 16</p>
+            <h2>DDD has two layers of practice</h2>
+            <p class="lead">Boundaries first. Model behavior second.</p>
+          </div>
+          <div class="strategy-board">
+            <article>
+              <span>Strategic</span>
+              <h3>Boundaries</h3>
+            </article>
+            <article>
+              <span>Tactical</span>
+              <h3>Behavior</h3>
+            </article>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -231,21 +223,19 @@
         </section>
 
         <section class="slide" data-title="Domains and subdomains">
-          <div class="slide-grid two-column">
-            <div>
-              <p class="slide-number">07 / 16</p>
-              <h2>A domain is the business problem space</h2>
-              <p class="lead">Subdomains are smaller business capabilities.</p>
-            </div>
-            <div class="capability-map">
-              <div class="capability core">Marketplace</div>
-              <div class="capability">Product catalog</div>
-              <div class="capability">Checkout</div>
-              <div class="capability">Shop order management</div>
-              <div class="capability">Payment processing</div>
-              <div class="capability">Fulfillment coordination</div>
-              <div class="capability">Customer support</div>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">07 / 16</p>
+            <h2>A domain is the business problem space</h2>
+            <p class="lead">Subdomains are smaller business capabilities.</p>
+          </div>
+          <div class="capability-map">
+            <div class="capability core">Marketplace</div>
+            <div class="capability">Product catalog</div>
+            <div class="capability">Checkout</div>
+            <div class="capability">Shop order management</div>
+            <div class="capability">Payment processing</div>
+            <div class="capability">Fulfillment coordination</div>
+            <div class="capability">Customer support</div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -256,12 +246,12 @@
         </section>
 
         <section class="slide" data-title="Core, supporting, generic">
+          <div class="topic-header">
+            <p class="slide-number">08 / 16</p>
+            <h2>Not all subdomains deserve the same investment</h2>
+            <p class="lead">Spend design effort where the business wins.</p>
+          </div>
           <div class="slide-grid three-panel">
-            <div class="panel-intro">
-              <p class="slide-number">08 / 16</p>
-              <h2>Not all subdomains deserve the same investment</h2>
-              <p class="lead">Spend design effort where the business wins.</p>
-            </div>
             <article>
               <span>Core domain</span>
               <h3>Competitive advantage</h3>
@@ -284,17 +274,15 @@
         </section>
 
         <section class="slide" data-title="Ubiquitous Language">
-          <div class="slide-grid two-column visual-focus">
-            <div>
-              <p class="slide-number">09 / 16</p>
-              <h2>Ubiquitous Language is the shared model in words</h2>
-              <p class="lead">One vocabulary across conversation, design, and code.</p>
-            </div>
-            <div class="language-panel image-only">
-              <figure class="slide-art">
-                <img src="assets/slides/language-board.svg" alt="Shared language flowing from conversation into tickets, APIs, tests, and code">
-              </figure>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">09 / 16</p>
+            <h2>Ubiquitous Language is the shared model in words</h2>
+            <p class="lead">One vocabulary across conversation, design, and code.</p>
+          </div>
+          <div class="language-panel image-only">
+            <figure class="slide-art">
+              <img src="assets/slides/language-board.svg" alt="Shared language flowing from conversation into tickets, APIs, tests, and code">
+            </figure>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -305,24 +293,22 @@
         </section>
 
         <section class="slide" data-title="Bounded Context">
-          <div class="slide-grid two-column">
+          <div class="topic-header">
+            <p class="slide-number">10 / 16</p>
+            <h2>A Bounded Context protects meaning</h2>
+            <p class="lead">One boundary. One consistent meaning.</p>
+          </div>
+          <div class="context-example">
+            <figure class="slide-art">
+              <img src="assets/slides/bounded-context-split.svg" alt="Catalog and checkout contexts keeping separate meanings for product">
+            </figure>
             <div>
-              <p class="slide-number">10 / 16</p>
-              <h2>A Bounded Context protects meaning</h2>
-              <p class="lead">One boundary. One consistent meaning.</p>
+              <span>Catalog context</span>
+              <strong>Product</strong>
             </div>
-            <div class="context-example">
-              <figure class="slide-art">
-                <img src="assets/slides/bounded-context-split.svg" alt="Catalog and checkout contexts keeping separate meanings for product">
-              </figure>
-              <div>
-                <span>Catalog context</span>
-                <strong>Product</strong>
-              </div>
-              <div>
-                <span>Checkout context</span>
-                <strong>Product</strong>
-              </div>
+            <div>
+              <span>Checkout context</span>
+              <strong>Product</strong>
             </div>
           </div>
           <aside class="speaker-notes">
@@ -403,24 +389,22 @@
         </section>
 
         <section class="slide" data-title="Entities and value objects">
-          <div class="slide-grid comparison">
+          <div class="topic-header">
+            <p class="slide-number">12 / 16</p>
+            <h2>Tactical models start with identity and value</h2>
+            <p class="lead">Identity is not the same as value.</p>
+          </div>
+          <div class="compare-board">
+            <figure class="slide-art span-all">
+              <img src="assets/slides/tactical-patterns.svg" alt="Entity identity and value object values compared in a marketplace model">
+            </figure>
             <div>
-              <p class="slide-number">12 / 16</p>
-              <h2>Tactical models start with identity and value</h2>
-              <p class="lead">Identity is not the same as value.</p>
+              <h3>Entity</h3>
+              <p>Identity over time</p>
             </div>
-            <div class="compare-board">
-              <figure class="slide-art span-all">
-                <img src="assets/slides/tactical-patterns.svg" alt="Entity identity and value object values compared in a marketplace model">
-              </figure>
-              <div>
-                <h3>Entity</h3>
-                <p>Identity over time</p>
-              </div>
-              <div>
-                <h3>Value object</h3>
-                <p>Defined by values</p>
-              </div>
+            <div>
+              <h3>Value object</h3>
+              <p>Defined by values</p>
             </div>
           </div>
           <aside class="speaker-notes">
@@ -433,19 +417,17 @@
         </section>
 
         <section class="slide" data-title="Aggregates">
-          <div class="slide-grid two-column">
-            <div>
-              <p class="slide-number">13 / 16</p>
-              <h2>An aggregate is a consistency boundary</h2>
-              <p class="lead">Protect the rules that must always be true.</p>
-            </div>
-            <div class="aggregate-diagram">
-              <div class="aggregate-root">Buyer Order</div>
-              <div>Order Line</div>
-              <div>Shipping Address</div>
-              <div>Payment Reference</div>
-              <p>Invariant protected here</p>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">13 / 16</p>
+            <h2>An aggregate is a consistency boundary</h2>
+            <p class="lead">Protect the rules that must always be true.</p>
+          </div>
+          <div class="aggregate-diagram">
+            <div class="aggregate-root">Buyer Order</div>
+            <div>Order Line</div>
+            <div>Shipping Address</div>
+            <div>Payment Reference</div>
+            <p>Invariant protected here</p>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -456,18 +438,16 @@
         </section>
 
         <section class="slide" data-title="Domain events">
-          <div class="slide-grid two-column">
-            <div>
-              <p class="slide-number">14 / 16</p>
-              <h2>Domain events name important business facts</h2>
-              <p class="lead">Name the business facts that already happened.</p>
-            </div>
-            <div class="event-timeline" aria-label="Domain event examples">
-              <div><span>01</span><strong>BuyerOrderPlaced</strong></div>
-              <div><span>02</span><strong>PaymentAuthorized</strong></div>
-              <div><span>03</span><strong>ShopOrderCreated</strong></div>
-              <div><span>04</span><strong>ShipmentDelivered</strong></div>
-            </div>
+          <div class="topic-header">
+            <p class="slide-number">14 / 16</p>
+            <h2>Domain events name important business facts</h2>
+            <p class="lead">Name the business facts that already happened.</p>
+          </div>
+          <div class="event-timeline" aria-label="Domain event examples">
+            <div><span>01</span><strong>BuyerOrderPlaced</strong></div>
+            <div><span>02</span><strong>PaymentAuthorized</strong></div>
+            <div><span>03</span><strong>ShopOrderCreated</strong></div>
+            <div><span>04</span><strong>ShipmentDelivered</strong></div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
@@ -479,7 +459,7 @@
         </section>
 
         <section class="slide exercise-slide" data-title="Group exercise">
-          <div>
+          <div class="topic-header">
             <p class="slide-number">15 / 16</p>
             <h2>Exercise: model a marketplace order</h2>
             <p class="lead narrow">Order. Payment. Delivery.</p>
@@ -511,22 +491,20 @@
         </section>
 
         <section class="slide summary-slide" data-title="Summary and reading path">
-          <div class="slide-grid two-column visual-focus">
-            <div>
-              <p class="slide-number">16 / 16</p>
-              <h2>Takeaways</h2>
-              <div class="goal-strip summary-cues" aria-label="Session takeaways">
-                <span>Domain</span>
-                <span>Language</span>
-                <span>Boundaries</span>
-                <span>Patterns</span>
-              </div>
+          <div class="topic-header">
+            <p class="slide-number">16 / 16</p>
+            <h2>Takeaways</h2>
+            <div class="goal-strip summary-cues" aria-label="Session takeaways">
+              <span>Domain</span>
+              <span>Language</span>
+              <span>Boundaries</span>
+              <span>Patterns</span>
             </div>
-            <div class="reading-path image-only">
-              <figure class="slide-art reading-art">
-                <img src="assets/slides/reading-path.svg" alt="Reading path from distilled concepts to practical guide to original DDD book">
-              </figure>
-            </div>
+          </div>
+          <div class="reading-path image-only">
+            <figure class="slide-art reading-art">
+              <img src="assets/slides/reading-path.svg" alt="Reading path from distilled concepts to practical guide to original DDD book">
+            </figure>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
