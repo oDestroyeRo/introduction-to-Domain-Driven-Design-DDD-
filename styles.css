@@ -727,6 +727,22 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+.book-stack .book-idea {
+  margin: 10px 0 0;
+  color: #35424d;
+  font-size: 0.98rem;
+  line-height: 1.42;
+}
+.book-stack .book-idea span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--amber);
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .compare-board {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
