@@ -1,0 +1,8 @@
+{
+  "status": "ready",
+  "itemCount": 11,
+  "totalItemCount": 11,
+  "excludedFailedItems": [
+    "thin-rule-service-map"
+  ]
+}

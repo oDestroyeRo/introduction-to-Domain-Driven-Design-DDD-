@@ -2781,6 +2781,459 @@ body:not(.audience-mode) .presenter-preview .slide.is-active {
   box-shadow: inset 0 0 0 1px rgba(251, 248, 239, 0.7);
 }
 
+/* Product Design + Creative Production professional pass: editorial stage system. */
+:root {
+  --stage-bg: #111927;
+  --stage-panel: #162238;
+  --paper-stage: #fffaf0;
+  --paper-tint: #f3ead8;
+  --rule-strong: rgba(27, 54, 93, 0.22);
+  --rule-soft: rgba(27, 54, 93, 0.11);
+  --stage-shadow: 0 34px 80px rgba(16, 24, 38, 0.2);
+  --panel-clean-shadow: 0 18px 42px rgba(16, 24, 38, 0.11);
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.38), transparent 36%),
+    linear-gradient(rgba(27, 54, 93, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 54, 93, 0.028) 1px, transparent 1px),
+    var(--bg);
+  background-size: auto, 36px 36px, 36px 36px, auto;
+}
+
+.brand,
+.slide-number,
+.panel-heading,
+.presenter-notes strong,
+.book-stack span,
+.book-stack .book-idea span,
+.strategy-board span,
+.three-panel span,
+.context-card span,
+.context-link span,
+.context-example span {
+  letter-spacing: 0;
+}
+
+.topbar {
+  min-height: 56px;
+  padding: 8px clamp(18px, 2vw, 30px);
+  border-bottom-color: rgba(251, 248, 239, 0.1);
+  background:
+    linear-gradient(90deg, rgba(15, 143, 140, 0.16), transparent 38%),
+    linear-gradient(180deg, rgba(22, 34, 56, 0.98), rgba(17, 25, 39, 0.96)),
+    var(--stage-bg);
+  box-shadow: 0 16px 34px rgba(17, 25, 39, 0.2);
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: linear-gradient(145deg, rgba(255, 250, 240, 0.18), rgba(15, 143, 140, 0.34));
+  box-shadow: none;
+}
+
+.brand-copy {
+  max-width: min(430px, 52vw);
+  font-size: 0.86rem;
+  line-height: 1.18;
+}
+
+.top-actions {
+  gap: 8px;
+}
+
+.topbar .icon-button,
+.slide-controls button,
+.presenter-stepper button,
+.presenter-actions .icon-button {
+  min-height: 34px;
+  border-radius: 6px;
+}
+
+.topbar .icon-button {
+  padding-inline: 11px;
+  border-color: rgba(251, 248, 239, 0.18);
+  background: rgba(251, 248, 239, 0.07);
+  font-size: 0.78rem;
+}
+
+.shell {
+  grid-template-columns: minmax(220px, 258px) minmax(0, 1fr);
+  gap: clamp(18px, 2vw, 30px);
+  width: min(1640px, 100%);
+  padding: clamp(18px, 2vw, 30px);
+}
+
+.agenda-panel {
+  top: 76px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px rgba(16, 24, 38, 0.1);
+}
+
+.agenda-heading span,
+.agenda-list button {
+  letter-spacing: 0;
+}
+
+.agenda-list button {
+  min-height: 38px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+body:not(.audience-mode) .slide {
+  min-height: min(724px, calc(100vh - 136px));
+  max-width: min(1200px, 100%);
+  padding: clamp(32px, 3vw, 50px);
+  padding-bottom: clamp(56px, 4.2vw, 72px);
+  border-radius: 6px;
+  border-color: var(--rule-soft);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.995), rgba(243, 234, 216, 0.95)),
+    linear-gradient(rgba(27, 54, 93, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 54, 93, 0.018) 1px, transparent 1px),
+    var(--paper-stage);
+  background-size: auto, 32px 32px, 32px 32px, auto;
+  box-shadow: var(--stage-shadow);
+}
+
+body:not(.audience-mode) .slide::before,
+.audience-mode .slide::before {
+  height: 6px;
+  background: linear-gradient(90deg, var(--ink-blue), var(--teal) 54%, var(--amber));
+}
+
+body:not(.audience-mode) .slide::after,
+.audience-mode .slide::after {
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(15, 143, 140, 0.28), transparent);
+}
+
+body:not(.audience-mode) .slide.is-active {
+  row-gap: clamp(16px, 1.9vw, 26px);
+}
+
+body:not(.audience-mode) .topic-header,
+.audience-mode .topic-header {
+  padding-left: clamp(16px, 1.45vw, 24px);
+  border-left: 3px solid var(--teal);
+}
+
+body:not(.audience-mode) .layout-title .topic-header,
+.audience-mode .layout-title .topic-header {
+  padding-left: clamp(16px, 1.45vw, 24px);
+  border-left: 3px solid var(--teal);
+}
+
+body:not(.audience-mode) .slide-number,
+.audience-mode .slide-number {
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  font-size: clamp(0.7rem, 0.74vw, 0.82rem);
+}
+
+body:not(.audience-mode) .topic-header h1,
+body:not(.audience-mode) .topic-header h2 {
+  max-width: min(920px, 100%);
+  margin-bottom: 8px;
+  font-size: clamp(1.8rem, 2.35vw, 2.62rem);
+  line-height: 1.06;
+}
+
+body:not(.audience-mode):not(.reader-mode) .layout-title .topic-header h1 {
+  max-width: 620px;
+  font-size: clamp(2.35rem, 3.35vw, 3.75rem);
+}
+
+body:not(.audience-mode) .topic-header .lead {
+  max-width: min(820px, 100%);
+  font-size: clamp(1rem, 1.18vw, 1.14rem);
+  line-height: 1.44;
+}
+
+body:not(.audience-mode):not(.reader-mode) .layout-title.is-active,
+body:not(.audience-mode):not(.reader-mode) .layout-problem.is-active,
+body:not(.audience-mode):not(.reader-mode) .layout-flow.is-active,
+body:not(.audience-mode):not(.reader-mode) .layout-language.is-active,
+body:not(.audience-mode):not(.reader-mode) .layout-summary.is-active {
+  grid-template-columns: minmax(300px, 0.66fr) minmax(0, 1.34fr);
+  column-gap: clamp(30px, 4.3vw, 72px);
+}
+
+body:not(.audience-mode):not(.reader-mode) .layout-title .domain-map {
+  min-height: min(520px, 58vh);
+}
+
+body:not(.audience-mode):not(.reader-mode) .layout-problem .slide-art,
+body:not(.audience-mode):not(.reader-mode) .layout-flow .slide-art,
+body:not(.audience-mode):not(.reader-mode) .layout-language .slide-art,
+body:not(.audience-mode):not(.reader-mode) .layout-summary .slide-art {
+  min-height: min(540px, 58vh);
+}
+
+.slide-art,
+.domain-map,
+.wide-context-map,
+.capability-map,
+.aggregate-diagram,
+.event-timeline,
+.book-stack article,
+.strategy-board article,
+.three-panel article,
+.compare-board > div,
+.exercise-grid article,
+.context-example > div,
+.lesson-strip span,
+.goal-strip span {
+  border-radius: 6px;
+  border-color: var(--rule-soft);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.99), rgba(243, 234, 216, 0.88)),
+    var(--paper-stage);
+  box-shadow: var(--panel-clean-shadow);
+}
+
+.slide-art,
+.domain-map,
+.wide-context-map,
+.aggregate-diagram {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 250, 240, 0.64),
+    var(--panel-clean-shadow);
+}
+
+.book-stack article,
+.strategy-board article,
+.three-panel article,
+.compare-board > div,
+.exercise-grid article,
+.context-example > div {
+  border-top: 3px solid rgba(15, 143, 140, 0.46);
+}
+
+.book-cover img {
+  border-radius: 5px;
+  box-shadow: 0 18px 34px rgba(16, 24, 38, 0.22);
+}
+
+.context-card,
+.context-link {
+  border-radius: 6px;
+}
+
+.checkout-card {
+  background: linear-gradient(145deg, var(--stage-panel), #14515a 62%, var(--teal-dark));
+}
+
+.slide-controls {
+  right: 24px;
+  bottom: 20px;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 0 18px 44px rgba(16, 24, 38, 0.2);
+}
+
+.slide-controls button {
+  min-width: 74px;
+  padding-inline: 10px;
+}
+
+.reader-mode .shell {
+  grid-template-columns: minmax(220px, 270px) minmax(0, 1060px);
+  gap: clamp(20px, 2.4vw, 36px);
+}
+
+body.reader-mode .slide,
+body.reader-mode .slide.is-active {
+  padding: clamp(32px, 4vw, 54px);
+  border-left: 0;
+  box-shadow: 0 18px 44px rgba(16, 24, 38, 0.1);
+}
+
+.reader-mode .topic-header h1,
+.reader-mode .topic-header h2 {
+  font-size: clamp(1.85rem, 2.4vw, 2.5rem);
+}
+
+.reader-mode .speaker-notes {
+  border-left-color: var(--amber);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.98), rgba(243, 226, 199, 0.9)),
+    var(--soft-amber);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.show-notes:not(.reader-mode) .speaker-notes {
+  max-height: min(320px, 36vh);
+  border-left-color: var(--amber);
+}
+
+.audience-mode {
+  background: var(--stage-bg);
+}
+
+.audience-mode .slide {
+  padding: clamp(42px, 5.2vh, 66px) clamp(72px, 6.4vw, 118px) clamp(34px, 4.2vh, 58px);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.995), rgba(243, 234, 216, 0.97)),
+    linear-gradient(rgba(27, 54, 93, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 54, 93, 0.018) 1px, transparent 1px),
+    var(--paper-stage);
+  background-size: auto, 34px 34px, 34px 34px, auto;
+}
+
+.audience-mode .slide.is-active {
+  row-gap: clamp(16px, 2.2vh, 30px);
+}
+
+.audience-mode .slide::after {
+  top: clamp(52px, 6vh, 78px);
+  bottom: clamp(44px, 5.2vh, 70px);
+  left: clamp(42px, 4.8vw, 82px);
+}
+
+.audience-mode .topic-header h1,
+.audience-mode .topic-header h2 {
+  max-width: min(1080px, 100%);
+  font-size: clamp(1.85rem, 2.25vw, 2.58rem);
+  line-height: 1.06;
+}
+
+.audience-mode .layout-title .topic-header h1 {
+  max-width: 660px;
+  font-size: clamp(2.35rem, 3.35vw, 3.9rem);
+}
+
+.audience-mode .topic-header .lead {
+  max-width: min(960px, 100%);
+  font-size: clamp(0.98rem, 1.08vw, 1.18rem);
+  line-height: 1.42;
+}
+
+.audience-mode .layout-title.is-active,
+.audience-mode .layout-problem.is-active,
+.audience-mode .layout-flow.is-active,
+.audience-mode .layout-language.is-active,
+.audience-mode .layout-summary.is-active {
+  grid-template-columns: minmax(320px, 0.64fr) minmax(0, 1.36fr);
+  column-gap: clamp(38px, 5vw, 92px);
+}
+
+.audience-mode .layout-title .domain-map {
+  min-height: min(650px, 68vh);
+}
+
+.audience-mode .layout-problem .slide-art,
+.audience-mode .layout-flow .slide-art,
+.audience-mode .layout-language .slide-art,
+.audience-mode .layout-summary .slide-art {
+  height: min(710px, 70vh);
+  min-height: 430px;
+}
+
+.audience-mode .layout-books .book-stack article {
+  min-height: clamp(455px, 51vh, 585px);
+}
+
+.audience-mode .layout-marketplace-map .wide-context-map {
+  min-height: min(650px, 66vh);
+}
+
+.audience-mode .layout-events .event-timeline div {
+  min-height: clamp(330px, 46vh, 500px);
+}
+
+.presenter-mode {
+  background:
+    linear-gradient(180deg, rgba(15, 143, 140, 0.08), transparent 42%),
+    var(--stage-bg);
+}
+
+.presenter-console {
+  width: min(1760px, 100%);
+  padding: clamp(14px, 1.35vw, 22px) clamp(18px, 2vw, 32px) 34px;
+}
+
+.presenter-console-header {
+  align-items: center;
+  padding: 14px 20px;
+  border-radius: 6px;
+}
+
+.presenter-console-header h2 {
+  font-size: clamp(1.55rem, 2.3vw, 2.55rem);
+  line-height: 1.05;
+}
+
+.presenter-grid {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(620px, 1.34fr) minmax(320px, 0.78fr);
+  gap: 20px;
+  max-height: calc(100vh - 258px);
+}
+
+.presenter-panel {
+  min-height: 0;
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: 0 18px 42px rgba(16, 24, 38, 0.12);
+}
+
+.notes-panel {
+  max-height: calc(100vh - 316px);
+  overflow: hidden;
+}
+
+.presenter-preview {
+  border: 8px solid rgba(17, 25, 39, 0.94);
+  border-radius: 6px;
+  background: var(--stage-bg);
+  box-shadow: inset 0 0 0 1px rgba(255, 250, 240, 0.08);
+}
+
+.presenter-preview .slide {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.995), rgba(243, 234, 216, 0.96)),
+    var(--paper-stage);
+}
+
+.presenter-notes {
+  min-height: 0;
+  height: calc(100vh - 424px);
+  max-height: calc(100vh - 424px);
+  padding: 22px;
+  border-radius: 6px;
+  font-size: clamp(1.04rem, 1.2vw, 1.34rem);
+  line-height: 1.58;
+}
+
+@media (min-width: 1600px) and (min-height: 900px) {
+  .audience-mode .slide {
+    padding: clamp(54px, 5.4vh, 74px) clamp(96px, 6.8vw, 132px) clamp(46px, 4.8vh, 68px);
+  }
+
+  .audience-mode .slide.is-active {
+    row-gap: clamp(20px, 2.8vh, 36px);
+  }
+
+  .audience-mode .topic-header h1,
+  .audience-mode .topic-header h2 {
+    font-size: clamp(2rem, 2.12vw, 2.68rem);
+  }
+
+  .audience-mode .layout-title .topic-header h1 {
+    font-size: clamp(2.6rem, 3.2vw, 4.1rem);
+  }
+
+  .audience-mode .layout-marketplace-map .wide-context-map,
+  .audience-mode .layout-title .domain-map {
+    min-height: min(680px, 68vh);
+  }
+}
+
 @media (min-width: 1600px) and (min-height: 900px) {
   .audience-mode .slide.is-active {
     row-gap: clamp(26px, 3.4vh, 48px);

@@ -1,0 +1,1381 @@
+{
+  "meta": {
+    "title": "DDD Presentation Professional Direction",
+    "summary": "Image-first visual references for a professional Domain-Driven Design presentation system.",
+    "business": "Introduction to Domain-Driven Design knowledge sharing",
+    "goal": "Professional live presentation, presenter console, audience display, reader notes, mobile, and print",
+    "audience": "Mixed product and technical teams",
+    "qualifiedIntake": {
+      "tone": "Product strategy workshop",
+      "visualLanguage": [
+        "Structured context maps",
+        "Thin-rule diagrams"
+      ],
+      "typography": "Compact sans UI",
+      "palette": "Ink navy"
+    }
+  },
+  "signals": {
+    "creativeTerritories": [
+      "strategy-room clarity",
+      "editorial technical paper",
+      "diagram-first teaching",
+      "quiet presenter console"
+    ],
+    "palette": [
+      "ink navy",
+      "warm paper",
+      "charcoal",
+      "soft white",
+      "muted teal accent"
+    ],
+    "mustPreserve": [
+      "single visual reference image per tile",
+      "professional product-and-engineering taste",
+      "structured diagrams without readable labels",
+      "no stock-photo boardroom cliches"
+    ],
+    "avoid": [
+      "collage",
+      "mini mood board",
+      "generic dashboard",
+      "decorative blobs",
+      "readable text",
+      "logos",
+      "marketing hero"
+    ]
+  },
+  "items": [
+    {
+      "id": "strategy-room-context-wall",
+      "title": "Strategy Room Context Wall",
+      "caption": "A product strategy workshop wall with clean context-map shapes and calm executive staging.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Product strategy workshop, calm and decisive",
+      "motif": "workshop wall, bounded-context cards, thin connector lines",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#d8d0bd",
+        "#0f8f8c"
+      ],
+      "prompt": "Single editorial photograph of a refined product strategy workshop wall, off-white paper cards arranged as abstract bounded contexts with thin ink-navy connector lines, no readable writing, no logos, no UI labels, warm paper surface, compact and orderly composition, subtle muted teal pin accents, professional engineering education tone, realistic room light, 16:9 composition. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Motion Wall",
+            "description": "More kinetic gesture, blur, or environmental energy around Strategy Room Context Wall",
+            "promptHint": "Introduce controlled motion to Strategy Room Context Wall while preserving the campaign cue: A product strategy workshop wall with clean context-map shapes and calm executive..."
+          },
+          {
+            "label": "Material Wall",
+            "description": "A closer tactile read of surface, temperature, and finish around Strategy Room Context Wall",
+            "promptHint": "Rebuild Strategy Room Context Wall as a tactile material study inspired by A product strategy workshop wall with clean context-map shapes and calm executive staging, with a..."
+          },
+          {
+            "label": "Dramatic Wall",
+            "description": "Richer blacks, sharper highlights, and more cinematic emphasis",
+            "promptHint": "Apply high-contrast cinematic treatment to Strategy Room Context Wall; keep A product strategy workshop wall with clean context-map shapes and calm executive staging..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Unexpected Wall",
+            "description": "A more surprising secondary color relationship around Strategy Room Context Wall",
+            "promptHint": "Keep the subject recognizable, but introduce one unexpected supporting color that extends A product strategy workshop wall with clean context-map shapes and calm executive staging"
+          },
+          {
+            "label": "Cool Wall",
+            "description": "Crisper whites, cooler shadows, and restrained technical contrast",
+            "promptHint": "Use cooler minimal accents around Strategy Room Context Wall; keep A product strategy workshop wall with clean context-map shapes and calm executive staging intact"
+          },
+          {
+            "label": "Monochrome Wall",
+            "description": "A narrower near-monochrome treatment that lets one cue around Strategy Room Context Wall stand out",
+            "promptHint": "Reduce the palette around Strategy Room Context Wall to tonal restraint plus one preserved cue from A product strategy workshop wall with clean context-map shapes and calm..."
+          }
+        ],
+        "scene": [
+          {
+            "label": "Wall Exterior",
+            "description": "Move Strategy Room Context Wall into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Strategy Room Context Wall into an exterior or entryway scene while preserving the core cue: A product strategy workshop wall with clean context-map shapes and calm..."
+          },
+          {
+            "label": "Wall Studio",
+            "description": "A cleaner controlled studio setting that keeps Strategy Room Context Wall dominant",
+            "promptHint": "Move Strategy Room Context Wall into a cleaner studio-hero setting while preserving A product strategy workshop wall with clean context-map shapes and calm executive staging"
+          },
+          {
+            "label": "Wall Detail",
+            "description": "A tighter scene focused on material, craft, or product detail",
+            "promptHint": "Create a close-detail scene for Strategy Room Context Wall, keeping the most important source cue visible"
+          }
+        ],
+        "props": [
+          {
+            "label": "Unexpected Wall Prop",
+            "description": "One surprising but believable object that opens a new story around Strategy Room Context Wall",
+            "promptHint": "Add one unexpected supporting prop that extends A product strategy workshop wall with clean context-map shapes and calm executive staging without stealing focus from Strategy..."
+          },
+          {
+            "label": "Minimal Support",
+            "description": "Reduce surrounding objects so Strategy Room Context Wall carries more weight",
+            "promptHint": "Remove nonessential props and keep Strategy Room Context Wall as the dominant read"
+          },
+          {
+            "label": "Premium Finish",
+            "description": "Sharper materials, cleaner surfaces, and more elevated detail",
+            "promptHint": "Add premium material cues around Strategy Room Context Wall; preserve the source image's composition"
+          }
+        ],
+        "character": [
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Strategy Room Context Wall in an everyday user context without losing A product strategy workshop wall with clean context-map shapes and calm executive staging"
+          },
+          {
+            "label": "Passing Figure",
+            "description": "A partial human presence that adds scale and motion without taking over Strategy Room Context Wall",
+            "promptHint": "Add a cropped passing figure or gesture around Strategy Room Context Wall; keep identity nonspecific and preserve A product strategy workshop wall with clean context-map shapes..."
+          },
+          {
+            "label": "Expert Hands",
+            "description": "More credible craft, authority, and purposeful interaction with Strategy Room Context Wall",
+            "promptHint": "If a person appears, make them an expert operator interacting naturally with Strategy Room Context Wall"
+          }
+        ],
+        "format": [
+          {
+            "label": "Portrait Wall",
+            "description": "Tighter vertical crop for social or story placement",
+            "promptHint": "Adapt Strategy Room Context Wall to a portrait social crop while preserving the key visual read"
+          },
+          {
+            "label": "Wall Crop",
+            "description": "Closer inspection of the material, surface, or focal subject",
+            "promptHint": "Create a closer detail crop of Strategy Room Context Wall; keep A product strategy workshop wall with clean context-map shapes and calm executive staging legible"
+          },
+          {
+            "label": "Split-Depth Wall",
+            "description": "Foreground detail and background atmosphere in one composed frame",
+            "promptHint": "Create a single-frame split-depth composition for Strategy Room Context Wall; do not make a collage or panel layout"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/strategy-room-context-wall.jpg",
+      "sourceImageUrl": "generated/2ce21051b4741ea68e6f29fc75652e28.png"
+    },
+    {
+      "id": "ink-navy-stage-paper",
+      "title": "Ink Navy Stage Paper",
+      "caption": "A premium slide-stage material direction: navy frame, warm paper, thin rules.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Editorial technical paper",
+      "motif": "navy stage edge, paper sheet, fine grid and rules",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#cfc6b4",
+        "#283a5c"
+      ],
+      "prompt": "Single visual reference image of a warm paper presentation sheet resting on an ink-navy stage surface, fine hairline grid and rule details without readable text, compact technical spacing, subtle shadows, executive education deck mood, no logos, no people, no collage, 16:9 overhead composition. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Candid Paper",
+            "description": "More natural texture and believable lived-in detail for Ink Navy Stage Paper",
+            "promptHint": "Shift Ink Navy Stage Paper toward documentary realism while preserving A premium slide-stage material direction: navy frame, warm paper, thin rules; make lighting and staging..."
+          },
+          {
+            "label": "Editorial Paper",
+            "description": "Cleaner light and hierarchy around Ink Navy Stage Paper",
+            "promptHint": "Apply a polished editorial treatment to Ink Navy Stage Paper; preserve A premium slide-stage material direction: navy frame, warm paper, thin rules while changing the..."
+          },
+          {
+            "label": "Minimal Paper",
+            "description": "Quieter hierarchy, more negative space, and stricter restraint around Ink Navy Stage Paper",
+            "promptHint": "Strip Ink Navy Stage Paper down to a minimal premium frame; keep A premium slide-stage material direction: navy frame, warm paper, thin rules legible but change the surrounding..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Monochrome Paper",
+            "description": "A narrower near-monochrome treatment that lets one cue around Ink Navy Stage Paper stand out",
+            "promptHint": "Reduce the palette around Ink Navy Stage Paper to tonal restraint plus one preserved cue from A premium slide-stage material direction: navy frame, warm paper, thin rules"
+          },
+          {
+            "label": "Warm Paper",
+            "description": "Warmer neutrals and tactile highlights around Ink Navy Stage Paper",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Ink Navy Stage Paper"
+          },
+          {
+            "label": "Accent Paper",
+            "description": "A stronger accent color against quieter supporting surfaces",
+            "promptHint": "Add a controlled accent palette to Ink Navy Stage Paper without changing the main subject"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Paper Exterior",
+            "description": "Move Ink Navy Stage Paper into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Ink Navy Stage Paper into an exterior or entryway scene while preserving the core cue: A premium slide-stage material direction: navy frame, warm paper, thin rules"
+          },
+          {
+            "label": "Paper Studio",
+            "description": "A cleaner controlled studio setting that keeps Ink Navy Stage Paper dominant",
+            "promptHint": "Move Ink Navy Stage Paper into a cleaner studio-hero setting while preserving A premium slide-stage material direction: navy frame, warm paper, thin rules"
+          },
+          {
+            "label": "Paper Detail",
+            "description": "A tighter scene focused on material, craft, or product detail",
+            "promptHint": "Create a close-detail scene for Ink Navy Stage Paper, keeping the most important source cue visible"
+          }
+        ],
+        "props": [
+          {
+            "label": "Unexpected Paper Prop",
+            "description": "One surprising but believable object that opens a new story around Ink Navy Stage Paper",
+            "promptHint": "Add one unexpected supporting prop that extends A premium slide-stage material direction: navy frame, warm paper, thin rules without stealing focus from Ink Navy Stage Paper"
+          },
+          {
+            "label": "Minimal Support",
+            "description": "Reduce surrounding objects so Ink Navy Stage Paper carries more weight",
+            "promptHint": "Remove nonessential props and keep Ink Navy Stage Paper as the dominant read"
+          },
+          {
+            "label": "Premium Finish",
+            "description": "Sharper materials, cleaner surfaces, and more elevated detail",
+            "promptHint": "Add premium material cues around Ink Navy Stage Paper; preserve the source image's composition"
+          }
+        ],
+        "character": [
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Ink Navy Stage Paper",
+            "promptHint": "Introduce a collector or tastemaker presence around Ink Navy Stage Paper while changing wardrobe, gesture, or posture"
+          },
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Ink Navy Stage Paper in an everyday user context without losing A premium slide-stage material direction: navy frame, warm paper, thin rules"
+          },
+          {
+            "label": "Passing Figure",
+            "description": "A partial human presence that adds scale and motion without taking over Ink Navy Stage Paper",
+            "promptHint": "Add a cropped passing figure or gesture around Ink Navy Stage Paper; keep identity nonspecific and preserve A premium slide-stage material direction: navy frame, warm paper..."
+          }
+        ],
+        "format": [
+          {
+            "label": "Paper Crop",
+            "description": "Closer inspection of the material, surface, or focal subject",
+            "promptHint": "Create a closer detail crop of Ink Navy Stage Paper; keep A premium slide-stage material direction: navy frame, warm paper, thin rules legible"
+          },
+          {
+            "label": "Split-Depth Paper",
+            "description": "Foreground detail and background atmosphere in one composed frame",
+            "promptHint": "Create a single-frame split-depth composition for Ink Navy Stage Paper; do not make a collage or panel layout"
+          },
+          {
+            "label": "Wide Paper",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Ink Navy Stage Paper to a wide hero composition with room for layout"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/ink-navy-stage-paper.jpg",
+      "sourceImageUrl": "generated/d681151dfca237f176d6d78d2cf9d964.png"
+    },
+    {
+      "id": "presenter-console-detail",
+      "title": "Presenter Console Detail",
+      "caption": "A restrained control-surface reference for speaker notes and slide previews.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Quiet, focused, presenter-ready",
+      "motif": "small preview panels, notes surface, dark chrome",
+      "palette": [
+        "#111927",
+        "#18243a",
+        "#fffaf0",
+        "#d7cbb5"
+      ],
+      "prompt": "Single visual reference image of a professional presenter control surface on a laptop-like dark frame, abstract slide preview panels and warm paper notes area, no readable text, no real UI labels, compact sans-like blocks only as texture, ink navy chrome, soft studio lighting, product education context, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Dramatic Console",
+            "description": "Richer blacks, sharper highlights, and more cinematic emphasis",
+            "promptHint": "Apply high-contrast cinematic treatment to Presenter Console Detail; keep A restrained control-surface reference for speaker notes and slide previews recognizable but alter..."
+          },
+          {
+            "label": "Candid Console",
+            "description": "More natural texture and believable lived-in detail for Presenter Console Detail",
+            "promptHint": "Shift Presenter Console Detail toward documentary realism while preserving A restrained control-surface reference for speaker notes and slide previews; make lighting and..."
+          },
+          {
+            "label": "Editorial Console",
+            "description": "Cleaner light and hierarchy around Presenter Console Detail",
+            "promptHint": "Apply a polished editorial treatment to Presenter Console Detail; preserve A restrained control-surface reference for speaker notes and slide previews while changing the..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Accent Console",
+            "description": "A stronger accent color against quieter supporting surfaces",
+            "promptHint": "Add a controlled accent palette to Presenter Console Detail without changing the main subject"
+          },
+          {
+            "label": "Unexpected Console",
+            "description": "A more surprising secondary color relationship around Presenter Console Detail",
+            "promptHint": "Keep the subject recognizable, but introduce one unexpected supporting color that extends A restrained control-surface reference for speaker notes and slide previews"
+          },
+          {
+            "label": "Cool Console",
+            "description": "Crisper whites, cooler shadows, and restrained technical contrast",
+            "promptHint": "Use cooler minimal accents around Presenter Console Detail; keep A restrained control-surface reference for speaker notes and slide previews intact"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Console In Use",
+            "description": "A more believable real-world context for Presenter Console Detail",
+            "promptHint": "Place Presenter Console Detail into a realistic usage context; preserve the source image's core cue: A restrained control-surface reference for speaker notes and slide previews"
+          },
+          {
+            "label": "Console Exterior",
+            "description": "Move Presenter Console Detail into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Presenter Console Detail into an exterior or entryway scene while preserving the core cue: A restrained control-surface reference for speaker notes and slide previews"
+          },
+          {
+            "label": "Console Studio",
+            "description": "A cleaner controlled studio setting that keeps Presenter Console Detail dominant",
+            "promptHint": "Move Presenter Console Detail into a cleaner studio-hero setting while preserving A restrained control-surface reference for speaker notes and slide previews"
+          }
+        ],
+        "props": [
+          {
+            "label": "Console Cues",
+            "description": "Add restrained supporting objects that clarify the context of Presenter Console Detail",
+            "promptHint": "Add a few contextual props that reinforce A restrained control-surface reference for speaker notes and slide previews without distracting from Presenter Console Detail"
+          },
+          {
+            "label": "Unexpected Console Prop",
+            "description": "One surprising but believable object that opens a new story around Presenter Console Detail",
+            "promptHint": "Add one unexpected supporting prop that extends A restrained control-surface reference for speaker notes and slide previews without stealing focus from Presenter Console Detail"
+          },
+          {
+            "label": "Minimal Support",
+            "description": "Reduce surrounding objects so Presenter Console Detail carries more weight",
+            "promptHint": "Remove nonessential props and keep Presenter Console Detail as the dominant read"
+          }
+        ],
+        "character": [
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Presenter Console Detail",
+            "promptHint": "Introduce a collector or tastemaker presence around Presenter Console Detail while changing wardrobe, gesture, or posture"
+          },
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Presenter Console Detail in an everyday user context without losing A restrained control-surface reference for speaker notes and slide previews"
+          },
+          {
+            "label": "Passing Figure",
+            "description": "A partial human presence that adds scale and motion without taking over Presenter Console Detail",
+            "promptHint": "Add a cropped passing figure or gesture around Presenter Console Detail; keep identity nonspecific and preserve A restrained control-surface reference for speaker notes and..."
+          }
+        ],
+        "format": [
+          {
+            "label": "Square Console",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Presenter Console Detail as a square frame with a changed focal balance and the core cue intact"
+          },
+          {
+            "label": "Portrait Console",
+            "description": "Tighter vertical crop for social or story placement",
+            "promptHint": "Adapt Presenter Console Detail to a portrait social crop while preserving the key visual read"
+          },
+          {
+            "label": "Console Crop",
+            "description": "Closer inspection of the material, surface, or focal subject",
+            "promptHint": "Create a closer detail crop of Presenter Console Detail; keep A restrained control-surface reference for speaker notes and slide previews legible"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/presenter-console-detail.jpg",
+      "sourceImageUrl": "generated/d88d1c411c8a1e8b17ec9aa74a1f273f.png"
+    },
+    {
+      "id": "domain-model-tabletop",
+      "title": "Domain Model Tabletop",
+      "caption": "A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Collaborative but polished",
+      "motif": "tabletop cards, boundary tape, workshop hands absent",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#e5dcc9",
+        "#8a7b65"
+      ],
+      "prompt": "Single editorial photograph of a clean tabletop domain modeling setup, unlabeled warm paper cards grouped inside thin navy boundary lines, a few neutral markers and ruler-like tools, no readable text, no hands, no logos, calm product strategy workshop atmosphere, high taste B2B presentation reference, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Editorial Tabletop",
+            "description": "Cleaner light and hierarchy around Domain Model Tabletop",
+            "promptHint": "Apply a polished editorial treatment to Domain Model Tabletop; preserve A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality while..."
+          },
+          {
+            "label": "Minimal Tabletop",
+            "description": "Quieter hierarchy, more negative space, and stricter restraint around Domain Model Tabletop",
+            "promptHint": "Strip Domain Model Tabletop down to a minimal premium frame; keep A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality legible but..."
+          },
+          {
+            "label": "Motion Tabletop",
+            "description": "More kinetic gesture, blur, or environmental energy around Domain Model Tabletop",
+            "promptHint": "Introduce controlled motion to Domain Model Tabletop while preserving the campaign cue: A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Warm Tabletop",
+            "description": "Warmer neutrals and tactile highlights around Domain Model Tabletop",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Domain Model Tabletop"
+          },
+          {
+            "label": "Accent Tabletop",
+            "description": "A stronger accent color against quieter supporting surfaces",
+            "promptHint": "Add a controlled accent palette to Domain Model Tabletop without changing the main subject"
+          },
+          {
+            "label": "Unexpected Tabletop",
+            "description": "A more surprising secondary color relationship around Domain Model Tabletop",
+            "promptHint": "Keep the subject recognizable, but introduce one unexpected supporting color that extends A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet..."
+          }
+        ],
+        "scene": [
+          {
+            "label": "Tabletop Backstage",
+            "description": "A behind-the-scenes environment that adds process and atmosphere around Domain Model Tabletop",
+            "promptHint": "Reframe Domain Model Tabletop as a backstage or preparation moment; keep A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality recognizable"
+          },
+          {
+            "label": "Tabletop In Use",
+            "description": "A more believable real-world context for Domain Model Tabletop",
+            "promptHint": "Place Domain Model Tabletop into a realistic usage context; preserve the source image's core cue: A tabletop artifact direction for modeling sessions: cards, boundaries, and..."
+          },
+          {
+            "label": "Tabletop Exterior",
+            "description": "Move Domain Model Tabletop into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Domain Model Tabletop into an exterior or entryway scene while preserving the core cue: A tabletop artifact direction for modeling sessions: cards, boundaries, and..."
+          }
+        ],
+        "props": [
+          {
+            "label": "Process Cues",
+            "description": "Tools, traces, or handling details that make Domain Model Tabletop feel actively used",
+            "promptHint": "Add restrained process cues around Domain Model Tabletop; preserve the strongest visual idea from A tabletop artifact direction for modeling sessions: cards, boundaries, and..."
+          },
+          {
+            "label": "Tabletop Cues",
+            "description": "Add restrained supporting objects that clarify the context of Domain Model Tabletop",
+            "promptHint": "Add a few contextual props that reinforce A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality without distracting from Domain Model..."
+          },
+          {
+            "label": "Unexpected Tabletop Prop",
+            "description": "One surprising but believable object that opens a new story around Domain Model Tabletop",
+            "promptHint": "Add one unexpected supporting prop that extends A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality without stealing focus from Domain..."
+          }
+        ],
+        "character": [
+          {
+            "label": "No Human",
+            "description": "Let the object, place, or composition carry the frame",
+            "promptHint": "Remove visible people and let Domain Model Tabletop carry the image"
+          },
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Domain Model Tabletop",
+            "promptHint": "Introduce a collector or tastemaker presence around Domain Model Tabletop while changing wardrobe, gesture, or posture"
+          },
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Domain Model Tabletop in an everyday user context without losing A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality"
+          }
+        ],
+        "format": [
+          {
+            "label": "Wide Tabletop",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Domain Model Tabletop to a wide hero composition with room for layout"
+          },
+          {
+            "label": "Square Tabletop",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Domain Model Tabletop as a square frame with a changed focal balance and the core cue intact"
+          },
+          {
+            "label": "Portrait Tabletop",
+            "description": "Tighter vertical crop for social or story placement",
+            "promptHint": "Adapt Domain Model Tabletop to a portrait social crop while preserving the key visual read"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/domain-model-tabletop.jpg",
+      "sourceImageUrl": "generated/7df7968e02892cdbdbf01014f25fa2a5.png"
+    },
+    {
+      "id": "bounded-context-architectural-lines",
+      "title": "Bounded Context Architectural Lines",
+      "caption": "A more architectural diagram reference with strong spacing and crisp boundaries.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Precise and architectural",
+      "motif": "architectural drafting, context blocks, sparse connectors",
+      "palette": [
+        "#111927",
+        "#f8f4ea",
+        "#c7c0af",
+        "#21365b"
+      ],
+      "prompt": "Single visual reference image of an architectural drafting sheet with abstract bounded-context blocks, precise thin navy lines, sparse connectors, clean negative space, no readable labels or measurements, warm off-white paper, professional technical education mood, photographed flat with slight paper texture, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Dramatic Lines",
+            "description": "Richer blacks, sharper highlights, and more cinematic emphasis",
+            "promptHint": "Apply high-contrast cinematic treatment to Bounded Context Architectural Lines; keep A more architectural diagram reference with strong spacing and crisp boundaries..."
+          },
+          {
+            "label": "Candid Lines",
+            "description": "More natural texture and believable lived-in detail for Bounded Context Architectural Lines",
+            "promptHint": "Shift Bounded Context Architectural Lines toward documentary realism while preserving A more architectural diagram reference with strong spacing and crisp boundaries; make..."
+          },
+          {
+            "label": "Editorial Lines",
+            "description": "Cleaner light and hierarchy around Bounded Context Architectural Lines",
+            "promptHint": "Apply a polished editorial treatment to Bounded Context Architectural Lines; preserve A more architectural diagram reference with strong spacing and crisp boundaries while..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Accent Lines",
+            "description": "A stronger accent color against quieter supporting surfaces",
+            "promptHint": "Add a controlled accent palette to Bounded Context Architectural Lines without changing the main subject"
+          },
+          {
+            "label": "Unexpected Lines",
+            "description": "A more surprising secondary color relationship around Bounded Context Architectural Lines",
+            "promptHint": "Keep the subject recognizable, but introduce one unexpected supporting color that extends A more architectural diagram reference with strong spacing and crisp boundaries"
+          },
+          {
+            "label": "Cool Lines",
+            "description": "Crisper whites, cooler shadows, and restrained technical contrast",
+            "promptHint": "Use cooler minimal accents around Bounded Context Architectural Lines; keep A more architectural diagram reference with strong spacing and crisp boundaries intact"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Lines Exterior",
+            "description": "Move Bounded Context Architectural Lines into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Bounded Context Architectural Lines into an exterior or entryway scene while preserving the core cue: A more architectural diagram reference with strong spacing and..."
+          },
+          {
+            "label": "Lines Studio",
+            "description": "A cleaner controlled studio setting that keeps Bounded Context Architectural Lines dominant",
+            "promptHint": "Move Bounded Context Architectural Lines into a cleaner studio-hero setting while preserving A more architectural diagram reference with strong spacing and crisp boundaries"
+          },
+          {
+            "label": "Lines Detail",
+            "description": "A tighter scene focused on material, craft, or product detail",
+            "promptHint": "Create a close-detail scene for Bounded Context Architectural Lines, keeping the most important source cue visible"
+          }
+        ],
+        "props": [
+          {
+            "label": "Unexpected Lines Prop",
+            "description": "One surprising but believable object that opens a new story around Bounded Context Architectural Lines",
+            "promptHint": "Add one unexpected supporting prop that extends A more architectural diagram reference with strong spacing and crisp boundaries without stealing focus from Bounded Context..."
+          },
+          {
+            "label": "Minimal Support",
+            "description": "Reduce surrounding objects so Bounded Context Architectural Lines carries more weight",
+            "promptHint": "Remove nonessential props and keep Bounded Context Architectural Lines as the dominant read"
+          },
+          {
+            "label": "Premium Finish",
+            "description": "Sharper materials, cleaner surfaces, and more elevated detail",
+            "promptHint": "Add premium material cues around Bounded Context Architectural Lines; preserve the source image's composition"
+          }
+        ],
+        "character": [
+          {
+            "label": "No Human",
+            "description": "Let the object, place, or composition carry the frame",
+            "promptHint": "Remove visible people and let Bounded Context Architectural Lines carry the image"
+          },
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Bounded Context Architectural Lines",
+            "promptHint": "Introduce a collector or tastemaker presence around Bounded Context Architectural Lines while changing wardrobe, gesture, or posture"
+          },
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Bounded Context Architectural Lines in an everyday user context without losing A more architectural diagram reference with strong spacing and crisp boundaries"
+          }
+        ],
+        "format": [
+          {
+            "label": "Split-Depth Lines",
+            "description": "Foreground detail and background atmosphere in one composed frame",
+            "promptHint": "Create a single-frame split-depth composition for Bounded Context Architectural Lines; do not make a collage or panel layout"
+          },
+          {
+            "label": "Wide Lines",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Bounded Context Architectural Lines to a wide hero composition with room for layout"
+          },
+          {
+            "label": "Square Lines",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Bounded Context Architectural Lines as a square frame with a changed focal balance and the core cue intact"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/bounded-context-architectural-lines.jpg",
+      "sourceImageUrl": "generated/ecc1ef6671326a72e536225436a70286.png"
+    },
+    {
+      "id": "marketplace-flow-material-study",
+      "title": "Marketplace Flow Material Study",
+      "caption": "A tactile representation of one checkout becoming many fulfillment paths.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Clear, tactile, business-focused",
+      "motif": "one central path splitting into grouped paths",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#d7cab3",
+        "#0f8f8c"
+      ],
+      "prompt": "Single composed material detail of thin navy thread or linework on warm paper, one central route splitting into several neatly grouped routes, abstractly suggesting one checkout and multiple order groups without labels, small muted teal anchor point, no readable text, no collage, refined strategy workshop image, 16:9 macro-overhead composition. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Minimal Material",
+            "description": "Quieter hierarchy, more negative space, and stricter restraint around Marketplace Flow Material Study",
+            "promptHint": "Strip Marketplace Flow Material Study down to a minimal premium frame; keep A tactile representation of one checkout becoming many fulfillment paths legible but change the..."
+          },
+          {
+            "label": "Motion Material",
+            "description": "More kinetic gesture, blur, or environmental energy around Marketplace Flow Material Study",
+            "promptHint": "Introduce controlled motion to Marketplace Flow Material Study while preserving the campaign cue: A tactile representation of one checkout becoming many fulfillment paths"
+          },
+          {
+            "label": "Material Material",
+            "description": "A closer tactile read of surface, temperature, and finish around Marketplace Flow Material Study",
+            "promptHint": "Rebuild Marketplace Flow Material Study as a tactile material study inspired by A tactile representation of one checkout becoming many fulfillment paths, with a visibly..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Cool Material",
+            "description": "Crisper whites, cooler shadows, and restrained technical contrast",
+            "promptHint": "Use cooler minimal accents around Marketplace Flow Material Study; keep A tactile representation of one checkout becoming many fulfillment paths intact"
+          },
+          {
+            "label": "Monochrome Material",
+            "description": "A narrower near-monochrome treatment that lets one cue around Marketplace Flow Material Study stand out",
+            "promptHint": "Reduce the palette around Marketplace Flow Material Study to tonal restraint plus one preserved cue from A tactile representation of one checkout becoming many fulfillment paths"
+          },
+          {
+            "label": "Warm Material",
+            "description": "Warmer neutrals and tactile highlights around Marketplace Flow Material Study",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Marketplace Flow Material Study"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Material Exterior",
+            "description": "Move Marketplace Flow Material Study into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Marketplace Flow Material Study into an exterior or entryway scene while preserving the core cue: A tactile representation of one checkout becoming many fulfillment paths"
+          },
+          {
+            "label": "Material Studio",
+            "description": "A cleaner controlled studio setting that keeps Marketplace Flow Material Study dominant",
+            "promptHint": "Move Marketplace Flow Material Study into a cleaner studio-hero setting while preserving A tactile representation of one checkout becoming many fulfillment paths"
+          },
+          {
+            "label": "Material Detail",
+            "description": "A tighter scene focused on material, craft, or product detail",
+            "promptHint": "Create a close-detail scene for Marketplace Flow Material Study, keeping the most important source cue visible"
+          }
+        ],
+        "props": [
+          {
+            "label": "Unexpected Material Prop",
+            "description": "One surprising but believable object that opens a new story around Marketplace Flow Material Study",
+            "promptHint": "Add one unexpected supporting prop that extends A tactile representation of one checkout becoming many fulfillment paths without stealing focus from Marketplace Flow Material Study"
+          },
+          {
+            "label": "Minimal Support",
+            "description": "Reduce surrounding objects so Marketplace Flow Material Study carries more weight",
+            "promptHint": "Remove nonessential props and keep Marketplace Flow Material Study as the dominant read"
+          },
+          {
+            "label": "Premium Finish",
+            "description": "Sharper materials, cleaner surfaces, and more elevated detail",
+            "promptHint": "Add premium material cues around Marketplace Flow Material Study; preserve the source image's composition"
+          }
+        ],
+        "character": [
+          {
+            "label": "Expert Hands",
+            "description": "More credible craft, authority, and purposeful interaction with Marketplace Flow Material Study",
+            "promptHint": "If a person appears, make them an expert operator interacting naturally with Marketplace Flow Material Study"
+          },
+          {
+            "label": "No Human",
+            "description": "Let the object, place, or composition carry the frame",
+            "promptHint": "Remove visible people and let Marketplace Flow Material Study carry the image"
+          },
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Marketplace Flow Material Study",
+            "promptHint": "Introduce a collector or tastemaker presence around Marketplace Flow Material Study while changing wardrobe, gesture, or posture"
+          }
+        ],
+        "format": [
+          {
+            "label": "Wide Material",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Marketplace Flow Material Study to a wide hero composition with room for layout"
+          },
+          {
+            "label": "Square Material",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Marketplace Flow Material Study as a square frame with a changed focal balance and the core cue intact"
+          },
+          {
+            "label": "Portrait Material",
+            "description": "Tighter vertical crop for social or story placement",
+            "promptHint": "Adapt Marketplace Flow Material Study to a portrait social crop while preserving the key visual read"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/marketplace-flow-material-study.jpg",
+      "sourceImageUrl": "generated/64c45a1116fca61fe16eb4ff6c06bd18.png"
+    },
+    {
+      "id": "compact-sans-control-tokens",
+      "title": "Compact Control Tokens",
+      "caption": "A UI-system texture reference for compact controls without real interface content.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Compact, utilitarian, premium",
+      "motif": "small controls, counters, stage rail, technical rhythm",
+      "palette": [
+        "#111927",
+        "#17233a",
+        "#fffaf0",
+        "#d4c8b4"
+      ],
+      "prompt": "Single visual reference image of abstract compact control tokens on an ink-navy surface, small pill-like buttons and counters represented only by simple shapes, no readable text, no logos, no actual app UI, warm paper card nearby, precise spacing, professional presentation-control mood, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Editorial Tokens",
+            "description": "Cleaner light and hierarchy around Compact Control Tokens",
+            "promptHint": "Apply a polished editorial treatment to Compact Control Tokens; preserve A UI-system texture reference for compact controls without real interface content while changing the..."
+          },
+          {
+            "label": "Minimal Tokens",
+            "description": "Quieter hierarchy, more negative space, and stricter restraint around Compact Control Tokens",
+            "promptHint": "Strip Compact Control Tokens down to a minimal premium frame; keep A UI-system texture reference for compact controls without real interface content legible but change the..."
+          },
+          {
+            "label": "Motion Tokens",
+            "description": "More kinetic gesture, blur, or environmental energy around Compact Control Tokens",
+            "promptHint": "Introduce controlled motion to Compact Control Tokens while preserving the campaign cue: A UI-system texture reference for compact controls without real interface content"
+          }
+        ],
+        "palette": [
+          {
+            "label": "Cool Tokens",
+            "description": "Crisper whites, cooler shadows, and restrained technical contrast",
+            "promptHint": "Use cooler minimal accents around Compact Control Tokens; keep A UI-system texture reference for compact controls without real interface content intact"
+          },
+          {
+            "label": "Monochrome Tokens",
+            "description": "A narrower near-monochrome treatment that lets one cue around Compact Control Tokens stand out",
+            "promptHint": "Reduce the palette around Compact Control Tokens to tonal restraint plus one preserved cue from A UI-system texture reference for compact controls without real interface content"
+          },
+          {
+            "label": "Warm Tokens",
+            "description": "Warmer neutrals and tactile highlights around Compact Control Tokens",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Compact Control Tokens"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Tokens Backstage",
+            "description": "A behind-the-scenes environment that adds process and atmosphere around Compact Control Tokens",
+            "promptHint": "Reframe Compact Control Tokens as a backstage or preparation moment; keep A UI-system texture reference for compact controls without real interface content recognizable"
+          },
+          {
+            "label": "Tokens In Use",
+            "description": "A more believable real-world context for Compact Control Tokens",
+            "promptHint": "Place Compact Control Tokens into a realistic usage context; preserve the source image's core cue: A UI-system texture reference for compact controls without real interface content"
+          },
+          {
+            "label": "Tokens Exterior",
+            "description": "Move Compact Control Tokens into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Compact Control Tokens into an exterior or entryway scene while preserving the core cue: A UI-system texture reference for compact controls without real interface content"
+          }
+        ],
+        "props": [
+          {
+            "label": "Process Cues",
+            "description": "Tools, traces, or handling details that make Compact Control Tokens feel actively used",
+            "promptHint": "Add restrained process cues around Compact Control Tokens; preserve the strongest visual idea from A UI-system texture reference for compact controls without real interface content"
+          },
+          {
+            "label": "Tokens Cues",
+            "description": "Add restrained supporting objects that clarify the context of Compact Control Tokens",
+            "promptHint": "Add a few contextual props that reinforce A UI-system texture reference for compact controls without real interface content without distracting from Compact Control Tokens"
+          },
+          {
+            "label": "Unexpected Tokens Prop",
+            "description": "One surprising but believable object that opens a new story around Compact Control Tokens",
+            "promptHint": "Add one unexpected supporting prop that extends A UI-system texture reference for compact controls without real interface content without stealing focus from Compact Control Tokens"
+          }
+        ],
+        "character": [
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Compact Control Tokens",
+            "promptHint": "Introduce a collector or tastemaker presence around Compact Control Tokens while changing wardrobe, gesture, or posture"
+          },
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Compact Control Tokens in an everyday user context without losing A UI-system texture reference for compact controls without real interface content"
+          },
+          {
+            "label": "Passing Figure",
+            "description": "A partial human presence that adds scale and motion without taking over Compact Control Tokens",
+            "promptHint": "Add a cropped passing figure or gesture around Compact Control Tokens; keep identity nonspecific and preserve A UI-system texture reference for compact controls without real..."
+          }
+        ],
+        "format": [
+          {
+            "label": "Split-Depth Tokens",
+            "description": "Foreground detail and background atmosphere in one composed frame",
+            "promptHint": "Create a single-frame split-depth composition for Compact Control Tokens; do not make a collage or panel layout"
+          },
+          {
+            "label": "Wide Tokens",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Compact Control Tokens to a wide hero composition with room for layout"
+          },
+          {
+            "label": "Square Tokens",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Compact Control Tokens as a square frame with a changed focal balance and the core cue intact"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/compact-sans-control-tokens.jpg",
+      "sourceImageUrl": "generated/e182ee7f37c8cf9aacf3f9ff8b3117ca.png"
+    },
+    {
+      "id": "editorial-book-desk",
+      "title": "Editorial Book Desk",
+      "caption": "A reference for the book slide: serious learning material without literal book-cover text.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Scholarly, modern, accessible",
+      "motif": "technical books, paper tabs, navy desk",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#cbc1af",
+        "#2b3958"
+      ],
+      "prompt": "Single editorial photograph of three unlabeled technical books on an ink-navy desk, warm paper tabs and thin rule bookmarks, no readable titles, no logos, refined education-deck mood, soft directional light, compact arrangement with generous negative space, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Motion Desk",
+            "description": "More kinetic gesture, blur, or environmental energy around Editorial Book Desk",
+            "promptHint": "Introduce controlled motion to Editorial Book Desk while preserving the campaign cue: A reference for the book slide: serious learning material without literal book-cover text"
+          },
+          {
+            "label": "Material Desk",
+            "description": "A closer tactile read of surface, temperature, and finish around Editorial Book Desk",
+            "promptHint": "Rebuild Editorial Book Desk as a tactile material study inspired by A reference for the book slide: serious learning material without literal book-cover text, with a visibly..."
+          },
+          {
+            "label": "Dramatic Desk",
+            "description": "Richer blacks, sharper highlights, and more cinematic emphasis",
+            "promptHint": "Apply high-contrast cinematic treatment to Editorial Book Desk; keep A reference for the book slide: serious learning material without literal book-cover text recognizable but..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Cool Desk",
+            "description": "Crisper whites, cooler shadows, and restrained technical contrast",
+            "promptHint": "Use cooler minimal accents around Editorial Book Desk; keep A reference for the book slide: serious learning material without literal book-cover text intact"
+          },
+          {
+            "label": "Monochrome Desk",
+            "description": "A narrower near-monochrome treatment that lets one cue around Editorial Book Desk stand out",
+            "promptHint": "Reduce the palette around Editorial Book Desk to tonal restraint plus one preserved cue from A reference for the book slide: serious learning material without literal..."
+          },
+          {
+            "label": "Warm Desk",
+            "description": "Warmer neutrals and tactile highlights around Editorial Book Desk",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Editorial Book Desk"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Desk Studio",
+            "description": "A cleaner controlled studio setting that keeps Editorial Book Desk dominant",
+            "promptHint": "Move Editorial Book Desk into a cleaner studio-hero setting while preserving A reference for the book slide: serious learning material without literal book-cover text"
+          },
+          {
+            "label": "Desk Detail",
+            "description": "A tighter scene focused on material, craft, or product detail",
+            "promptHint": "Create a close-detail scene for Editorial Book Desk, keeping the most important source cue visible"
+          },
+          {
+            "label": "Desk Backstage",
+            "description": "A behind-the-scenes environment that adds process and atmosphere around Editorial Book Desk",
+            "promptHint": "Reframe Editorial Book Desk as a backstage or preparation moment; keep A reference for the book slide: serious learning material without literal book-cover text recognizable"
+          }
+        ],
+        "props": [
+          {
+            "label": "Minimal Support",
+            "description": "Reduce surrounding objects so Editorial Book Desk carries more weight",
+            "promptHint": "Remove nonessential props and keep Editorial Book Desk as the dominant read"
+          },
+          {
+            "label": "Premium Finish",
+            "description": "Sharper materials, cleaner surfaces, and more elevated detail",
+            "promptHint": "Add premium material cues around Editorial Book Desk; preserve the source image's composition"
+          },
+          {
+            "label": "Process Cues",
+            "description": "Tools, traces, or handling details that make Editorial Book Desk feel actively used",
+            "promptHint": "Add restrained process cues around Editorial Book Desk; preserve the strongest visual idea from A reference for the book slide: serious learning material without literal..."
+          }
+        ],
+        "character": [
+          {
+            "label": "Passing Figure",
+            "description": "A partial human presence that adds scale and motion without taking over Editorial Book Desk",
+            "promptHint": "Add a cropped passing figure or gesture around Editorial Book Desk; keep identity nonspecific and preserve A reference for the book slide: serious learning material without..."
+          },
+          {
+            "label": "Expert Hands",
+            "description": "More credible craft, authority, and purposeful interaction with Editorial Book Desk",
+            "promptHint": "If a person appears, make them an expert operator interacting naturally with Editorial Book Desk"
+          },
+          {
+            "label": "No Human",
+            "description": "Let the object, place, or composition carry the frame",
+            "promptHint": "Remove visible people and let Editorial Book Desk carry the image"
+          }
+        ],
+        "format": [
+          {
+            "label": "Desk Crop",
+            "description": "Closer inspection of the material, surface, or focal subject",
+            "promptHint": "Create a closer detail crop of Editorial Book Desk; keep A reference for the book slide: serious learning material without literal book-cover text legible"
+          },
+          {
+            "label": "Split-Depth Desk",
+            "description": "Foreground detail and background atmosphere in one composed frame",
+            "promptHint": "Create a single-frame split-depth composition for Editorial Book Desk; do not make a collage or panel layout"
+          },
+          {
+            "label": "Wide Desk",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Editorial Book Desk to a wide hero composition with room for layout"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/editorial-book-desk.jpg",
+      "sourceImageUrl": "generated/29f9fe35d2eea797bdfbc5f545194799.png"
+    },
+    {
+      "id": "diagram-first-teaching-wall",
+      "title": "Diagram-First Teaching Wall",
+      "caption": "A teaching visual where the diagram is the hero and the text is intentionally absent.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Explanatory and confident",
+      "motif": "large unlabeled diagram, teacher-ready wall, controlled hierarchy",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#ddd5c6",
+        "#0d6f74"
+      ],
+      "prompt": "Single editorial photograph of a large off-white teaching wall with one clean abstract diagram made of thin navy lines and rounded rectangles, no readable writing, no presenter visible, a small muted teal highlight shape, professional workshop stage lighting, calm and sophisticated B2B learning atmosphere, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Candid Wall",
+            "description": "More natural texture and believable lived-in detail for Diagram-First Teaching Wall",
+            "promptHint": "Shift Diagram-First Teaching Wall toward documentary realism while preserving A teaching visual where the diagram is the hero and the text is intentionally absent; make..."
+          },
+          {
+            "label": "Editorial Wall",
+            "description": "Cleaner light and hierarchy around Diagram-First Teaching Wall",
+            "promptHint": "Apply a polished editorial treatment to Diagram-First Teaching Wall; preserve A teaching visual where the diagram is the hero and the text is intentionally absent while..."
+          },
+          {
+            "label": "Minimal Wall",
+            "description": "Quieter hierarchy, more negative space, and stricter restraint around Diagram-First Teaching Wall",
+            "promptHint": "Strip Diagram-First Teaching Wall down to a minimal premium frame; keep A teaching visual where the diagram is the hero and the text is intentionally absent legible but change..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Monochrome Wall",
+            "description": "A narrower near-monochrome treatment that lets one cue around Diagram-First Teaching Wall stand out",
+            "promptHint": "Reduce the palette around Diagram-First Teaching Wall to tonal restraint plus one preserved cue from A teaching visual where the diagram is the hero and the text is..."
+          },
+          {
+            "label": "Warm Wall",
+            "description": "Warmer neutrals and tactile highlights around Diagram-First Teaching Wall",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Diagram-First Teaching Wall"
+          },
+          {
+            "label": "Accent Wall",
+            "description": "A stronger accent color against quieter supporting surfaces",
+            "promptHint": "Add a controlled accent palette to Diagram-First Teaching Wall without changing the main subject"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Wall Detail",
+            "description": "A tighter scene focused on material, craft, or product detail",
+            "promptHint": "Create a close-detail scene for Diagram-First Teaching Wall, keeping the most important source cue visible"
+          },
+          {
+            "label": "Wall Backstage",
+            "description": "A behind-the-scenes environment that adds process and atmosphere around Diagram-First Teaching Wall",
+            "promptHint": "Reframe Diagram-First Teaching Wall as a backstage or preparation moment; keep A teaching visual where the diagram is the hero and the text is intentionally absent recognizable"
+          },
+          {
+            "label": "Wall In Use",
+            "description": "A more believable real-world context for Diagram-First Teaching Wall",
+            "promptHint": "Place Diagram-First Teaching Wall into a realistic usage context; preserve the source image's core cue: A teaching visual where the diagram is the hero and the text is..."
+          }
+        ],
+        "props": [
+          {
+            "label": "Premium Finish",
+            "description": "Sharper materials, cleaner surfaces, and more elevated detail",
+            "promptHint": "Add premium material cues around Diagram-First Teaching Wall; preserve the source image's composition"
+          },
+          {
+            "label": "Process Cues",
+            "description": "Tools, traces, or handling details that make Diagram-First Teaching Wall feel actively used",
+            "promptHint": "Add restrained process cues around Diagram-First Teaching Wall; preserve the strongest visual idea from A teaching visual where the diagram is the hero and the text is..."
+          },
+          {
+            "label": "Wall Cues",
+            "description": "Add restrained supporting objects that clarify the context of Diagram-First Teaching Wall",
+            "promptHint": "Add a few contextual props that reinforce A teaching visual where the diagram is the hero and the text is intentionally absent without distracting from Diagram-First Teaching Wall"
+          }
+        ],
+        "character": [
+          {
+            "label": "Expert Hands",
+            "description": "More credible craft, authority, and purposeful interaction with Diagram-First Teaching Wall",
+            "promptHint": "If a person appears, make them an expert operator interacting naturally with Diagram-First Teaching Wall"
+          },
+          {
+            "label": "No Human",
+            "description": "Let the object, place, or composition carry the frame",
+            "promptHint": "Remove visible people and let Diagram-First Teaching Wall carry the image"
+          },
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Diagram-First Teaching Wall",
+            "promptHint": "Introduce a collector or tastemaker presence around Diagram-First Teaching Wall while changing wardrobe, gesture, or posture"
+          }
+        ],
+        "format": [
+          {
+            "label": "Split-Depth Wall",
+            "description": "Foreground detail and background atmosphere in one composed frame",
+            "promptHint": "Create a single-frame split-depth composition for Diagram-First Teaching Wall; do not make a collage or panel layout"
+          },
+          {
+            "label": "Wide Wall",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Diagram-First Teaching Wall to a wide hero composition with room for layout"
+          },
+          {
+            "label": "Square Wall",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Diagram-First Teaching Wall as a square frame with a changed focal balance and the core cue intact"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/diagram-first-teaching-wall.jpg",
+      "sourceImageUrl": "generated/d73a34cbdc9d47ed411d38775de66deb.png"
+    },
+    {
+      "id": "reader-notes-paper-system",
+      "title": "Reader Notes Paper System",
+      "caption": "A handout/notes visual direction with dense but readable paper hierarchy.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Readable, editorial, reviewable",
+      "motif": "paper handout, note rail, diagram margins",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#e7dcc9",
+        "#9b8d78"
+      ],
+      "prompt": "Single overhead visual reference image of a professional printed handout system, warm paper pages with abstract blocks and thin navy margin rules, no readable text, no logos, subtle note rail and diagram placeholders, compact editorial hierarchy, product-engineering training mood, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Motion System",
+            "description": "More kinetic gesture, blur, or environmental energy around Reader Notes Paper System",
+            "promptHint": "Introduce controlled motion to Reader Notes Paper System while preserving the campaign cue: A handout/notes visual direction with dense but readable paper hierarchy"
+          },
+          {
+            "label": "Material System",
+            "description": "A closer tactile read of surface, temperature, and finish around Reader Notes Paper System",
+            "promptHint": "Rebuild Reader Notes Paper System as a tactile material study inspired by A handout/notes visual direction with dense but readable paper hierarchy, with a visibly different..."
+          },
+          {
+            "label": "Dramatic System",
+            "description": "Richer blacks, sharper highlights, and more cinematic emphasis",
+            "promptHint": "Apply high-contrast cinematic treatment to Reader Notes Paper System; keep A handout/notes visual direction with dense but readable paper hierarchy recognizable but alter..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Warm System",
+            "description": "Warmer neutrals and tactile highlights around Reader Notes Paper System",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Reader Notes Paper System"
+          },
+          {
+            "label": "Accent System",
+            "description": "A stronger accent color against quieter supporting surfaces",
+            "promptHint": "Add a controlled accent palette to Reader Notes Paper System without changing the main subject"
+          },
+          {
+            "label": "Unexpected System",
+            "description": "A more surprising secondary color relationship around Reader Notes Paper System",
+            "promptHint": "Keep the subject recognizable, but introduce one unexpected supporting color that extends A handout/notes visual direction with dense but readable paper hierarchy"
+          }
+        ],
+        "scene": [
+          {
+            "label": "System Backstage",
+            "description": "A behind-the-scenes environment that adds process and atmosphere around Reader Notes Paper System",
+            "promptHint": "Reframe Reader Notes Paper System as a backstage or preparation moment; keep A handout/notes visual direction with dense but readable paper hierarchy recognizable"
+          },
+          {
+            "label": "System In Use",
+            "description": "A more believable real-world context for Reader Notes Paper System",
+            "promptHint": "Place Reader Notes Paper System into a realistic usage context; preserve the source image's core cue: A handout/notes visual direction with dense but readable paper hierarchy"
+          },
+          {
+            "label": "System Exterior",
+            "description": "Move Reader Notes Paper System into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Reader Notes Paper System into an exterior or entryway scene while preserving the core cue: A handout/notes visual direction with dense but readable paper hierarchy"
+          }
+        ],
+        "props": [
+          {
+            "label": "Process Cues",
+            "description": "Tools, traces, or handling details that make Reader Notes Paper System feel actively used",
+            "promptHint": "Add restrained process cues around Reader Notes Paper System; preserve the strongest visual idea from A handout/notes visual direction with dense but readable paper hierarchy"
+          },
+          {
+            "label": "System Cues",
+            "description": "Add restrained supporting objects that clarify the context of Reader Notes Paper System",
+            "promptHint": "Add a few contextual props that reinforce A handout/notes visual direction with dense but readable paper hierarchy without distracting from Reader Notes Paper System"
+          },
+          {
+            "label": "Unexpected System Prop",
+            "description": "One surprising but believable object that opens a new story around Reader Notes Paper System",
+            "promptHint": "Add one unexpected supporting prop that extends A handout/notes visual direction with dense but readable paper hierarchy without stealing focus from Reader Notes Paper System"
+          }
+        ],
+        "character": [
+          {
+            "label": "No Human",
+            "description": "Let the object, place, or composition carry the frame",
+            "promptHint": "Remove visible people and let Reader Notes Paper System carry the image"
+          },
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Reader Notes Paper System",
+            "promptHint": "Introduce a collector or tastemaker presence around Reader Notes Paper System while changing wardrobe, gesture, or posture"
+          },
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Reader Notes Paper System in an everyday user context without losing A handout/notes visual direction with dense but readable paper hierarchy"
+          }
+        ],
+        "format": [
+          {
+            "label": "Wide System",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Reader Notes Paper System to a wide hero composition with room for layout"
+          },
+          {
+            "label": "Square System",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Reader Notes Paper System as a square frame with a changed focal balance and the core cue intact"
+          },
+          {
+            "label": "Portrait System",
+            "description": "Tighter vertical crop for social or story placement",
+            "promptHint": "Adapt Reader Notes Paper System to a portrait social crop while preserving the key visual read"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/reader-notes-paper-system.jpg",
+      "sourceImageUrl": "generated/c2eee659623a5ab4dd99f8d9c3974927.png"
+    },
+    {
+      "id": "mobile-reading-surface",
+      "title": "Mobile Reading Surface",
+      "caption": "A responsive review mood: compact, legible, and still presentation-grade.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Focused and portable",
+      "motif": "small screen silhouette, paper cards, navy surround",
+      "palette": [
+        "#111927",
+        "#fffaf0",
+        "#d2c6b3",
+        "#203558"
+      ],
+      "prompt": "Single visual reference image of a small-screen reading surface abstracted as a warm paper card inside an ink-navy frame, compact blocks and diagram shapes with no readable text, no logos, no real device brand, polished responsive presentation mood, clean shadows, 16:9. Single coherent frame, one composed scene or object detail, not a collage, not a grid, not a contact sheet, not a scrapbook, not a mood board layout.",
+      "remixSuggestions": {
+        "style": [
+          {
+            "label": "Material Surface",
+            "description": "A closer tactile read of surface, temperature, and finish around Mobile Reading Surface",
+            "promptHint": "Rebuild Mobile Reading Surface as a tactile material study inspired by A responsive review mood: compact, legible, and still presentation-grade, with a visibly different crop..."
+          },
+          {
+            "label": "Dramatic Surface",
+            "description": "Richer blacks, sharper highlights, and more cinematic emphasis",
+            "promptHint": "Apply high-contrast cinematic treatment to Mobile Reading Surface; keep A responsive review mood: compact, legible, and still presentation-grade recognizable but alter camera..."
+          },
+          {
+            "label": "Candid Surface",
+            "description": "More natural texture and believable lived-in detail for Mobile Reading Surface",
+            "promptHint": "Shift Mobile Reading Surface toward documentary realism while preserving A responsive review mood: compact, legible, and still presentation-grade; make lighting and staging..."
+          }
+        ],
+        "palette": [
+          {
+            "label": "Warm Surface",
+            "description": "Warmer neutrals and tactile highlights around Mobile Reading Surface",
+            "promptHint": "Shift the palette warmer while preserving the subject and composition of Mobile Reading Surface"
+          },
+          {
+            "label": "Accent Surface",
+            "description": "A stronger accent color against quieter supporting surfaces",
+            "promptHint": "Add a controlled accent palette to Mobile Reading Surface without changing the main subject"
+          },
+          {
+            "label": "Unexpected Surface",
+            "description": "A more surprising secondary color relationship around Mobile Reading Surface",
+            "promptHint": "Keep the subject recognizable, but introduce one unexpected supporting color that extends A responsive review mood: compact, legible, and still presentation-grade"
+          }
+        ],
+        "scene": [
+          {
+            "label": "Surface Backstage",
+            "description": "A behind-the-scenes environment that adds process and atmosphere around Mobile Reading Surface",
+            "promptHint": "Reframe Mobile Reading Surface as a backstage or preparation moment; keep A responsive review mood: compact, legible, and still presentation-grade recognizable"
+          },
+          {
+            "label": "Surface In Use",
+            "description": "A more believable real-world context for Mobile Reading Surface",
+            "promptHint": "Place Mobile Reading Surface into a realistic usage context; preserve the source image's core cue: A responsive review mood: compact, legible, and still presentation-grade"
+          },
+          {
+            "label": "Surface Exterior",
+            "description": "Move Mobile Reading Surface into an outdoor or threshold environment with a fresh spatial read",
+            "promptHint": "Relocate Mobile Reading Surface into an exterior or entryway scene while preserving the core cue: A responsive review mood: compact, legible, and still presentation-grade"
+          }
+        ],
+        "props": [
+          {
+            "label": "Process Cues",
+            "description": "Tools, traces, or handling details that make Mobile Reading Surface feel actively used",
+            "promptHint": "Add restrained process cues around Mobile Reading Surface; preserve the strongest visual idea from A responsive review mood: compact, legible, and still presentation-grade"
+          },
+          {
+            "label": "Surface Cues",
+            "description": "Add restrained supporting objects that clarify the context of Mobile Reading Surface",
+            "promptHint": "Add a few contextual props that reinforce A responsive review mood: compact, legible, and still presentation-grade without distracting from Mobile Reading Surface"
+          },
+          {
+            "label": "Unexpected Surface Prop",
+            "description": "One surprising but believable object that opens a new story around Mobile Reading Surface",
+            "promptHint": "Add one unexpected supporting prop that extends A responsive review mood: compact, legible, and still presentation-grade without stealing focus from Mobile Reading Surface"
+          }
+        ],
+        "character": [
+          {
+            "label": "No Human",
+            "description": "Let the object, place, or composition carry the frame",
+            "promptHint": "Remove visible people and let Mobile Reading Surface carry the image"
+          },
+          {
+            "label": "Collector Persona",
+            "description": "A more intentional, taste-driven persona interacting with Mobile Reading Surface",
+            "promptHint": "Introduce a collector or tastemaker presence around Mobile Reading Surface while changing wardrobe, gesture, or posture"
+          },
+          {
+            "label": "Everyday Use",
+            "description": "More approachable human presence while preserving the mood",
+            "promptHint": "Show Mobile Reading Surface in an everyday user context without losing A responsive review mood: compact, legible, and still presentation-grade"
+          }
+        ],
+        "format": [
+          {
+            "label": "Wide Surface",
+            "description": "Broader horizontal composition for landing-page or banner use",
+            "promptHint": "Adapt Mobile Reading Surface to a wide hero composition with room for layout"
+          },
+          {
+            "label": "Square Surface",
+            "description": "A balanced square crop for gallery or feed review",
+            "promptHint": "Recompose Mobile Reading Surface as a square frame with a changed focal balance and the core cue intact"
+          },
+          {
+            "label": "Portrait Surface",
+            "description": "Tighter vertical crop for social or story placement",
+            "promptHint": "Adapt Mobile Reading Surface to a portrait social crop while preserving the key visual read"
+          }
+        ]
+      },
+      "imageUrl": "generated/mcp-thumbs/mobile-reading-surface.jpg",
+      "sourceImageUrl": "generated/d870ca24670a1087ae937537ad16769e.png"
+    }
+  ]
+}

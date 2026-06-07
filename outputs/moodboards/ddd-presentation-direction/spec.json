@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "title": "DDD Presentation Professional Direction",
+    "summary": "Image-first visual references for a professional Domain-Driven Design presentation system.",
+    "business": "Introduction to Domain-Driven Design knowledge sharing",
+    "goal": "Professional live presentation, presenter console, audience display, reader notes, mobile, and print",
+    "audience": "Mixed product and technical teams",
+    "qualifiedIntake": {
+      "tone": "Product strategy workshop",
+      "visualLanguage": ["Structured context maps", "Thin-rule diagrams"],
+      "typography": "Compact sans UI",
+      "palette": "Ink navy"
+    }
+  },
+  "signals": {
+    "creativeTerritories": [
+      "strategy-room clarity",
+      "editorial technical paper",
+      "diagram-first teaching",
+      "quiet presenter console"
+    ],
+    "palette": ["ink navy", "warm paper", "charcoal", "soft white", "muted teal accent"],
+    "mustPreserve": [
+      "single visual reference image per tile",
+      "professional product-and-engineering taste",
+      "structured diagrams without readable labels",
+      "no stock-photo boardroom cliches"
+    ],
+    "avoid": [
+      "collage",
+      "mini mood board",
+      "generic dashboard",
+      "decorative blobs",
+      "readable text",
+      "logos",
+      "marketing hero"
+    ]
+  },
+  "items": [
+    {
+      "id": "strategy-room-context-wall",
+      "title": "Strategy Room Context Wall",
+      "caption": "A product strategy workshop wall with clean context-map shapes and calm executive staging.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Product strategy workshop, calm and decisive",
+      "motif": "workshop wall, bounded-context cards, thin connector lines",
+      "palette": ["#111927", "#fffaf0", "#d8d0bd", "#0f8f8c"],
+      "prompt": "Single editorial photograph of a refined product strategy workshop wall, off-white paper cards arranged as abstract bounded contexts with thin ink-navy connector lines, no readable writing, no logos, no UI labels, warm paper surface, compact and orderly composition, subtle muted teal pin accents, professional engineering education tone, realistic room light, 16:9 composition."
+    },
+    {
+      "id": "ink-navy-stage-paper",
+      "title": "Ink Navy Stage Paper",
+      "caption": "A premium slide-stage material direction: navy frame, warm paper, thin rules.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Editorial technical paper",
+      "motif": "navy stage edge, paper sheet, fine grid and rules",
+      "palette": ["#111927", "#fffaf0", "#cfc6b4", "#283a5c"],
+      "prompt": "Single visual reference image of a warm paper presentation sheet resting on an ink-navy stage surface, fine hairline grid and rule details without readable text, compact technical spacing, subtle shadows, executive education deck mood, no logos, no people, no collage, 16:9 overhead composition."
+    },
+    {
+      "id": "thin-rule-service-map",
+      "title": "Thin-Rule Service Map",
+      "caption": "A service-map visual language for marketplace checkout without literal labels.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Structured and explanatory",
+      "motif": "service blueprint, connected rectangles, payment flow abstraction",
+      "palette": ["#111927", "#f7f2e7", "#d9d2c2", "#0d6f74"],
+      "prompt": "Single composed scene of an abstract service blueprint drawn with thin ink-navy rules on warm neutral paper, connected unlabeled rectangles suggesting marketplace checkout and payment flow, one darker focal node, no readable words, no logos, crisp product-strategy workshop quality, photographed from a slight angle, 16:9."
+    },
+    {
+      "id": "presenter-console-detail",
+      "title": "Presenter Console Detail",
+      "caption": "A restrained control-surface reference for speaker notes and slide previews.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Quiet, focused, presenter-ready",
+      "motif": "small preview panels, notes surface, dark chrome",
+      "palette": ["#111927", "#18243a", "#fffaf0", "#d7cbb5"],
+      "prompt": "Single visual reference image of a professional presenter control surface on a laptop-like dark frame, abstract slide preview panels and warm paper notes area, no readable text, no real UI labels, compact sans-like blocks only as texture, ink navy chrome, soft studio lighting, product education context, 16:9."
+    },
+    {
+      "id": "domain-model-tabletop",
+      "title": "Domain Model Tabletop",
+      "caption": "A tabletop artifact direction for modeling sessions: cards, boundaries, and quiet materiality.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Collaborative but polished",
+      "motif": "tabletop cards, boundary tape, workshop hands absent",
+      "palette": ["#111927", "#fffaf0", "#e5dcc9", "#8a7b65"],
+      "prompt": "Single editorial photograph of a clean tabletop domain modeling setup, unlabeled warm paper cards grouped inside thin navy boundary lines, a few neutral markers and ruler-like tools, no readable text, no hands, no logos, calm product strategy workshop atmosphere, high taste B2B presentation reference, 16:9."
+    },
+    {
+      "id": "bounded-context-architectural-lines",
+      "title": "Bounded Context Architectural Lines",
+      "caption": "A more architectural diagram reference with strong spacing and crisp boundaries.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Precise and architectural",
+      "motif": "architectural drafting, context blocks, sparse connectors",
+      "palette": ["#111927", "#f8f4ea", "#c7c0af", "#21365b"],
+      "prompt": "Single visual reference image of an architectural drafting sheet with abstract bounded-context blocks, precise thin navy lines, sparse connectors, clean negative space, no readable labels or measurements, warm off-white paper, professional technical education mood, photographed flat with slight paper texture, 16:9."
+    },
+    {
+      "id": "marketplace-flow-material-study",
+      "title": "Marketplace Flow Material Study",
+      "caption": "A tactile representation of one checkout becoming many fulfillment paths.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Clear, tactile, business-focused",
+      "motif": "one central path splitting into grouped paths",
+      "palette": ["#111927", "#fffaf0", "#d7cab3", "#0f8f8c"],
+      "prompt": "Single composed material detail of thin navy thread or linework on warm paper, one central route splitting into several neatly grouped routes, abstractly suggesting one checkout and multiple order groups without labels, small muted teal anchor point, no readable text, no collage, refined strategy workshop image, 16:9 macro-overhead composition."
+    },
+    {
+      "id": "compact-sans-control-tokens",
+      "title": "Compact Control Tokens",
+      "caption": "A UI-system texture reference for compact controls without real interface content.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Compact, utilitarian, premium",
+      "motif": "small controls, counters, stage rail, technical rhythm",
+      "palette": ["#111927", "#17233a", "#fffaf0", "#d4c8b4"],
+      "prompt": "Single visual reference image of abstract compact control tokens on an ink-navy surface, small pill-like buttons and counters represented only by simple shapes, no readable text, no logos, no actual app UI, warm paper card nearby, precise spacing, professional presentation-control mood, 16:9."
+    },
+    {
+      "id": "editorial-book-desk",
+      "title": "Editorial Book Desk",
+      "caption": "A reference for the book slide: serious learning material without literal book-cover text.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Scholarly, modern, accessible",
+      "motif": "technical books, paper tabs, navy desk",
+      "palette": ["#111927", "#fffaf0", "#cbc1af", "#2b3958"],
+      "prompt": "Single editorial photograph of three unlabeled technical books on an ink-navy desk, warm paper tabs and thin rule bookmarks, no readable titles, no logos, refined education-deck mood, soft directional light, compact arrangement with generous negative space, 16:9."
+    },
+    {
+      "id": "diagram-first-teaching-wall",
+      "title": "Diagram-First Teaching Wall",
+      "caption": "A teaching visual where the diagram is the hero and the text is intentionally absent.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Explanatory and confident",
+      "motif": "large unlabeled diagram, teacher-ready wall, controlled hierarchy",
+      "palette": ["#111927", "#fffaf0", "#ddd5c6", "#0d6f74"],
+      "prompt": "Single editorial photograph of a large off-white teaching wall with one clean abstract diagram made of thin navy lines and rounded rectangles, no readable writing, no presenter visible, a small muted teal highlight shape, professional workshop stage lighting, calm and sophisticated B2B learning atmosphere, 16:9."
+    },
+    {
+      "id": "reader-notes-paper-system",
+      "title": "Reader Notes Paper System",
+      "caption": "A handout/notes visual direction with dense but readable paper hierarchy.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Readable, editorial, reviewable",
+      "motif": "paper handout, note rail, diagram margins",
+      "palette": ["#111927", "#fffaf0", "#e7dcc9", "#9b8d78"],
+      "prompt": "Single overhead visual reference image of a professional printed handout system, warm paper pages with abstract blocks and thin navy margin rules, no readable text, no logos, subtle note rail and diagram placeholders, compact editorial hierarchy, product-engineering training mood, 16:9."
+    },
+    {
+      "id": "mobile-reading-surface",
+      "title": "Mobile Reading Surface",
+      "caption": "A responsive review mood: compact, legible, and still presentation-grade.",
+      "source": "Qualified DDD presentation moodboard intake.",
+      "tone": "Focused and portable",
+      "motif": "small screen silhouette, paper cards, navy surround",
+      "palette": ["#111927", "#fffaf0", "#d2c6b3", "#203558"],
+      "prompt": "Single visual reference image of a small-screen reading surface abstracted as a warm paper card inside an ink-navy frame, compact blocks and diagram shapes with no readable text, no logos, no real device brand, polished responsive presentation mood, clean shadows, 16:9."
+    }
+  ]
+}
