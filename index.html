@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
     <title>Introduction to Domain-Driven Design</title>
-    <link rel="stylesheet" href="styles.css?v=20260607-order-split">
+    <link rel="stylesheet" href="styles.css?v=20260607-audience-orders">
   </head>
   <body>
     <a class="skip-link" href="#slide-title">Skip to presentation</a>
@@ -337,8 +337,8 @@
         <section class="slide" data-title="Marketplace context map">
           <div>
             <p class="slide-number">11 / 16</p>
-            <h2>One checkout, one payment, then orders</h2>
-            <p class="lead narrow">Checkout groups items by shop. After payment succeeds, the platform creates buyer and shop orders.</p>
+            <h2>One checkout, one payment, many orders</h2>
+            <p class="lead narrow">Checkout groups items by shop. After payment succeeds, the platform creates one confirmed order per shop.</p>
           </div>
           <div class="wide-context-map" aria-label="Marketplace bounded-context map with relationship labels">
             <div class="context-row">
@@ -357,15 +357,10 @@
                 <strong>One charge</strong>
                 <small>Whole checkout amount</small>
               </div>
-              <div class="context-card buyer-order-card">
-                <span>Buyer Orders</span>
-                <strong>Confirmed purchase</strong>
-                <small>One order for the buyer</small>
-              </div>
               <div class="context-card shop-order-card">
-                <span>Shop Orders</span>
-                <strong>Seller fulfillment units</strong>
-                <small>One order per shop</small>
+                <span>Orders</span>
+                <strong>Per-shop confirmed orders</strong>
+                <small>Buyer and shop see the same split</small>
               </div>
               <div class="context-card ship-card">
                 <span>Fulfillment</span>
@@ -386,17 +381,12 @@
               </div>
               <div class="context-link">
                 <span>Published Language</span>
-                <strong>Payment -> Buyer Orders</strong>
+                <strong>Payment -> Orders</strong>
                 <small>PaymentSucceeded</small>
               </div>
               <div class="context-link">
-                <span>Published Language</span>
-                <strong>Buyer Orders -> Shop Orders</strong>
-                <small>Confirmed purchase</small>
-              </div>
-              <div class="context-link">
                 <span>Customer/Supplier</span>
-                <strong>Shop Orders -> Fulfillment</strong>
+                <strong>Orders -> Fulfillment</strong>
                 <small>Fulfillment request</small>
               </div>
             </div>
@@ -404,10 +394,10 @@
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
             <p><span class="note-cue">Say:</span> This context map shows the marketplace rule more accurately: before payment, Checkout is not yet the final order. Checkout is a purchase attempt that groups items by shop and asks Payment to charge the buyer once.</p>
-            <p><span class="note-cue">Walkthrough:</span> Catalog publishes an offer snapshot to Checkout. Checkout requests one payment for the whole checkout. After payment succeeds, Buyer Orders records the customer-facing confirmed purchase. Then Shop Orders creates seller-facing fulfillment orders, usually one shop order per shop.</p>
-            <p><span class="note-cue">Important:</span> Different roles are only a clue. We separate Buyer Orders and Shop Orders because the meaning, lifecycle, rules, and ownership are different. Buyer Order means the buyer's confirmed purchase. Shop Order means the seller's fulfillment responsibility.</p>
+            <p><span class="note-cue">Walkthrough:</span> Catalog publishes an offer snapshot to Checkout. Checkout requests one payment for the whole checkout. After payment succeeds, Orders creates one confirmed order per shop. The buyer sees the same separate orders, and each shop sees only the order it must fulfill.</p>
+            <p><span class="note-cue">Important:</span> Different roles are only a clue, not an automatic bounded-context split. In this marketplace, buyer-facing order history and shop-facing order work can be different views of the same per-shop order model because the confirmed order is already split by shop.</p>
             <p><span class="note-cue">Design note:</span> If Payment integrates an external gateway, Payment can protect the marketplace model with an anti-corruption layer instead of leaking gateway terms into Checkout.</p>
-            <p><span class="note-cue">Example:</span> A buyer buys a phone case from Shop A and a charger from Shop B. Checkout contains two shop groups. Payment charges the buyer once. After success, Buyer Orders creates one buyer order, and Shop Orders creates one order for Shop A and one order for Shop B.</p>
+            <p><span class="note-cue">Example:</span> A buyer buys a phone case from Shop A and a charger from Shop B. Checkout contains two shop groups. Payment charges the buyer once. After success, Orders creates Order A for Shop A and Order B for Shop B. The buyer sees both orders; Shop A sees only Order A; Shop B sees only Order B.</p>
             <p><span class="note-cue">Transition:</span> Now move from strategic design into tactical modeling inside a context.</p>
           </aside>
         </section>
