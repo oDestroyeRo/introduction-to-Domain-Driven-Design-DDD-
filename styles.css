@@ -827,15 +827,24 @@ h3 {
   font-size: 2.2rem;
 }
 .wide-context-map {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
+  display: block;
   margin-top: 32px;
   padding: 20px;
   border: 1px solid rgba(20, 33, 61, 0.12);
   border-radius: var(--radius);
   background: linear-gradient(90deg, transparent 9%, rgba(216, 146, 34, 0.5) 9%, rgba(216, 146, 34, 0.5) 91%, transparent 91%) 0 50% / 100% 3px no-repeat, #fdfdf9;
   box-shadow: var(--panel-shadow);
+}
+.context-row, .context-relations {
+  display: grid;
+  gap: 12px;
+}
+.context-row {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.context-relations {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 12px;
 }
 .context-card {
   min-height: 170px;
@@ -857,6 +866,46 @@ h3 {
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.35;
+}
+.context-link {
+  position: relative;
+  display: grid;
+  align-content: center;
+  min-height: 82px;
+  padding: 14px 12px;
+  border: 1px solid rgba(216, 146, 34, 0.36);
+  border-radius: var(--radius);
+  background: rgba(255, 248, 232, 0.94);
+  text-align: center;
+}
+.context-link::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: rgba(216, 146, 34, 0.55);
+}
+.context-link span {
+  margin-bottom: 6px;
+  color: var(--amber);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.context-link strong {
+  color: var(--navy);
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+.context-link small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.25;
 }
 .order-card {
   color: white;
@@ -1304,7 +1353,7 @@ h3 {
   .hero-grid, .two-column, .comparison, .book-grid, .three-panel {
     grid-template-columns: 1fr;
   }
-  .principle-row, .exercise-grid, .wide-context-map {
+  .principle-row, .exercise-grid, .wide-context-map, .context-row, .context-relations {
     grid-template-columns: 1fr;
   }
   .wide-context-map {
@@ -1387,14 +1436,18 @@ h3 {
     padding: 14px 16px;
   }
   .brand-copy {
-    max-width: 240px;
+    max-width: none;
   }
   .top-actions {
     width: 100%;
     justify-content: flex-start;
+    gap: 8px;
   }
   .icon-button {
-    flex: 1 1 120px;
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+    padding-inline: 10px;
+    font-size: 0.84rem;
   }
   .shell {
     padding: 14px;
@@ -1415,9 +1468,17 @@ h3 {
     border-bottom: 1px solid var(--line);
   }
   .book-stack article {
-    grid-template-columns: 74px minmax(0, 1fr);
-    gap: 14px;
-    padding: 18px;
+    grid-template-columns: 64px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    padding: 14px;
+  }
+  .book-stack .book-idea {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+  .book-stack .book-idea span {
+    font-size: 0.66rem;
   }
   .slide-controls {
     width: 100%;
