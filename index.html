@@ -493,7 +493,7 @@
               <div><span>02</span><strong><em>Payment</em>PaymentSucceeded<small>One payment succeeds for the whole checkout.</small></strong></div>
               <div><span>03</span><strong><em>Orders</em>OrderConfirmed<small>One order per shop group; buyer and shop see the same order.</small></strong></div>
               <div><span>04</span><strong><em>Fulfillment</em>FulfillmentRequested<small>Each confirmed order asks fulfillment to prepare delivery or pickup.</small></strong></div>
-              <div><span>05</span><strong><em>Fulfillment</em>OrderPreparedForHandoff<small>The shop packed the order; delivery or pickup handoff can start.</small></strong></div>
+              <div><span>05</span><strong><em>Fulfillment</em>OrderPrepared<small>The shop packed the order; delivery or pickup can start.</small></strong></div>
             </div>
           </div>
           <aside class="speaker-notes">
@@ -501,7 +501,7 @@
             <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. It should sound like business language in the past tense, not like a technical command. For example, PaymentSucceeded is a fact. PayOrder is a command. InsertOrderRows is an implementation detail.</p>
             <p><span class="note-cue">Explain:</span> Events help us tell the story across contexts while keeping each context's model independent. Checkout can publish CheckoutSubmitted. Payment reacts and later publishes PaymentSucceeded. Orders can then create confirmed orders without Payment sharing its internal payment model.</p>
             <p><span class="note-cue">Marketplace example:</span> One buyer checkout has one payment. After PaymentSucceeded, the Orders context confirms one order for each shop group and can publish OrderConfirmed for each order. Buyer and shop views read the same confirmed order records; they are not separate buyer-order and shop-order contexts.</p>
-            <p><span class="note-cue">Design tip:</span> Do not publish every small state change. Choose events that another part of the business would care about, such as a checkout being submitted, payment succeeding, an order being confirmed, fulfillment being requested, or an order being prepared for handoff.</p>
+            <p><span class="note-cue">Design tip:</span> Do not publish every small state change. Choose events that another part of the business would care about, such as a checkout being submitted, payment succeeding, an order being confirmed, fulfillment being requested, or an order being prepared.</p>
             <p><span class="note-cue">Transition:</span> Now give the group a small exercise to practice language, boundaries, and tactical patterns together.</p>
           </aside>
         </section>
