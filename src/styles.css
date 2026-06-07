@@ -104,16 +104,16 @@ button {
 
 .topbar {
   position: sticky;
-  top: 4px;
+  top: 0;
   z-index: 25;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 74px;
-  padding: 14px 28px;
+  min-height: 62px;
+  padding: 10px 24px;
   border-bottom: 1px solid rgba(219, 224, 220, 0.8);
-  background: rgba(247, 248, 245, 0.9);
-  box-shadow: 0 8px 28px rgba(20, 33, 61, 0.05);
+  background: rgba(247, 248, 245, 0.94);
+  box-shadow: 0 8px 24px rgba(20, 33, 61, 0.045);
   backdrop-filter: blur(18px);
 }
 
@@ -129,8 +129,8 @@ button {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   color: white;
@@ -140,19 +140,19 @@ button {
 }
 
 .brand-copy {
-  max-width: 360px;
+  max-width: 320px;
 }
 
 .top-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 6px;
 }
 
 .icon-button,
 .slide-controls button {
-  min-height: 42px;
+  min-height: 38px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   color: var(--ink);
@@ -162,7 +162,7 @@ button {
 }
 
 .icon-button {
-  padding: 0 14px;
+  padding: 0 12px;
 }
 
 .icon-button:hover,
@@ -181,19 +181,19 @@ button {
 
 .shell {
   display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
-  gap: 26px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 20px;
   width: min(1440px, 100%);
   margin: 0 auto;
-  padding: 28px;
+  padding: 18px 24px 12px;
 }
 
 .agenda-panel {
   position: sticky;
-  top: 102px;
+  top: 82px;
   align-self: start;
-  max-height: calc(100vh - 130px);
-  padding: 18px;
+  max-height: calc(100vh - 102px);
+  padding: 14px;
   overflow: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -207,7 +207,7 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   color: var(--muted);
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -234,11 +234,11 @@ button {
 .agenda-list button {
   position: relative;
   display: grid;
-  grid-template-columns: 30px 1fr;
+  grid-template-columns: 28px 1fr;
   gap: 8px;
   width: 100%;
-  min-height: 42px;
-  padding: 8px 10px;
+  min-height: 38px;
+  padding: 7px 9px;
   border: 1px solid transparent;
   border-radius: var(--radius);
   text-align: left;
@@ -250,8 +250,8 @@ button {
 .agenda-list button::after {
   content: "";
   position: absolute;
-  top: 8px;
-  bottom: 8px;
+  top: 7px;
+  bottom: 7px;
   left: 0;
   width: 3px;
   border-radius: 999px;
@@ -292,11 +292,11 @@ button {
   position: relative;
   display: none;
   overflow: hidden;
-  min-height: calc(100vh - 178px);
+  min-height: calc(100vh - 132px);
   max-width: var(--max-slide);
   margin: 0 auto;
-  padding: clamp(30px, 4.5vw, 56px);
-  padding-bottom: clamp(78px, 8vw, 96px);
+  padding: clamp(26px, 3.6vw, 46px);
+  padding-bottom: clamp(60px, 5.8vw, 78px);
   border: 1px solid rgba(219, 224, 220, 0.9);
   border-radius: var(--radius);
   background:
@@ -309,7 +309,7 @@ button {
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: 6px;
+  height: 5px;
   background: linear-gradient(90deg, var(--teal), var(--amber));
 }
 
@@ -341,7 +341,7 @@ button {
 
 .slide-grid {
   display: grid;
-  gap: clamp(32px, 5vw, 64px);
+  gap: clamp(26px, 4vw, 52px);
   align-items: center;
 }
 
@@ -375,8 +375,8 @@ button {
 .slide-number {
   display: inline-flex;
   width: max-content;
-  margin: 0 0 18px;
-  padding: 7px 10px;
+  margin: 0 0 14px;
+  padding: 6px 9px;
   border: 1px solid rgba(15, 143, 140, 0.2);
   border-radius: 999px;
   color: var(--teal-dark);
@@ -397,7 +397,7 @@ p {
 h1,
 h2 {
   max-width: 900px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   color: var(--navy);
   font-weight: 850;
   letter-spacing: 0;
@@ -422,7 +422,7 @@ h3 {
 
 .lead {
   max-width: 760px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   color: #35424d;
   font-size: clamp(1.08rem, 1.65vw, 1.32rem);
   line-height: 1.45;
@@ -863,8 +863,8 @@ h3 {
 
 .wide-context-map {
   display: block;
-  margin-top: 32px;
-  padding: 20px;
+  margin-top: 22px;
+  padding: 16px;
   border: 1px solid rgba(20, 33, 61, 0.12);
   border-radius: var(--radius);
   background:
@@ -876,7 +876,7 @@ h3 {
 .context-row,
 .context-relations {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .context-row {
@@ -885,12 +885,12 @@ h3 {
 
 .context-relations {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .context-card {
-  min-height: 170px;
-  padding: 22px;
+  min-height: 138px;
+  padding: 18px;
   border: 1px solid rgba(20, 33, 61, 0.13);
   border-radius: var(--radius);
   background:
@@ -902,15 +902,15 @@ h3 {
 .context-card strong {
   display: block;
   color: var(--navy);
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   line-height: 1.2;
 }
 
 .context-card small {
   display: block;
-  margin-top: 12px;
+  margin-top: 10px;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   line-height: 1.35;
 }
 
@@ -918,8 +918,8 @@ h3 {
   position: relative;
   display: grid;
   align-content: center;
-  min-height: 82px;
-  padding: 14px 12px;
+  min-height: 68px;
+  padding: 12px 10px;
   border: 1px solid rgba(216, 146, 34, 0.36);
   border-radius: var(--radius);
   background: rgba(255, 248, 232, 0.94);
@@ -1144,13 +1144,13 @@ h3 {
 
 .slide-controls {
   position: fixed;
-  right: 28px;
-  bottom: 24px;
+  right: 24px;
+  bottom: 18px;
   z-index: 24;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px;
+  gap: 8px;
+  padding: 6px;
   border: 1px solid rgba(20, 33, 61, 0.12);
   border-radius: var(--radius);
   background:
@@ -1161,12 +1161,12 @@ h3 {
 }
 
 .slide-controls button {
-  min-width: 98px;
-  padding: 0 14px;
+  min-width: 86px;
+  padding: 0 12px;
 }
 
 .counter {
-  min-width: 70px;
+  min-width: 60px;
   color: var(--muted);
   text-align: center;
   font-weight: 750;
@@ -1289,9 +1289,9 @@ h3 {
 
 .presenter-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 0.68fr) minmax(520px, 1.55fr) minmax(220px, 0.58fr);
+  grid-template-columns: minmax(240px, 0.82fr) minmax(440px, 1.28fr) minmax(220px, 0.72fr);
   gap: 18px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .presenter-panel {
@@ -1315,7 +1315,9 @@ h3 {
 }
 
 .presenter-preview {
-  min-height: 340px;
+  position: relative;
+  height: var(--preview-height, 180px);
+  min-height: var(--preview-height, 180px);
   overflow: hidden;
   border: 1px solid rgba(20, 33, 61, 0.12);
   border-radius: var(--radius);
@@ -1328,88 +1330,29 @@ h3 {
 
 .presenter-preview .slide {
   display: block;
-  min-height: 340px;
+  width: 1120px;
+  height: 630px;
+  min-height: 630px;
   max-width: none;
   margin: 0;
-  padding: 22px;
-  padding-bottom: 22px;
+  padding: 46px;
+  padding-bottom: 76px;
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  background: transparent;
+  background:
+    linear-gradient(180deg, rgba(255, 254, 250, 0.99), rgba(255, 254, 250, 0.94)),
+    var(--paper);
+  transform: scale(var(--preview-scale, 0.25));
+  transform-origin: top left;
 }
 
-.presenter-preview .slide-grid,
-.presenter-preview .hero-grid,
-.presenter-preview .two-column,
-.presenter-preview .comparison,
-.presenter-preview .book-grid,
-.presenter-preview .three-panel {
-  grid-template-columns: 1fr;
-  gap: 16px;
+.presenter-preview .slide::before {
+  height: 6px;
 }
 
-.presenter-preview .slide-number {
-  margin-bottom: 10px;
-  font-size: 0.68rem;
-}
-
-.presenter-preview h1,
-.presenter-preview h2 {
-  margin-bottom: 12px;
-  font-size: clamp(1.75rem, 3.8vw, 3rem);
-  line-height: 1.02;
-}
-
-.presenter-preview h3 {
-  font-size: 1rem;
-}
-
-.presenter-preview .lead,
-.presenter-preview p,
-.presenter-preview li {
-  font-size: 0.9rem;
-  line-height: 1.35;
-}
-
-.presenter-preview .slide-art {
-  box-shadow: none;
-}
-
-.presenter-preview .slide-art img {
-  aspect-ratio: 16 / 8.5;
-}
-
-.presenter-preview .domain-map,
-.presenter-preview .wide-context-map,
-.presenter-preview .capability-map,
-.presenter-preview .aggregate-diagram,
-.presenter-preview .exercise-grid,
-.presenter-preview .principle-row,
-.presenter-preview .compare-board,
-.presenter-preview .language-panel {
-  min-height: auto;
-  grid-template-columns: 1fr;
-}
-
-.presenter-preview .domain-map {
-  display: none;
-}
-
-.presenter-preview .goal-strip span,
-.presenter-preview .slide-art,
-.presenter-preview .book-stack article,
-.presenter-preview .strategy-board article,
-.presenter-preview .compare-board > div,
-.presenter-preview .three-panel article,
-.presenter-preview .exercise-grid article,
-.presenter-preview .evidence-list div {
-  padding: 12px;
-}
-
-.presenter-preview .book-stack article {
-  grid-template-columns: 52px minmax(0, 1fr);
-  gap: 10px;
+.presenter-preview .preview-slide {
+  pointer-events: none;
 }
 
 .presenter-preview .speaker-notes {
@@ -1417,11 +1360,7 @@ h3 {
 }
 
 .next-preview {
-  min-height: 220px;
-}
-
-.next-preview .slide {
-  min-height: 220px;
+  min-height: var(--preview-height, 140px);
 }
 
 .preview-empty {
@@ -1472,29 +1411,29 @@ h3 {
 }
 
 .audience-mode .progress {
-  height: 6px;
+  height: 7px;
 }
 
 .audience-mode .shell {
   display: block;
   width: 100vw;
-  height: calc(100vh - 6px);
+  height: calc(100vh - 7px);
   margin: 0;
   padding: 0;
 }
 
 .audience-mode .presentation {
   width: 100vw;
-  height: calc(100vh - 6px);
+  height: calc(100vh - 7px);
 }
 
 .audience-mode .slide {
   width: 100vw;
   max-width: none;
-  min-height: calc(100vh - 6px);
-  height: calc(100vh - 6px);
+  min-height: calc(100vh - 7px);
+  height: calc(100vh - 7px);
   margin: 0;
-  padding: clamp(48px, 6vw, 96px);
+  padding: clamp(42px, 5vw, 78px);
   border: 0;
   border-radius: 0;
   background:
@@ -1503,8 +1442,35 @@ h3 {
   box-shadow: none;
 }
 
+.audience-mode .slide::before {
+  height: 8px;
+}
+
 .audience-mode .speaker-notes {
   display: none !important;
+}
+
+.audience-mode .slide-number {
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+}
+
+.audience-mode .lead {
+  max-width: 860px;
+  font-size: clamp(1.16rem, 1.55vw, 1.5rem);
+}
+
+.audience-mode .wide-context-map {
+  margin-top: clamp(20px, 2vw, 34px);
+  padding: clamp(18px, 2vw, 28px);
+}
+
+.audience-mode .context-card {
+  min-height: clamp(138px, 16vh, 188px);
+}
+
+.audience-mode .context-link {
+  min-height: clamp(72px, 9vh, 98px);
 }
 
 .audience-mode h1 {

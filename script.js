@@ -25,6 +25,7 @@
 
   let currentSlide = 0;
   let audienceWindow = null;
+  const previewCanvas = { width: 1120, height: 630 };
   const params = new URLSearchParams(window.location.search);
   const isAudienceMode = params.get("audience") === "1";
   const syncKey = "ddd-presentation-sync-state";
@@ -270,6 +271,8 @@
     container.innerHTML = "";
 
     if (!slide) {
+      container.style.removeProperty("--preview-scale");
+      container.style.removeProperty("--preview-height");
       const empty = document.createElement("p");
       empty.className = "preview-empty";
       empty.textContent = emptyText;
@@ -284,6 +287,27 @@
     container.appendChild(clone);
   }
 
+  function updatePreviewScale(container) {
+    const previewSlide = container.querySelector(".preview-slide");
+
+    if (!previewSlide) {
+      return;
+    }
+
+    const width = container.clientWidth || container.getBoundingClientRect().width;
+    const scale = Math.max(0.16, Math.min(width / previewCanvas.width, 0.42));
+    container.style.setProperty("--preview-scale", scale.toFixed(4));
+    container.style.setProperty("--preview-height", `${Math.round(previewCanvas.height * scale)}px`);
+  }
+
+  function updatePresenterPreviewScales() {
+    if (!presenterConsole || presenterConsole.hidden) {
+      return;
+    }
+
+    [currentPreview, nextPreview].forEach(updatePreviewScale);
+  }
+
   function renderPresenterConsole() {
     if (!presenterConsole || presenterConsole.hidden) {
       return;
@@ -296,6 +320,7 @@
     presenterNotes.innerHTML = current?.querySelector(".speaker-notes")?.innerHTML || "No speaker notes for this slide.";
     renderPreview(currentPreview, current, "No current slide.");
     renderPreview(nextPreview, next, "End of presentation.");
+    requestAnimationFrame(updatePresenterPreviewScales);
   }
 
   function handleRemoteState(data) {
@@ -407,6 +432,7 @@
   });
 
   window.addEventListener("hashchange", hydrateFromHash);
+  window.addEventListener("resize", updatePresenterPreviewScales);
 
   if (presentation) {
     presentation.setAttribute("data-ready", "true");
