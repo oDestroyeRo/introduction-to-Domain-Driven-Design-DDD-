@@ -2288,12 +2288,27 @@ body:not(.audience-mode) .presenter-preview .slide, body:not(.audience-mode) .pr
   --paper-tint: #f3ead8;
   --rule-strong: rgba(27, 54, 93, 0.22);
   --rule-soft: rgba(27, 54, 93, 0.11);
+  --stage-line: rgba(27, 54, 93, 0.075);
+  --stage-line-strong: rgba(15, 143, 140, 0.13);
   --stage-shadow: 0 34px 80px rgba(16, 24, 38, 0.2);
   --panel-clean-shadow: 0 18px 42px rgba(16, 24, 38, 0.11);
 }
 body {
   background: linear-gradient(180deg, rgba(255, 250, 240, 0.38), transparent 36%), linear-gradient(rgba(27, 54, 93, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 54, 93, 0.028) 1px, transparent 1px), var(--bg);
   background-size: auto, 36px 36px, 36px 36px, auto;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 56px 0 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(118deg, transparent 0 13%, rgba(27, 54, 93, 0.07) 13% 13.12%, transparent 13.12% 72%, rgba(15, 143, 140, 0.075) 72% 72.14%, transparent 72.14%), linear-gradient(26deg, transparent 0 44%, rgba(192, 120, 42, 0.06) 44% 44.12%, transparent 44.12%), repeating-linear-gradient(90deg, transparent 0 118px, rgba(27, 54, 93, 0.035) 118px 119px), repeating-linear-gradient(0deg, transparent 0 88px, rgba(27, 54, 93, 0.03) 88px 89px);
+  opacity: 0.9;
+}
+.shell, .presenter-console {
+  position: relative;
+  z-index: 1;
 }
 .brand, .slide-number, .panel-heading, .presenter-notes strong, .book-stack span, .book-stack .book-idea span, .strategy-board span, .three-panel span, .context-card span, .context-link span, .context-example span {
   letter-spacing: 0;
@@ -2356,8 +2371,8 @@ body:not(.audience-mode) .slide {
   padding-bottom: clamp(56px, 4.2vw, 72px);
   border-radius: 6px;
   border-color: var(--rule-soft);
-  background: linear-gradient(180deg, rgba(255, 250, 240, 0.995), rgba(243, 234, 216, 0.95)), linear-gradient(rgba(27, 54, 93, 0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 54, 93, 0.018) 1px, transparent 1px), var(--paper-stage);
-  background-size: auto, 32px 32px, 32px 32px, auto;
+  background: linear-gradient(118deg, transparent 0 58%, var(--stage-line) 58% 58.16%, transparent 58.16%), linear-gradient(24deg, transparent 0 35%, rgba(192, 120, 42, 0.055) 35% 35.14%, transparent 35.14%), linear-gradient(180deg, rgba(255, 250, 240, 0.995), rgba(243, 234, 216, 0.95)), linear-gradient(rgba(27, 54, 93, 0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 54, 93, 0.018) 1px, transparent 1px), var(--paper-stage);
+  background-size: auto, auto, auto, 32px 32px, 32px 32px, auto;
   box-shadow: var(--stage-shadow);
 }
 body:not(.audience-mode) .slide::before, .audience-mode .slide::before {
@@ -2398,6 +2413,38 @@ body:not(.audience-mode) .topic-header .lead {
   max-width: min(820px, 100%);
   font-size: clamp(1rem, 1.18vw, 1.14rem);
   line-height: 1.44;
+}
+.hero-quote {
+  position: relative;
+  width: min(620px, 100%);
+  margin: clamp(14px, 1.7vw, 22px) 0 clamp(12px, 1.4vw, 18px);
+  padding: clamp(15px, 1.55vw, 20px) clamp(16px, 1.9vw, 24px);
+  overflow: hidden;
+  border: 1px solid rgba(27, 54, 93, 0.14);
+  border-left: 4px solid var(--amber);
+  border-radius: 6px;
+  background: linear-gradient(118deg, transparent 0 62%, rgba(15, 143, 140, 0.08) 62% 62.4%, transparent 62.4%), linear-gradient(180deg, rgba(255, 250, 240, 0.96), rgba(243, 234, 216, 0.88)), var(--paper-stage);
+  box-shadow: 0 18px 34px rgba(16, 24, 38, 0.11);
+}
+.hero-quote::before {
+  content: "Guiding idea";
+  display: block;
+  margin-bottom: 8px;
+  color: var(--meta);
+  font-family: var(--font-ui);
+  font-size: clamp(0.66rem, 0.7vw, 0.78rem);
+  font-weight: 850;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.hero-quote p {
+  max-width: none;
+  margin: 0;
+  color: var(--ink-blue);
+  font-family: var(--font-heading);
+  font-size: clamp(1.18rem, 1.5vw, 1.58rem);
+  font-weight: 760;
+  line-height: 1.16;
 }
 body:not(.audience-mode):not(.reader-mode) .layout-title.is-active, body:not(.audience-mode):not(.reader-mode) .layout-problem.is-active, body:not(.audience-mode):not(.reader-mode) .layout-flow.is-active, body:not(.audience-mode):not(.reader-mode) .layout-language.is-active, body:not(.audience-mode):not(.reader-mode) .layout-summary.is-active {
   grid-template-columns: minmax(300px, 0.66fr) minmax(0, 1.34fr);
@@ -2465,12 +2512,12 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
   border-left-color: var(--amber);
 }
 .audience-mode {
-  background: var(--stage-bg);
+  background: linear-gradient(120deg, rgba(15, 143, 140, 0.12), transparent 42%), linear-gradient(30deg, transparent 0 68%, rgba(192, 120, 42, 0.08) 68% 68.18%, transparent 68.18%), var(--stage-bg);
 }
 .audience-mode .slide {
   padding: clamp(42px, 5.2vh, 66px) clamp(72px, 6.4vw, 118px) clamp(34px, 4.2vh, 58px);
-  background: linear-gradient(180deg, rgba(255, 250, 240, 0.995), rgba(243, 234, 216, 0.97)), linear-gradient(rgba(27, 54, 93, 0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 54, 93, 0.018) 1px, transparent 1px), var(--paper-stage);
-  background-size: auto, 34px 34px, 34px 34px, auto;
+  background: linear-gradient(118deg, transparent 0 57%, rgba(27, 54, 93, 0.065) 57% 57.14%, transparent 57.14%), linear-gradient(24deg, transparent 0 36%, rgba(192, 120, 42, 0.055) 36% 36.13%, transparent 36.13%), linear-gradient(180deg, rgba(255, 250, 240, 0.995), rgba(243, 234, 216, 0.97)), linear-gradient(rgba(27, 54, 93, 0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 54, 93, 0.018) 1px, transparent 1px), var(--paper-stage);
+  background-size: auto, auto, auto, 34px 34px, 34px 34px, auto;
 }
 .audience-mode .slide.is-active {
   row-gap: clamp(16px, 2.2vh, 30px);
@@ -2488,6 +2535,14 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
 .audience-mode .layout-title .topic-header h1 {
   max-width: 660px;
   font-size: clamp(2.35rem, 3.35vw, 3.9rem);
+}
+.audience-mode .hero-quote {
+  width: min(600px, 100%);
+  margin-block: clamp(14px, 1.55vh, 22px);
+  padding: clamp(14px, 1.55vh, 20px) clamp(16px, 1.5vw, 24px);
+}
+.audience-mode .hero-quote p {
+  font-size: clamp(1.14rem, 1.34vw, 1.56rem);
 }
 .audience-mode .topic-header .lead {
   max-width: min(960px, 100%);
@@ -2574,7 +2629,7 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
     font-size: clamp(2rem, 2.12vw, 2.68rem);
   }
   .audience-mode .layout-title .topic-header h1 {
-    font-size: clamp(2.6rem, 3.2vw, 4.1rem);
+    font-size: clamp(2.45rem, 3vw, 3.85rem);
   }
   .audience-mode .layout-marketplace-map .wide-context-map, .audience-mode .layout-title .domain-map {
     min-height: min(680px, 68vh);
@@ -2899,6 +2954,9 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
   }
   body {
     background: white;
+  }
+  body::before {
+    display: none;
   }
   .topbar, .agenda-panel, .presenter-console, .slide-controls, .progress, .skip-link {
     display: none !important;
