@@ -1360,6 +1360,41 @@ h3 {
   max-width: min(860px, 100%);
   margin-bottom: 0;
 }
+@media (min-width: 1600px) and (min-height: 900px) {
+  .audience-mode .slide {
+    padding: clamp(58px, 5vw, 90px) clamp(84px, 7vw, 132px);
+  }
+  .audience-mode .topic-header {
+    width: min(1120px, 100%);
+    margin-bottom: clamp(24px, 2.2vw, 40px);
+  }
+  .audience-mode .topic-header h2 {
+    max-width: min(1120px, 100%);
+    font-size: clamp(2.2rem, 2.45vw, 3rem);
+  }
+  .audience-mode .topic-header .lead {
+    max-width: min(980px, 100%);
+    font-size: clamp(1.05rem, 1.08vw, 1.24rem);
+  }
+  .audience-mode .wide-context-map {
+    width: min(1480px, 100%);
+    padding: clamp(24px, 2vw, 36px);
+  }
+  .audience-mode .context-card {
+    min-height: clamp(160px, 17vh, 210px);
+    padding: clamp(20px, 1.45vw, 28px);
+  }
+  .audience-mode .context-link {
+    min-height: clamp(84px, 10vh, 112px);
+    padding: clamp(14px, 1vw, 18px);
+  }
+  .audience-mode .context-card strong {
+    font-size: clamp(1.08rem, 1.08vw, 1.28rem);
+  }
+  .audience-mode .context-card small, .audience-mode .context-link small {
+    font-size: clamp(0.86rem, 0.82vw, 0.96rem);
+  }
+}
 @media (max-width: 1020px) {
   .shell {
     grid-template-columns: 1fr;
