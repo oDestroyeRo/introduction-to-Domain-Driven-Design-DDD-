@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
     <title>Introduction to Domain-Driven Design</title>
-    <link rel="stylesheet" href="styles.css?v=20260607-quote-stage">
+    <link rel="stylesheet" href="styles.css?v=20260607-domain-events">
   </head>
   <body>
     <a class="skip-link" href="#slide-title">Skip to presentation</a>
@@ -475,21 +475,33 @@
         <section class="slide layout-events" data-title="Domain events">
           <div class="topic-header">
             <p class="slide-number">14 / 16</p>
-            <h2>Domain events name important business facts</h2>
-            <p class="lead">Name the business facts that already happened.</p>
+            <h2>Domain events tell the business story</h2>
+            <p class="lead">Name important facts in business language so other contexts can react without sharing one model.</p>
           </div>
-          <div class="event-timeline" aria-label="Domain event examples">
-            <div><span>01</span><strong>CartUpdated<small>Buyer changes editable shopping intent.</small></strong></div>
-            <div><span>02</span><strong>CheckoutSubmitted<small>Buyer commits selected cart items.</small></strong></div>
-            <div><span>03</span><strong>PaymentAuthorized<small>Payment context confirms the charge.</small></strong></div>
-            <div><span>04</span><strong>OrderCreated<small>Orders context creates one order per shop.</small></strong></div>
-            <div><span>05</span><strong>FulfillmentRequested<small>Fulfillment starts work for the order.</small></strong></div>
+          <div class="event-story">
+            <article class="event-principle">
+              <span>Event checklist</span>
+              <h3>A domain event is a business fact</h3>
+              <ul>
+                <li>Past tense: <strong>PaymentSucceeded</strong>, <strong>OrderConfirmed</strong>.</li>
+                <li>Business language: not PayOrder or InsertOrderRows.</li>
+                <li>Small payload: IDs, time, and facts consumers need.</li>
+              </ul>
+            </article>
+            <div class="event-timeline" aria-label="Marketplace domain event story">
+              <div><span>01</span><strong><em>Checkout</em>CheckoutSubmitted<small>Buyer commits selected cart items and total.</small></strong></div>
+              <div><span>02</span><strong><em>Payment</em>PaymentSucceeded<small>One payment succeeds for the whole checkout.</small></strong></div>
+              <div><span>03</span><strong><em>Orders</em>OrderConfirmed<small>One order per shop group; buyer and shop see the same order.</small></strong></div>
+              <div><span>04</span><strong><em>Fulfillment</em>FulfillmentRequested<small>Each confirmed order asks fulfillment to prepare delivery or pickup.</small></strong></div>
+              <div><span>05</span><strong><em>Fulfillment</em>OrderPreparedForHandoff<small>The shop packed the order; delivery or pickup handoff can start.</small></strong></div>
+            </div>
           </div>
           <aside class="speaker-notes">
             <strong>Speaker notes:</strong>
-            <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. That is why event names are usually past tense, such as CartUpdated, CheckoutSubmitted, or PaymentAuthorized.</p>
-            <p><span class="note-cue">Explain:</span> Events help teams see workflows and integration points. They do not mean every context must share the same data model; they create a clear handoff between models.</p>
-            <p><span class="note-cue">Example:</span> In the marketplace flow, useful events might be CartUpdated, CheckoutSubmitted, PaymentAuthorized, OrderCreated, FulfillmentRequested, and ShipmentDelivered.</p>
+            <p><span class="note-cue">Say:</span> A domain event is an important business fact that already happened. It should sound like business language in the past tense, not like a technical command. For example, PaymentSucceeded is a fact. PayOrder is a command. InsertOrderRows is an implementation detail.</p>
+            <p><span class="note-cue">Explain:</span> Events help us tell the story across contexts while keeping each context's model independent. Checkout can publish CheckoutSubmitted. Payment reacts and later publishes PaymentSucceeded. Orders can then create confirmed orders without Payment sharing its internal payment model.</p>
+            <p><span class="note-cue">Marketplace example:</span> One buyer checkout has one payment. After PaymentSucceeded, the Orders context confirms one order for each shop group and can publish OrderConfirmed for each order. Buyer and shop views read the same confirmed order records; they are not separate buyer-order and shop-order contexts.</p>
+            <p><span class="note-cue">Design tip:</span> Do not publish every small state change. Choose events that another part of the business would care about, such as a checkout being submitted, payment succeeding, an order being confirmed, fulfillment being requested, or an order being prepared for handoff.</p>
             <p><span class="note-cue">Transition:</span> Now give the group a small exercise to practice language, boundaries, and tactical patterns together.</p>
           </aside>
         </section>
