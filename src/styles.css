@@ -3,24 +3,24 @@
 
 @theme {
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: Georgia, "Times New Roman", serif;
+  --font-display: Charter, Georgia, Palatino, "Times New Roman", serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", ui-monospace, Menlo, monospace;
-  --color-bg: #f4f7f5;
-  --color-paper: #fffdf8;
-  --color-ink: #1f2529;
-  --color-muted: #687179;
-  --color-line: #d7ded9;
+  --color-bg: #ebe8dc;
+  --color-paper: #fbf8ef;
+  --color-ink: #172026;
+  --color-muted: #5f6b70;
+  --color-line: #ddd7c7;
   --color-teal: #0f8f8c;
-  --color-teal-dark: #0d6766;
-  --color-amber: #b97420;
-  --color-navy: #101d33;
-  --color-soft-teal: #e6f3f0;
-  --color-soft-amber: #f6ead8;
-  --color-warm-panel: #f2e6d4;
-  --color-meta: #9a5a2f;
+  --color-teal-dark: #0c6566;
+  --color-amber: #c0782a;
+  --color-navy: #17233a;
+  --color-soft-teal: #dff1ec;
+  --color-soft-amber: #f3e2c7;
+  --color-warm-panel: #e8dfca;
+  --color-meta: #766044;
   --radius-panel: 8px;
-  --shadow-slide: 0 28px 70px rgba(16, 29, 51, 0.13);
-  --shadow-panel: 0 18px 44px rgba(16, 29, 51, 0.08);
+  --shadow-slide: 0 34px 86px rgba(23, 35, 58, 0.18);
+  --shadow-panel: 0 20px 46px rgba(23, 35, 58, 0.1);
 }
 
 :root {
@@ -44,6 +44,8 @@
   --font-body: var(--font-sans);
   --font-heading: var(--font-display);
   --font-ui: var(--font-mono);
+  --shell: #101826;
+  --ink-blue: #1b365d;
   font-family: var(--font-sans);
 }
 
@@ -60,10 +62,10 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(135deg, rgba(15, 143, 140, 0.08), transparent 34%),
-    linear-gradient(315deg, rgba(185, 116, 32, 0.08), transparent 38%),
-    linear-gradient(rgba(16, 29, 51, 0.034) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 29, 51, 0.028) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(27, 54, 93, 0.08), transparent 32%),
+    linear-gradient(315deg, rgba(15, 143, 140, 0.07), transparent 36%),
+    linear-gradient(rgba(23, 35, 58, 0.036) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 35, 58, 0.03) 1px, transparent 1px),
     var(--bg);
   background-size: auto, auto, 32px 32px, 32px 32px, auto;
   font-family: var(--font-body);
@@ -121,9 +123,9 @@ button {
   justify-content: space-between;
   min-height: 62px;
   padding: 10px 24px;
-  border-bottom: 1px solid rgba(16, 29, 51, 0.1);
-  background: rgba(255, 253, 248, 0.9);
-  box-shadow: 0 10px 28px rgba(16, 29, 51, 0.045);
+  border-bottom: 1px solid rgba(23, 35, 58, 0.12);
+  background: rgba(251, 248, 239, 0.92);
+  box-shadow: 0 10px 28px rgba(23, 35, 58, 0.055);
   backdrop-filter: blur(18px);
 }
 
@@ -141,12 +143,12 @@ button {
   place-items: center;
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(251, 248, 239, 0.28);
   border-radius: var(--radius);
-  color: white;
-  background: linear-gradient(135deg, var(--navy), #1e3a52 48%, var(--teal-dark));
+  color: var(--paper);
+  background: linear-gradient(135deg, var(--navy), var(--ink-blue) 52%, var(--teal-dark));
   font-size: 0.86rem;
-  box-shadow: 0 12px 24px rgba(16, 29, 51, 0.16);
+  box-shadow: 0 12px 24px rgba(23, 35, 58, 0.18);
 }
 
 .brand-copy {
@@ -1871,6 +1873,473 @@ h3 {
   }
 }
 
+/* Open Design deck pass: per-slide compositions for live presentation. */
+.audience-mode {
+  background: var(--shell);
+}
+
+.audience-mode .slide {
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(251, 248, 239, 0.995), rgba(244, 239, 226, 0.97)),
+    linear-gradient(rgba(27, 54, 93, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 54, 93, 0.022) 1px, transparent 1px),
+    var(--paper);
+  background-size: auto, 30px 30px, 30px 30px, auto;
+}
+
+.audience-mode .slide.is-active {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
+  row-gap: clamp(20px, 2.6vh, 36px);
+}
+
+.audience-mode .slide::before {
+  background: linear-gradient(90deg, var(--ink-blue), var(--teal), var(--amber));
+}
+
+.audience-mode .slide::after {
+  top: clamp(48px, 5.6vh, 72px);
+  bottom: clamp(42px, 5vh, 66px);
+  left: clamp(36px, 4.7vw, 76px);
+  background: linear-gradient(180deg, transparent, rgba(27, 54, 93, 0.24), transparent);
+}
+
+.audience-mode .topic-header {
+  justify-items: start;
+  align-self: start;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: clamp(18px, 1.7vw, 28px);
+  border-left: 4px solid var(--teal);
+  text-align: left;
+}
+
+.audience-mode .topic-header .slide-number {
+  margin-inline: 0;
+}
+
+.audience-mode .slide-number {
+  padding: 0 0 7px;
+  border: 0;
+  border-bottom: 1px solid rgba(118, 96, 68, 0.34);
+  border-radius: 0;
+  color: var(--meta);
+  background: transparent;
+  box-shadow: none;
+  font-size: clamp(0.72rem, 0.78vw, 0.9rem);
+  letter-spacing: 0.08em;
+}
+
+.audience-mode .topic-header h1,
+.audience-mode .topic-header h2 {
+  max-width: min(1160px, 100%);
+  margin-bottom: clamp(8px, 1vh, 14px);
+  color: var(--ink-blue);
+  font-size: clamp(2.05rem, 2.55vw, 3.05rem);
+  line-height: 1.02;
+}
+
+.audience-mode .topic-header .lead {
+  max-width: min(1040px, 100%);
+  color: #33424a;
+  font-size: clamp(1rem, 1.16vw, 1.26rem);
+  line-height: 1.38;
+}
+
+.audience-mode .slide > :not(.topic-header):not(.speaker-notes) {
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+}
+
+.audience-mode .slide-art,
+.audience-mode .domain-map,
+.audience-mode .wide-context-map,
+.audience-mode .capability-map,
+.audience-mode .aggregate-diagram,
+.audience-mode .event-timeline,
+.audience-mode .book-stack article,
+.audience-mode .strategy-board article,
+.audience-mode .three-panel article,
+.audience-mode .compare-board > div,
+.audience-mode .exercise-grid article,
+.audience-mode .context-example > div {
+  border-color: rgba(27, 54, 93, 0.14);
+  background:
+    linear-gradient(180deg, rgba(251, 248, 239, 0.99), rgba(241, 235, 219, 0.86)),
+    var(--paper);
+  box-shadow: 0 18px 42px rgba(23, 35, 58, 0.11);
+}
+
+.audience-mode .slide-art img {
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.audience-mode .layout-title.is-active,
+.audience-mode .layout-problem.is-active,
+.audience-mode .layout-flow.is-active,
+.audience-mode .layout-language.is-active,
+.audience-mode .layout-summary.is-active {
+  grid-template-columns: minmax(340px, 0.72fr) minmax(0, 1.28fr);
+  grid-template-rows: minmax(0, 1fr);
+  column-gap: clamp(36px, 5vw, 90px);
+  align-items: center;
+}
+
+.audience-mode .layout-title .topic-header,
+.audience-mode .layout-problem .topic-header,
+.audience-mode .layout-flow .topic-header,
+.audience-mode .layout-language .topic-header,
+.audience-mode .layout-summary .topic-header {
+  align-self: center;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.audience-mode .layout-title .topic-header {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.audience-mode .layout-title .topic-header h1 {
+  max-width: 720px;
+  font-size: clamp(3rem, 4.5vw, 5.2rem);
+}
+
+.audience-mode .layout-title .lead {
+  max-width: 620px;
+  font-size: clamp(1.08rem, 1.3vw, 1.42rem);
+}
+
+.audience-mode .layout-title .goal-strip,
+.audience-mode .layout-summary .goal-strip {
+  justify-content: flex-start;
+}
+
+.audience-mode .layout-title .domain-map,
+.audience-mode .layout-problem .image-only,
+.audience-mode .layout-flow .image-only,
+.audience-mode .layout-language .image-only,
+.audience-mode .layout-summary .reading-path {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.audience-mode .layout-title .domain-map {
+  min-height: min(640px, 70vh);
+  padding: clamp(22px, 1.8vw, 34px);
+}
+
+.audience-mode .layout-title .map-node {
+  min-height: clamp(112px, 15vh, 158px);
+  font-size: clamp(1rem, 1.04vw, 1.28rem);
+}
+
+.audience-mode .layout-problem .slide-art,
+.audience-mode .layout-flow .slide-art,
+.audience-mode .layout-language .slide-art,
+.audience-mode .layout-summary .slide-art {
+  display: grid;
+  place-items: center;
+  height: min(720px, 72vh);
+  min-height: 480px;
+}
+
+.audience-mode .layout-summary .slide-art {
+  min-height: 540px;
+}
+
+.audience-mode .layout-loop .topic-body {
+  display: grid;
+  grid-template-columns: minmax(330px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(28px, 4vw, 70px);
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+  text-align: left;
+}
+
+.audience-mode .layout-loop .centered-art {
+  width: 100%;
+  margin: 0;
+}
+
+.audience-mode .layout-loop .centered-art img {
+  aspect-ratio: 1 / 1;
+}
+
+.audience-mode .layout-loop .principle-row {
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin: 0;
+}
+
+.audience-mode .layout-loop .principle-row div {
+  min-height: clamp(120px, 14vh, 160px);
+  padding: clamp(20px, 1.6vw, 30px);
+}
+
+.audience-mode .layout-books .book-stack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 32px);
+}
+
+.audience-mode .layout-books .book-stack article {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: start;
+  gap: clamp(16px, 1.6vw, 24px);
+  min-height: clamp(470px, 55vh, 600px);
+  padding: clamp(22px, 2vw, 32px);
+}
+
+.audience-mode .layout-books .book-cover img {
+  width: min(190px, 64%);
+  margin: 0 auto;
+}
+
+.audience-mode .layout-books .book-stack h3 {
+  font-size: clamp(1.35rem, 1.55vw, 1.8rem);
+}
+
+.audience-mode .layout-dual .strategy-board,
+.audience-mode .layout-domain-types .three-panel,
+.audience-mode .layout-patterns .compare-board {
+  display: grid;
+  width: 100%;
+}
+
+.audience-mode .layout-dual .strategy-board,
+.audience-mode .layout-patterns .compare-board {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 32px);
+}
+
+.audience-mode .layout-dual .strategy-board article,
+.audience-mode .layout-domain-types .three-panel article,
+.audience-mode .layout-patterns .compare-board > div {
+  min-height: clamp(210px, 27vh, 320px);
+  padding: clamp(24px, 2.2vw, 38px);
+}
+
+.audience-mode .layout-dual .lesson-strip,
+.audience-mode .layout-domain-types .lesson-strip {
+  width: 100%;
+  margin-top: clamp(16px, 2vh, 28px);
+}
+
+.audience-mode .layout-domain-types .three-panel {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 30px);
+}
+
+.audience-mode .layout-capability .capability-map {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 1.6vw, 24px);
+  padding: clamp(18px, 2vw, 30px);
+}
+
+.audience-mode .layout-capability .capability {
+  min-height: clamp(118px, 14vh, 164px);
+  padding: clamp(16px, 1.5vw, 24px);
+  font-size: clamp(1rem, 1.1vw, 1.32rem);
+}
+
+.audience-mode .layout-capability .capability.core {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: auto;
+  background: linear-gradient(135deg, var(--navy), var(--ink-blue));
+  font-size: clamp(1.35rem, 2vw, 2.25rem);
+}
+
+.audience-mode .layout-context .context-example {
+  grid-template-columns: minmax(0, 1.24fr) minmax(300px, 0.76fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 30px);
+  min-height: 0;
+}
+
+.audience-mode .layout-context .context-example .slide-art {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  height: 100%;
+  min-height: 0;
+}
+
+.audience-mode .layout-context .context-example > div {
+  display: grid;
+  align-content: center;
+  padding: clamp(24px, 2.4vw, 44px);
+}
+
+.audience-mode .layout-context .context-example strong {
+  font-size: clamp(2rem, 3vw, 3.8rem);
+}
+
+.audience-mode .layout-marketplace-map .wide-context-map {
+  display: grid;
+  grid-template-rows: minmax(0, 1.25fr) minmax(0, 0.78fr);
+  gap: clamp(12px, 1.4vw, 20px);
+  width: 100%;
+  padding: clamp(18px, 1.8vw, 30px);
+}
+
+.audience-mode .layout-marketplace-map .context-row,
+.audience-mode .layout-marketplace-map .context-relations {
+  gap: clamp(10px, 1vw, 18px);
+  margin: 0;
+}
+
+.audience-mode .layout-marketplace-map .context-card {
+  display: grid;
+  align-content: center;
+  min-height: clamp(144px, 18vh, 214px);
+  padding: clamp(14px, 1.25vw, 22px);
+}
+
+.audience-mode .layout-marketplace-map .context-link {
+  min-height: clamp(88px, 11vh, 128px);
+}
+
+.audience-mode .layout-patterns .compare-board {
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.audience-mode .layout-patterns .compare-board .slide-art {
+  height: min(500px, 48vh);
+}
+
+.audience-mode .layout-aggregate .aggregate-diagram {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  padding: clamp(24px, 2vw, 36px);
+}
+
+.audience-mode .layout-aggregate .aggregate-diagram .aggregate-root,
+.audience-mode .layout-aggregate .aggregate-diagram p {
+  grid-column: 1 / -1;
+}
+
+.audience-mode .layout-aggregate .aggregate-diagram .aggregate-root {
+  min-height: clamp(150px, 21vh, 240px);
+  font-size: clamp(2rem, 3vw, 3.8rem);
+}
+
+.audience-mode .layout-aggregate .aggregate-diagram div:not(.aggregate-root) {
+  min-height: clamp(145px, 19vh, 210px);
+  font-size: clamp(1.1rem, 1.35vw, 1.6rem);
+}
+
+.audience-mode .layout-events .event-timeline {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(14px, 1.4vw, 22px);
+}
+
+.audience-mode .layout-events .event-timeline div {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: start;
+  justify-items: center;
+  min-height: clamp(370px, 50vh, 560px);
+  padding: clamp(20px, 1.6vw, 30px);
+  text-align: center;
+}
+
+.audience-mode .layout-events .event-timeline span {
+  width: clamp(48px, 4vw, 72px);
+  height: clamp(48px, 4vw, 72px);
+  margin-bottom: clamp(12px, 1.5vh, 20px);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--ink-blue), var(--teal-dark));
+}
+
+.audience-mode .layout-events .event-timeline strong {
+  font-size: clamp(1.15rem, 1.3vw, 1.58rem);
+}
+
+.audience-mode .layout-exercise.is-active {
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  column-gap: clamp(28px, 4vw, 68px);
+  align-items: stretch;
+}
+
+.audience-mode .layout-exercise .topic-header {
+  grid-column: 1 / -1;
+}
+
+.audience-mode .layout-exercise .exercise-art {
+  height: min(620px, 62vh);
+}
+
+.audience-mode .layout-exercise .exercise-art img {
+  aspect-ratio: 16 / 10;
+}
+
+.audience-mode .layout-exercise .exercise-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(14px, 1.6vw, 24px);
+  margin: 0;
+}
+
+.audience-mode .layout-exercise .exercise-grid article {
+  min-height: 0;
+  align-content: center;
+}
+
+.audience-mode .summary-cues {
+  max-width: 520px;
+}
+
+@media (min-width: 1600px) and (min-height: 900px) {
+  .audience-mode .slide.is-active {
+    row-gap: clamp(26px, 3.4vh, 48px);
+  }
+
+  .audience-mode .layout-books .book-stack article {
+    min-height: clamp(520px, 58vh, 650px);
+  }
+
+  .audience-mode .layout-marketplace-map .context-card strong {
+    font-size: clamp(1.14rem, 1.06vw, 1.38rem);
+  }
+
+  .audience-mode .layout-marketplace-map .context-card small,
+  .audience-mode .layout-marketplace-map .context-link small {
+    font-size: clamp(0.86rem, 0.82vw, 1rem);
+  }
+}
+
+@media (max-width: 1180px), (max-height: 760px) {
+  .audience-mode .layout-books .book-stack article,
+  .audience-mode .layout-dual .strategy-board article,
+  .audience-mode .layout-domain-types .three-panel article,
+  .audience-mode .layout-events .event-timeline div {
+    min-height: auto;
+  }
+
+  .audience-mode .layout-problem .slide-art,
+  .audience-mode .layout-flow .slide-art,
+  .audience-mode .layout-language .slide-art,
+  .audience-mode .layout-summary .slide-art {
+    min-height: 340px;
+  }
+
+  .audience-mode .layout-events .event-timeline {
+    grid-template-columns: repeat(5, minmax(140px, 1fr));
+  }
+}
+
 @media (max-width: 1020px) {
   .shell {
     grid-template-columns: 1fr;
@@ -1914,6 +2383,14 @@ h3 {
   .context-row,
   .context-relations {
     grid-template-columns: 1fr;
+  }
+
+  .audience-mode .layout-events .event-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-mode .layout-events .event-timeline div {
+    min-height: auto;
   }
 
   .wide-context-map {
@@ -2058,10 +2535,93 @@ h3 {
 
   .audience-mode .slide {
     padding: 30px 18px 40px;
+    overflow: visible;
   }
 
   .audience-mode .slide.is-active {
     align-content: start;
+  }
+
+  .audience-mode .layout-title.is-active,
+  .audience-mode .layout-problem.is-active,
+  .audience-mode .layout-flow.is-active,
+  .audience-mode .layout-language.is-active,
+  .audience-mode .layout-summary.is-active,
+  .audience-mode .layout-exercise.is-active {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 18px;
+    align-items: start;
+  }
+
+  .audience-mode .layout-title .topic-header,
+  .audience-mode .layout-problem .topic-header,
+  .audience-mode .layout-flow .topic-header,
+  .audience-mode .layout-language .topic-header,
+  .audience-mode .layout-summary .topic-header,
+  .audience-mode .layout-exercise .topic-header,
+  .audience-mode .layout-title .domain-map,
+  .audience-mode .layout-problem .image-only,
+  .audience-mode .layout-flow .image-only,
+  .audience-mode .layout-language .image-only,
+  .audience-mode .layout-summary .reading-path {
+    grid-column: auto;
+    grid-row: auto;
+    align-self: start;
+  }
+
+  .audience-mode .layout-loop .topic-body,
+  .audience-mode .layout-books .book-stack,
+  .audience-mode .layout-dual .strategy-board,
+  .audience-mode .layout-domain-types .three-panel,
+  .audience-mode .layout-capability .capability-map,
+  .audience-mode .layout-context .context-example,
+  .audience-mode .layout-marketplace-map .context-row,
+  .audience-mode .layout-marketplace-map .context-relations,
+  .audience-mode .layout-patterns .compare-board,
+  .audience-mode .layout-aggregate .aggregate-diagram,
+  .audience-mode .layout-events .event-timeline,
+  .audience-mode .layout-exercise .exercise-grid,
+  .audience-mode .domain-map {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-mode .layout-context .context-example .slide-art,
+  .audience-mode .layout-aggregate .aggregate-diagram .aggregate-root,
+  .audience-mode .layout-aggregate .aggregate-diagram p,
+  .audience-mode .layout-capability .capability.core,
+  .audience-mode .map-node.ordering,
+  .audience-mode .map-node.support {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .audience-mode .map-line {
+    display: none;
+  }
+
+  .audience-mode .layout-title .domain-map,
+  .audience-mode .layout-problem .slide-art,
+  .audience-mode .layout-flow .slide-art,
+  .audience-mode .layout-language .slide-art,
+  .audience-mode .layout-summary .slide-art,
+  .audience-mode .layout-exercise .exercise-art {
+    height: auto;
+    min-height: 0;
+  }
+
+  .audience-mode .layout-title .map-node,
+  .audience-mode .layout-books .book-stack article,
+  .audience-mode .layout-events .event-timeline div,
+  .audience-mode .layout-dual .strategy-board article,
+  .audience-mode .layout-domain-types .three-panel article,
+  .audience-mode .layout-patterns .compare-board > div {
+    min-height: auto;
+  }
+
+  .audience-mode .slide-art img {
+    height: auto;
+    max-height: none;
   }
 
   .audience-mode h1 {
