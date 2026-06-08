@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
     <title>Introduction to Domain-Driven Design</title>
-    <link rel="stylesheet" href="styles.css?v=20260607-domain-events">
+    <link rel="stylesheet" href="styles.css?v=20260608-product-design">
   </head>
   <body>
     <a class="skip-link" href="#slide-title">Skip to presentation</a>
@@ -402,8 +402,8 @@
               </div>
               <div class="context-card ship-card">
                 <span>Fulfillment</span>
-                <strong>Pickup, parcel, tracking</strong>
-                <small>Handled per confirmed order</small>
+                <strong>Shipment lifecycle</strong>
+                <small>Prepare, hand off, and track per confirmed order</small>
               </div>
             </div>
             <div class="context-relations" aria-label="Context map relationships">
@@ -522,7 +522,7 @@
               <div><span>01</span><strong><em>Checkout</em>CheckoutSubmitted<small>Buyer commits selected cart items and total.</small></strong></div>
               <div><span>02</span><strong><em>Payment</em>PaymentSucceeded<small>One payment succeeds for the whole checkout.</small></strong></div>
               <div><span>03</span><strong><em>Orders</em>OrderConfirmed<small>One order per shop group; buyer and shop see the same order.</small></strong></div>
-              <div><span>04</span><strong><em>Fulfillment</em>FulfillmentRequested<small>Each confirmed order asks fulfillment to prepare delivery or pickup.</small></strong></div>
+              <div><span>04</span><strong><em>Fulfillment</em>FulfillmentRequested<small>Each confirmed order asks fulfillment to prepare shipment or pickup.</small></strong></div>
               <div><span>05</span><strong><em>Fulfillment</em>OrderPrepared<small>The shop packed the order; delivery or pickup can start.</small></strong></div>
             </div>
           </div>
@@ -540,7 +540,7 @@
           <div class="topic-header">
             <p class="slide-number">15 / 16</p>
             <h2>Exercise: model a marketplace order</h2>
-            <p class="lead narrow">Cart. Checkout. Order. Delivery.</p>
+            <p class="lead narrow">Cart. Checkout. Order. Fulfillment.</p>
           </div>
           <figure class="slide-art exercise-art">
             <img src="assets/slides/workshop-board.svg" alt="Workshop board showing marketplace terms, contexts, and events">
