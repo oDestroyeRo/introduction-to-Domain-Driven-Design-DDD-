@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A knowledge-sharing web presentation introducing Domain-Driven Design for mixed product and technical teams.">
     <title>Introduction to Domain-Driven Design</title>
-    <link rel="stylesheet" href="styles.css?v=20260608-product-design">
+    <link rel="stylesheet" href="styles.css?v=20260608-presenter-console">
   </head>
   <body>
     <a class="skip-link" href="#slide-title">Skip to presentation</a>
@@ -633,7 +633,7 @@
         <article class="presenter-panel current-panel">
           <div class="panel-heading">
             <span>Current</span>
-            <strong>Slide preview</strong>
+            <strong>Slide</strong>
           </div>
           <div class="presenter-preview" id="currentPreview" aria-label="Current slide preview"></div>
         </article>
@@ -649,13 +649,17 @@
         <article class="presenter-panel next-panel">
           <div class="panel-heading">
             <span>Next</span>
-            <strong>Upcoming slide</strong>
+            <strong>Briefing</strong>
           </div>
-          <div class="presenter-preview next-preview" id="nextPreview" aria-label="Next slide preview"></div>
+          <div class="next-brief" id="nextBrief" aria-label="Next slide briefing">
+            <p class="next-brief-meta" id="nextBriefMeta">Next slide</p>
+            <h3 id="nextBriefTitle">Why software gets hard</h3>
+            <p id="nextBriefCue">Use the next point to connect business complexity with design boundaries.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <script src="script.js?v=20260607-presentation-view"></script>
+    <script src="script.js?v=20260608-presenter-console"></script>
   </body>
 </html>

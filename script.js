@@ -19,7 +19,9 @@
   const presenterTitle = document.getElementById("presenterTitle");
   const presenterNotes = document.getElementById("presenterNotes");
   const currentPreview = document.getElementById("currentPreview");
-  const nextPreview = document.getElementById("nextPreview");
+  const nextBriefMeta = document.getElementById("nextBriefMeta");
+  const nextBriefTitle = document.getElementById("nextBriefTitle");
+  const nextBriefCue = document.getElementById("nextBriefCue");
   const audienceButton = document.getElementById("audienceButton");
   const audienceStatus = document.getElementById("audienceStatus");
 
@@ -305,7 +307,48 @@
       return;
     }
 
-    [currentPreview, nextPreview].forEach(updatePreviewScale);
+    updatePreviewScale(currentPreview);
+  }
+
+  function cleanBriefText(text) {
+    const cleaned = text
+      .replace(/\s+/g, " ")
+      .replace(/^(Say|Ask|Example|Transition|Emphasize|Design note|Close|Recommended next step):\s*/i, "")
+      .trim();
+
+    if (cleaned.length <= 190) {
+      return cleaned;
+    }
+
+    return `${cleaned.slice(0, 187).trim()}...`;
+  }
+
+  function getNextBriefCue(slide) {
+    if (!slide) {
+      return "Close the session, recap the reading path, and invite follow-up questions.";
+    }
+
+    const noteParagraph = slide.querySelector(".speaker-notes p");
+    const lead = slide.querySelector(".lead");
+    const cue = noteParagraph?.textContent || lead?.textContent || "Use this slide as the next bridge point.";
+    return cleanBriefText(cue);
+  }
+
+  function renderNextBrief(nextSlide, nextIndex) {
+    if (!nextBriefMeta || !nextBriefTitle || !nextBriefCue) {
+      return;
+    }
+
+    if (!nextSlide) {
+      nextBriefMeta.textContent = "End";
+      nextBriefTitle.textContent = "End of presentation";
+      nextBriefCue.textContent = getNextBriefCue(null);
+      return;
+    }
+
+    nextBriefMeta.textContent = `Next slide ${String(nextIndex + 1).padStart(2, "0")} / ${slides.length}`;
+    nextBriefTitle.textContent = nextSlide.dataset.title || `Slide ${nextIndex + 1}`;
+    nextBriefCue.textContent = getNextBriefCue(nextSlide);
   }
 
   function renderPresenterConsole() {
@@ -319,7 +362,7 @@
     presenterTitle.textContent = current?.dataset.title || `Slide ${currentSlide + 1}`;
     presenterNotes.innerHTML = current?.querySelector(".speaker-notes")?.innerHTML || "No speaker notes for this slide.";
     renderPreview(currentPreview, current, "No current slide.");
-    renderPreview(nextPreview, next, "End of presentation.");
+    renderNextBrief(next, currentSlide + 1);
     requestAnimationFrame(updatePresenterPreviewScales);
   }
 

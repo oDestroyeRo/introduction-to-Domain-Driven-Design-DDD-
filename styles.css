@@ -8,6 +8,8 @@
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-display: Charter, Georgia, Palatino, "Times New Roman", serif;
@@ -1421,9 +1423,24 @@ h3 {
 }
 .presenter-grid {
   display: grid;
-  grid-template-columns: minmax(250px, 0.78fr) minmax(520px, 1.34fr) minmax(230px, 0.68fr);
+  grid-template-areas: "current notes next";
+  grid-template-columns: minmax(250px, 0.72fr) minmax(540px, 1.48fr) minmax(250px, 0.62fr);
   gap: 18px;
-  align-items: start;
+  align-items: stretch;
+}
+.current-panel {
+  grid-area: current;
+  align-self: start;
+}
+.notes-panel {
+  grid-area: notes;
+  align-self: stretch;
+}
+.next-panel {
+  grid-area: next;
+  align-self: start;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
 }
 .presenter-panel {
   min-width: 0;
@@ -1478,9 +1495,6 @@ h3 {
 .presenter-preview .speaker-notes {
   display: none !important;
 }
-.next-preview {
-  min-height: var(--preview-height, 140px);
-}
 .preview-empty {
   display: grid;
   place-items: center;
@@ -1488,6 +1502,38 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-weight: 750;
+}
+.next-brief {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 100%;
+  padding: 18px;
+  border: 1px solid rgba(15, 143, 140, 0.22);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(230, 243, 240, 0.96), rgba(255, 253, 248, 0.9)), var(--soft-teal);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.62);
+}
+.next-brief-meta {
+  margin: 0;
+  color: var(--meta);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.next-brief h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.18rem, 1.42vw, 1.72rem);
+  line-height: 1.14;
+}
+.next-brief p:last-child {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(0.92rem, 0.95vw, 1.08rem);
+  line-height: 1.46;
 }
 .presenter-notes {
   min-height: 390px;
@@ -3380,7 +3426,8 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
   }
 }
 .presenter-mode .presenter-grid {
-  grid-template-columns: minmax(280px, 0.8fr) minmax(560px, 1.42fr) minmax(260px, 0.7fr);
+  grid-template-areas: "current notes next";
+  grid-template-columns: minmax(280px, 0.72fr) minmax(560px, 1.52fr) minmax(260px, 0.62fr);
   gap: clamp(14px, 1.45vw, 22px);
 }
 @media (max-width: 1020px) {
@@ -3388,6 +3435,7 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
     width: 100%;
   }
   .presenter-mode .presenter-grid {
+    grid-template-areas: "current" "notes" "next";
     grid-template-columns: 1fr;
     max-height: none;
   }
@@ -3447,10 +3495,11 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
   padding: clamp(14px, 1.2vw, 18px);
 }
 .presenter-mode .current-panel .presenter-preview {
-  min-height: clamp(210px, 29vh, 310px);
+  height: var(--preview-height, 220px);
+  min-height: var(--preview-height, 220px);
 }
-.presenter-mode .next-panel .presenter-preview {
-  min-height: clamp(170px, 23vh, 245px);
+.presenter-mode .next-panel {
+  min-height: 0;
 }
 .presenter-mode .presenter-notes {
   height: calc(100vh - 396px);
@@ -3459,6 +3508,13 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
 }
 .presenter-preview .slide {
   isolation: isolate;
+}
+.presenter-mode .presenter-preview .slide, body:not(.audience-mode) .presenter-preview .slide {
+  width: 1120px;
+  min-width: 1120px;
+  max-width: none;
+  height: 630px;
+  min-height: 630px;
 }
 @media (min-width: 1600px) and (min-height: 900px) {
   .audience-mode .layout-title .domain-map, .audience-mode .layout-marketplace-map .wide-context-map {
@@ -3906,12 +3962,12 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
   .presenter-mode .presenter-grid {
     display: grid;
     grid-template-areas: "current notes" "next notes";
-    grid-template-columns: minmax(270px, 0.86fr) minmax(0, 1.14fr);
-    grid-template-rows: minmax(182px, 0.9fr) minmax(148px, 0.68fr);
+    grid-template-columns: minmax(270px, 0.82fr) minmax(0, 1.18fr);
+    grid-template-rows: auto minmax(124px, 1fr);
     gap: 10px;
     height: calc(100vh - 208px);
     max-height: calc(100vh - 208px);
-    align-items: stretch;
+    align-items: start;
   }
   .presenter-mode .current-panel {
     grid-area: current;
@@ -3931,9 +3987,25 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
     margin-bottom: 8px;
     font-size: 0.62rem;
   }
-  .presenter-mode .current-panel .presenter-preview, .presenter-mode .next-panel .presenter-preview {
-    height: calc(100% - 28px);
-    min-height: 0;
+  .presenter-mode .current-panel .presenter-preview {
+    height: var(--preview-height, 152px);
+    min-height: var(--preview-height, 152px);
+  }
+  .presenter-mode .next-brief {
+    min-height: 118px;
+    padding: 10px;
+    gap: 7px;
+  }
+  .presenter-mode .next-brief-meta {
+    font-size: 0.58rem;
+  }
+  .presenter-mode .next-brief h3 {
+    font-size: 0.98rem;
+    line-height: 1.12;
+  }
+  .presenter-mode .next-brief p:last-child {
+    font-size: 0.74rem;
+    line-height: 1.28;
   }
   .presenter-mode .presenter-notes {
     height: calc(100% - 28px);
@@ -3981,8 +4053,19 @@ body.reader-mode .slide, body.reader-mode .slide.is-active {
     min-height: 0;
     overflow: hidden;
   }
-  .presenter-mode .current-panel .presenter-preview, .presenter-mode .next-panel .presenter-preview {
+  .presenter-mode .current-panel .presenter-preview {
     min-height: 0;
+  }
+  .presenter-mode .next-brief {
+    padding: 14px;
+    gap: 10px;
+  }
+  .presenter-mode .next-brief h3 {
+    font-size: clamp(1rem, 1.18vw, 1.25rem);
+  }
+  .presenter-mode .next-brief p:last-child {
+    font-size: clamp(0.82rem, 0.9vw, 0.96rem);
+    line-height: 1.34;
   }
   .presenter-mode .presenter-notes {
     height: calc(100% - 38px);
